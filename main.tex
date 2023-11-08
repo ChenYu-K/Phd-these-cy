@@ -1,0 +1,109 @@
+% INSTRUCTIONS
+% (1) Compile using LuaLatex (it is the successor of pdflatex). To check this on Overleaf, click on the Menu on the top left.
+% (2) Complete the SETUP below
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY FROM HERE ...
+\documentclass[12pt,twosided]{ic_eee_thesis}
+
+
+%... TO HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADDITIONAL PACKAGES
+% You can add your packages below. Note that the following packages are already loaded: pgfcore, geometry, bookmark, graphicx, setspace, kantlipsum, fontspec, polygrossia (default English), minitoc, silence, background, xpatch, tikzpagenodes, totcount, fancyhdr, titlesec and the tikz libraries calc, shapes.symbols and shapes.misc  
+
+\usepackage[match]{luatexja-fontspec}
+\setmainjfont{TakaoMincho}
+\setsansjfont{TakaoGothic}
+\bibliographystyle{ieeetr} %elsiver
+\usepackage[figurename=Fig.,labelfont=bf,labelsep=period]{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{lmodern}
+\hypersetup{
+  colorlinks=true, % black，violet
+  linkcolor=violet,  % 设置内部链接颜色 blue，teal
+  citecolor=magenta, % 设置引用链接颜色 purple
+  urlcolor=red     % 设置URL链接颜色 red
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% SETUP %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDIT THE FOLLOWING INFORMATION WITH YOUR DATA
+\title{Limit State Design Of Hybrid Joint With Slip-critical bolted joint and Bearing-type joint}
+\subtitle{（摩擦と支圧を併用したハイブリッド継手の限界状態設計法に関する研究）} % use \subtitle{} to remove it
+\author{Chen Yu}
+
+\supervisor{Prof.Dr Takashi Yamaguchi \\[1mm] Prof. x Kitou} %UK: Dr no dot, prof has dot
+\submityear{2024}
+% PICK A DEGREE FROM THE LIST BELOW 
+% DO NOT MODIFY THE NAMES
+\course{Engineering}
+
+\setboolean{list_of_figures}{true} % false or true 
+\setboolean{list_of_tables}{false} % false or true 
+\setboolean{acknowledgement}{true} % false or true 
+\setboolean{acronyms}{true} % false or true - 
+
+%%%%%%%%%%%%% END SETUP %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ADDITIONAL COMMANDS
+%Examples
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\vect}{vec}
+%...
+
+
+\begin{document}
+
+\preamble % Do not change - required
+
+% EDIT THE CONTENT OF THE FILES
+% Abstract.tex
+% OrigSta_Copyright.tex
+% Acknowledgement.tex
+% You can find them under the folder 
+% "chapters" on the left column
+
+% ADD AS MANY CHAPTERS AS NEEDED
+% BY CREATING .TEX FILES IN THE FOLDER chapters
+% AND ADDING \input{namechapter.tex} BELOW
+
+\input{Chapter1.tex}
+\input{Chapter2.tex}
+\input{Chapter3.tex}
+\input{Chapter4.tex}
+\input{Chapter5.tex}
+\input{Chapter6.tex}
+\input{Chapter7.tex}
+
+\conclusions % Do not change - required
+% EDIT THE CONTENT OF THE FILE
+% Conclusions.tex
+% You can find it under the folder 
+% "chapters" on the left column
+
+% APPENDICES ARE OPTIONAL
+% COMMENT OUT BOTH LINES BELOW TO REMOVE THEM
+% ADD CHAPTERS TO ADD MULTIPLE APPENDICES
+\appendix 
+\input{AppendixA.tex}
+%\input{AppendixB.tex} % Example second appendix (need to create the file in "chapters")
+
+
+\cleardoublepage % Do not change - required
+\RemoveLabels % Do not change - required
+
+
+% \label{section:references}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{package/references,package/refmen}
+
+
+\end{document}
