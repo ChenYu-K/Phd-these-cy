@@ -22,7 +22,11 @@
 \usepackage{amsfonts} 
 \usepackage{lmodern}
 \usepackage{notoccite}
-
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{fontawesome}
+\usepackage[figuresright]{rotating}
+\usepackage{soul}
 
 \hypersetup{
   colorlinks=true, % black，violet
@@ -31,6 +35,10 @@
   urlcolor=red     % 设置URL链接颜色 red
 }
 
+% \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\newcommand{\RN}[1]{%
+\textup{\uppercase\expandafter{\romannumeral#1}}%
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,8 +46,8 @@
 %%%%%%%%%%%%%%%% SETUP %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % EDIT THE FOLLOWING INFORMATION WITH YOUR DATA
-\title{Limit State Design Of Hybrid Joint With Slip-critical bolted joint and Bearing-type joint}
-\subtitle{（摩擦と支圧を併用したハイブリッド継手の限界状態設計法に関する研究）} % use \subtitle{} to remove it
+\title{Study on Limit States of Hybrid Joint With Friction and Bearing Type Connection}
+\subtitle{（摩擦接合と支圧接合を併用したハイブリッド継手の限界状態に関する研究）} % use \subtitle{} to remove it
 \author{Chen Yu}
 
 \supervisor{Prof.Dr Takashi Yamaguchi \\[1mm] Prof. x Kitou} %UK: Dr no dot, prof has dot
@@ -85,8 +93,9 @@
 \input{Chapter5.tex}
 \input{Chapter6.tex}
 \input{Chapter7.tex}
+\input{Chapter8.tex}
 
-\conclusions % Do not change - required
+%\conclusions % Do not change - required
 % EDIT THE CONTENT OF THE FILE
 % Conclusions.tex
 % You can find it under the folder 
@@ -95,8 +104,8 @@
 % APPENDICES ARE OPTIONAL
 % COMMENT OUT BOTH LINES BELOW TO REMOVE THEM
 % ADD CHAPTERS TO ADD MULTIPLE APPENDICES
-\appendix 
-\input{AppendixA.tex}
+%\appendix 
+%\input{AppendixA.tex}
 %\input{AppendixB.tex} % Example second appendix (need to create the file in "chapters")
 
 

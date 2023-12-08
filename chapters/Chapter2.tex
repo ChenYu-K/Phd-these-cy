@@ -118,12 +118,28 @@ To fulfill this requirement, the bolted joints within the steel bridge structure
 
 Increasing the number of bolts is a simple and effective measure. However, an increase in the number of bolts means that the size of the joint will become larger, resulting in added weight. Large joints bring about several disadvantages, such as decreased load-carrying capacity with increasing side length of the joint. Additionally, an increase in the number of bolts complicates the management and maintenance of the bolt group, thereby increasing the maintenance costs of the bridge.
 
+\subsection{Long bolted joint}
+As a joint length increases, problems arise when using  long or large bolted joints. First, owing to the presence of secondary members in the vicinity of the joint (e.g., stiffener and diaphragm), excessively long joints can interfere with secondary members. Therefore, it is necessary to shorten the length of the joint while maintaining design strength. Typically, a slip-critical joint combined with a weld is used to satisfy the design strength requirements of a joint. Previous studies have demonstrated that slip-critical bolted joints combined with welds are reliable and feasible \cite{solodov2021,Thomas2000,Chang2019361,KHANDEL2022107036}. Combinations of welded--bolted connections are widely used in steel structures. However, some environments, such as those offering insufficient space or requiring work at height, are not conducive to welding during onsite bridge construction. Welding also destroys the original coating of steel parts, which necessitates repainting the joints. As a result, the construction of combined welded--bolted connections is very difficult for steel bridge joints that require onsite joining. Appropriate methods are required to shorten the bolted joint without reducing its strength. \par
+
+Second, as the length of the joint (defined as the spacing between the first and last fasteners in a joint) increases, the resistance that can bolt provide decreases to a value lower than the slip strength because the distribution of the bolts inside the joint becomes uneven. As the joint length increases with an increasing number of bolts in a line, the differential deformations in the main plate causes shear failure at the end bolts before all bolts can develop their full shearing strength. This ``unbuttoning'' phenomenon has been observed for all types of fasteners including rivets \cite{fisher1965behavior}. Bendigo et al.\cite{bendigo1963long} concluded that for longer connections, end bolts are sheared before all the bolts can develop their full shear strength. For short connections, the average shear stress is approximately 85\% that of a single bolt; however, for a 52.5 inch long connection, bolts only develop 60\% of their strength. Kamei et al. \cite{KAMEI2000} also showed that the serviceability limit strength decreases by approximately 2.5 $\%$ for each additional row.  Tan et al.\cite{Tan2022} considered that when the number of rows of bolts is more than 5, the force transmission ratio of the end bolt is 0.389.
+
+Owing to the above issues, specifications for long-bolted joints, such as AASHTO , Eurocode, as well as Japanese and Chinese, all provide a reduction factor based on the length of the bolted joint\cite{AASHTO2020,eccs1985,isohtb,eurocode3-21,douji2017}. Furthermore, owing to uneven load sharing, the bolts cannot simultaneously fracture, and the ultimate limit bearing capacity decreases \cite{Takai2021BoltUnbuttoning,Peng2013FeaDimensions,peng2010,longstainless2022}. 
+
+Considering the installation space requirements and strength problems associated with long-bolted joints, a rational compact joint must be developed to allow the use of fewer bolts to transmit more load, which could also improve the service limit capacity of the joints.
+
 \subsection{Technical Problem} %%todo , add the long bolted joint figure.
-Problems arise when utilizing long or large friction-type bolted joints as the joint length increases. Firstly, these excessively long bolted joints can cause interference with secondary members, such as stiffeners and diaphragms, located in close proximity to the joint. Therefore, it becomes necessary to reduce the joint length while maintaining the design strength. Typically, a friction-type bolted joint combined with a weld is employed to meet the design strength requirements of a joint. Previous studies have demonstrated the reliability and feasibility of friction-type bolted joints combined with welds \cite{solodov2021,Thomas2000,Chang2019361,KHANDEL2022107036}. Combinations of welded-bolted connections are sometimes utilized in steel structures to improve their strength. However, However, this combination methods is inefficient in terms of load bearing capacity enhancement, also the certain environments, such as those with limited space or requiring work at height, are not conducive to onsite welding during bridge construction. Additionally, welding destroys the original coating of steel parts, necessitating reapplication of the protective paint to the joints. Consequently, the construction of combined welded-bolted connections for steel bridge joints that require onsite joining becomes highly challenging. Thus, suitable approaches are required to reduce the length of bolted joints without compromising their strength.
+Problems arise when utilizing long or large friction-type bolted joints as the joint length increases. Firstly, these excessively long bolted joints can cause interference with secondary members, such as stiffeners and diaphragms, located in close proximity to the joint as shown in Fig. \ref{fig-boxhsbinter}. Therefore, it becomes necessary to reduce the joint length while maintaining the design strength. Typically, a friction-type bolted joint combined with a weld is employed to meet the design strength requirements of a joint. Previous studies have demonstrated the reliability and feasibility of friction-type bolted joints combined with welds \cite{solodov2021,Thomas2000,Chang2019361,KHANDEL2022107036}. Combinations of welded-bolted connections are sometimes utilized in steel structures to improve their strength. However, However, this combination methods is inefficient in terms of load bearing capacity enhancement, also the certain environments, such as those with limited space or requiring work at height, are not conducive to onsite welding during bridge construction. Additionally, welding destroys the original coating of steel parts, necessitating reapplication of the protective paint to the joints. Consequently, the construction of combined welded-bolted connections for steel bridge joints that require onsite joining becomes highly challenging. Thus, suitable approaches are required to reduce the length of bolted joints without compromising their strength.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{imgs//ch2/boxhsbinter.pdf}
+    \caption{Actual engineer case of the need of hybrid joint: the joint of box girder}
+    \label{fig-boxhsbinter}
+\end{figure}
 
 Second, as the length of the joint (defined as the spacing between the first and last fasteners in a joint) increases, the resistance that can bolt provide decreases to a value lower than the slip strength because the distribution of the bolts inside the joint becomes uneven. As the joint length increases with an increasing number of bolts in a line, the differential deformations in the main plate causes shear failure at the end bolts before all bolts can develop their full shearing strength. This "unbuttoning" phenomenon has been observed for all types of fasteners including rivets \cite{fisher1965behavior}. Bendigo et al.\cite{bendigo1963long} concluded that for longer connections, end bolts are sheared before all the bolts can develop their full shear strength. For short connections, the average shear stress is approximately 85\% that of a single bolt; however, for a 52.5 inch long connection, bolts only develop 60\% of their strength. Kamei et al. \cite{KAMEI2000} also showed that the serviceability limit strength decreases by approximately 2.5 $\%$ for each additional row.  Tan et al.\cite{Tan2022} considered that when the number of rows of bolts is more than 5, the force transmission ratio of the end bolt is 0.389.
 
-Owing to the above issues, specifications for long-bolted joints, such as AASHTO \cite{AASHTO2020}, Eurocode3 \cite{eurocode3}, as well as Japanese and Chinese, all provide a reduction factor based on the length of the bolted joint \cite{eccs1985,isohtb,douji2017}. Furthermore, owing to uneven load sharing, the bolts cannot simultaneously fracture, and the ultimate limit bearing capacity decreases \cite{Takai2021BoltUnbuttoning,Peng2013FeaDimensions,peng2010,longstainless2022}. 
+Owing to the above issues, specifications for long-bolted joints, such as AASHTO \cite{AASHTO2020}, Eurocode3 \cite{eurocode3-21}, as well as Japanese and Chinese, all provide a reduction factor based on the length of the bolted joint \cite{eccs1985,isohtb,douji2017}. Furthermore, owing to uneven load sharing, the bolts cannot simultaneously fracture, and the ultimate limit bearing capacity decreases \cite{Takai2021BoltUnbuttoning,Peng2013FeaDimensions,peng2010,longstainless2022}. 
 
 Considering the installation space requirements and strength problems associated with long-bolted joints, a rational compact joint must be developed to allow the use of fewer bolts to transmit more load, which could also improve the service limit capacity of the joints.
 
@@ -145,12 +161,7 @@ In summary, it can be expected that in the future bearing type bolts will be a f
 
 \subsection{Interference fit bolt}
 
-In Japan, a specialized high-strength bolt bearing type inteference fit bolt (\ac{IFHSB}) is present, as shown in Fig. \ref{fig-onebbolt}. 
-%todo！ 轴部有rib一般要求大于孔径，balabala，等要求
-
-Bearing-type bolts are widely employed for connecting steel bridge piers, owing to their substantial load-bearing capacity, which can accommodate large-scale earthquakes \cite{Guo20205}. Moreover, they can reduce the fatigue present in bolt holes, thereby increasing their fatigue strength. However, the stringent requirements for bolt-hole accuracy during the installation of bearing-type bolts make their use uncommon in other parts of the bridge.
-
-
+A specialized high-strength bolt for bearing-type connection (hereafter known as the Interference fit bolt) is present \cite{Kulak1988guide,bolt-bearing,Chen2023MechanicalConnections} as shown in Fig. \ref{fig-onebbolt}. The B10T grade interference fit bolts were used (courtesy of Kobelco Bolt, Ltd.) and meets the strength requirements of an F10T bolt according to the JIS-B1186 standard \cite{jis2018JIS}, which is equivalent to ASTM-A490 \cite{ASTM-bolt} \& Grade 10.9 \cite{ISO-bolt} and possesses the unique feature of an axially ribbed shank. When the bolt is hammered into a hole, the rib undergoes plastic deformation to ensure a tight fit and prevents excessive slipping. Interference fitting bolts are used to retrofit steel bridge piers that have fatigue damage or corrosion by attaching the patch plate \cite{Anami-bbolt-ate}. This is because initial imperfections or corrosion leads to uneven steel plate surfaces, making it impossible for the patch plate of the friction type bolted connection to effectively contact the steel surface and transmit force. And Interference fit bolts also can reduce the fatigue damage in bolt holes, and increasing their fatigue strength \cite{Guo20205}. However, interference fit bolts are rarely used on other bridge parts due to their stringent installation requirements. 
 
 \begin{figure}
     \centering
@@ -158,6 +169,8 @@ Bearing-type bolts are widely employed for connecting steel bridge piers, owing 
     \caption{Bearing-type Inteference fit bolt (M22, Diameter = 23.5mm), Made in Kobelco Bolt, Ltd.}
     \label{fig-onebbolt}
 \end{figure}
+
+Fig.\ref{fig-cs-b1} shows the cross-sectional diagram of the inteference fit bolt, The cross-sectional diagram was obtained from the hybrid joint that underwent a load of up to 1800kN. Revealing that the deformation of the rib on the non-bearing side is very small as observed in the magnified portion of bolt \#1 on the right side. It has been discovered that despite accurately drilled bolt holes, the interference fit of the rib is not behaving as expected, resulting in a small gap that directly impacts load transfer efficiency. The method of interference fit requires further exploration.
 
 \begin{figure}
     \centering
@@ -167,24 +180,22 @@ Bearing-type bolts are widely employed for connecting steel bridge piers, owing 
 \end{figure}
 
 
-
-
 \subsection{Resin injected bolt}
 
-Resin-injected bolts are fasteners in which the gap created by the clearance between the bolt and the wall of the hole is filled with a two-component resin as shown in \ref{fig-resinbolt}. They are an effective alternative for bolts fitted with high-strength friction grip bolts in shear connections where slip is not allowed. Injection bolts are a reliable and relatively low-cost option for repairing and improving existing structures \cite{gresnigt1996injbolt}. They are also being used successfully in constructing new structures. The clearance of an injection bolt is filled via a small hole in its head. Once the resin injection is complete and cures completely, the connection becomes slip-resistant. Bearing and shear of the bolt transfer the shear load. In addition, standard structural bolts can be used to fabricate injection bolts. The bolts and washers have been modified to facilitate the injection of resin. The recommendations of ECCS and the Eurocode3 \cite{eurocode3,EN14399}for executing steel structures establish the design and execution regulations for injection bolts.
+Resin-injected bolts are fasteners in which the gap created by the clearance between the bolt and the wall of the hole is filled with a two-component resin as shown in \ref{fig-resinbolt}. They are an effective alternative for bolts fitted with high-strength friction grip bolts in shear connections where slip is not allowed. Injection bolts are a reliable and relatively low-cost option for repairing and improving existing structures \cite{gresnigt1996injbolt}. They are also being used successfully in constructing new structures. The clearance of an injection bolt is filled via a small hole in its head. Once the resin injection is complete and cures completely, the connection becomes slip-resistant. Bearing and shear of the bolt transfer the shear load. In addition, standard structural bolts can be used to fabricate injection bolts. The bolts and washers have been modified to facilitate the injection of resin. The recommendations of ECCS and the Eurocode3 \cite{eurocode3-21,EN14399}for executing steel structures establish the design and execution regulations for injection bolts.
 
 This particular bolt is utilized and analyzed in Europe \cite{pedrosa2022injbolt-mec,kolstein2017injbolt-mec,pedrosa2020injbolt-fati,pedrosa2021injbolt-fati,gresnigt2000injtbolt-use,ungermann2023injbolt-mec}; however, there is no examination or usage of it in Asia. A small quantity of research exists regarding this bolt type within Japan \cite{fujino2010resbolt,Ryota2018resbolt}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.85\linewidth]{imgs//ch2/resin-bolt.jpg}
+    \includegraphics[width=0.75\linewidth]{imgs//ch2/resin-bolt.jpg}
     \caption{Sawed-through (resin) injection bolt connection \cite{Axel2017injbolt}}
     \label{fig-resinbolt}
 \end{figure}
 
-\subsection{Other: Mechanical bearing bolt(rivet)}
+\subsection{Other: Mechanical bearing blind rivet-bolt}
 
-The above two types of bolted connections have been used in actual steel construction, in addition to these two types of connection, this year Nakamoto et al. (2022) \cite{Nakamoto2022MBBRB} also proposed the mechanical bearing blind bolt (MBBRB), which can be installed on one side and transmits the load through the bearing force between the bolt and the wall of the bolt hole, as well as the friction force on the joint surface as shown in Figure \ref{fig-MBBRB}. The load-displacement relationship of the MBBRB is equivalent to that of the frictional joint using M22F8T up to the slip load. Therefore, the same service limit state can be applied to the MBBRB joint as to the frictional joint.
+The above two types of bolted connections have been used in actual steel construction, in addition to these two types of connection, this year Nakamoto et al. (2022) \cite{Nakamoto2022MBBRB} also proposed the \ac{MBBRB}, which can be installed on one side and transmits the load through the bearing force between the bolt and the wall of the bolt hole, as well as the friction force on the joint surface as shown in Figure \ref{fig-MBBRB}. The load-displacement relationship of the \ac{MBBRB} is equivalent to that of the frictional joint using M22F8T up to the slip load. Therefore, the same service limit state can be applied to the MBBRB joint as to the frictional joint.
 
 
 \begin{figure}
@@ -195,27 +206,26 @@ The above two types of bolted connections have been used in actual steel constru
 \end{figure}
 
 
-\begin{equation}
-F_{\mathrm{v}, \mathrm{Rd}}=\frac{\alpha_{\mathrm{v}} f_{\mathrm{ub}} A_{\mathrm{s}}}{\gamma_{\mathrm{M} 2}}
-\end{equation}
+% \begin{equation}
+% F_{\mathrm{v}, \mathrm{Rd}}=\frac{\alpha_{\mathrm{v}} f_{\mathrm{ub}} A_{\mathrm{s}}}{\gamma_{\mathrm{M} 2}}
+% \end{equation}
 
 \section{Hybrid joint}
 
-Joints are usually made of the same type of fastener, however, in some cases two fasteners with different load transmission mechanisms are assembled on the same joint, which is often referred to as a combination joint or hybrid joint as shown in Figure \ref{fig-schehyb}.
+Joints are usually made of the same type of fastener, however, in some cases two fasteners with different load transmission mechanisms are assembled on the same joint, which is often referred to as a combination joint or hybrid joint.
 
-The earliest research into hybrid joint was carried out after 1950, when high-strength bolts and welding technology became available. Due to the deterioration of riveted bridges, repair work was carried out on riveted connections, and high-strength bolts with better structural performance became one of the alternatives, but the prevailing view at the time was that connections with different mechanical load transfer mechanisms should not be combined, and, in addition, the prevailing research focused on discussing the performance of high-strength bolts and welds, and therefore research on hybrid joints progressed very slowly.
+The earliest research into hybrid joint was carried out after 1950, when high-strength bolts and welding technology became available as shown in Fig. \ref{fig-schehyb}. Due to the deterioration of riveted bridges, repair work was carried out on riveted connections, and high-strength bolts with better structural performance became one of the alternatives, but the prevailing view at the time was that connections with different mechanical load transfer mechanisms should not be combined, and, in addition, the prevailing research focused on discussing the performance of high-strength bolts and welds.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\linewidth]{imgs//ch2/hybrid-sche.pdf}
-    \caption{Schematic diagram of Double cover butt hybrid joint}
+    \caption{Schematic diagram of Double cover butt hybrid joint (Welding-fasteners)}
     \label{fig-schehyb}
 \end{figure}
 
-\section{Example of application of hybrid joint}
+\subsection{Example of application of hybrid joint}
 
-%高强螺栓和铆钉的混合接头在日本是比较常见的，由于腐蚀铆钉松动等原因
-
+Aging rivets need to be replaced due to factors such as corrosion of the rivet head and loosening of rivets caused by repeated loading. Despite the requirement for repairs and maintenance of riveted bridges, replacement of original rivets with new ones is not preferred due to the loss of riveting technology and poor constructability of the rivets. In Japan, the use of HSB to replace rivets and form hybrid joints is a common method. Although there are numerous issues that need to be addressed, such as determining the reliability of the slip coefficient of the faying surface and clarifying the mechanism of load transmission. Fig.\ref{fig-bridrivhsb} shows a riveted bridge that is undergoing repair with a mixture of rivets and high-strength bolts. Generally, the original rivets will be removed first, and depending on the situation, it will be chosen whether to replace the cover plate or not, and if necessary, some simple sandblasting and grinding will be performed on the connection surface in order to improve the slip coefficient of the connection surface, and finally the installation of high-strength bolts will be carried out.
 
 %
 \begin{figure}[ht]
@@ -225,45 +235,90 @@ The earliest research into hybrid joint was carried out after 1950, when high-st
     \label{fig-bridrivhsb}
 \end{figure}
 
-%This scenario may arise when reinforcing or fortifying an existing joint. For instance, it may be viable to replace several rivets with high-strength bolts. Alternatively, when there is limited space for additional fasteners, welds may be added to the joint. In both cases, the applied loads are transferred across a common shear plane using both types of fasteners. Combination joints that employ fasteners on a shared shear plane have the benefit of being compact. 
+On the other hand, interference fits bolt are also being examined as an alternative to rivets. Substituting the rivets with fasteners that are also transmit load by bearing would have been a more practical option. However, there have a serious problem is that when drilling out the rivets, the original rivet holes have to be slightly enlarged, making it difficult for the IFBs to produce an interference fit effectively. Additionally, due to the precision requirements of the IF bolts, it is challenging to employ them as substitutes for the rivets in fact engineering.
 
-%Reducing the required space and amount of splice material, welded connections can also assist in overcoming erection problems. Despite being generally more compact than bolted connections, fabrication tolerances for welding are more precise and demand careful consideration of component positioning and holding.  Bolted connections with regular hole clearance (1/16") enable some relative movement between the connected parts subsequent to the initial assembly, and before the final tightening of the bolts. Thus, it is more convenient to employ bolts to install a member in a frame. Once the member has been placed and aligned suitably, the bolts can be tightened. It is trouble-free to add welds to a connection after it has been first bolted into place (see Fig. 14.1a).
-%
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=1\linewidth]{imgs//ch2/boxhsbinter.pdf}
-    \caption{Actual engineer case of the need of hybrid joint: the joint of box girder}
-    \label{fig-boxhsbinter}
-\end{figure}
+When replacing rivets, it may be necessary to adjust the length of the joint to accommodate the possible addition of extra bolts to enhance its strength. However, the limited space within the bridge girder and the geometry of its components may render the installation of additional bolts impossible, the use of welds to increase the strength of the joint is usually considered in this case \cite{Thomas2000}.
+
+For riveted and welded joints, Bryla(1932)\cite{bryla1932Tests} conducted the first test of hybrid riveted and welded joints but considered only the ultimate strength of the joints. Consideration of riveted and welded fits from the point of view of ultimate strength only does not establish a factor of safety for the strength of the joints. More studies on load distribution followed by Sakurai(1951) \cite{sakurai1951Experimental}, discussing the effects of the construction sequence of riveted and welded joints as well as of the coefficients of the load distribution of riveted and welded joints.
+
+Welding and riveting can share a significant amount of load if handled properly, and the weld has sufficient stiffness and strength to transfer loads other than those originally shared by the rivet, and this type of reinforcement is considered effective \cite{young1934Relative,hiroshi2001Experimental,meier2000composite}. However, the reality is that in the case of old riveted bridges, the steel of the time contained more impurities, i.e. the steel of old riveted bridges is not suitable for welding, and due to the corrosion that often accompanies it, it is difficult to carry out high quality welding work in the field, which directly affects the tensile and fatigue strength of the weld, and therefore welding is not recommended for strengthening riveted bridges, except in special circumstances.
 
 \subsection{Rivet-HSB}
 
+The incorporation of high-strength bolts into a riveted connection yields various enhancements. In terms of a specific diameter, a high-strength bolt demonstrates superior shear strength compared to a rivet, thereby leading to an overall increase in the ultimate strength of the entire connection. Additionally, the inclusion of high-strength bolts contributes to an augmented stiffness in slip-resistant connections. In the event that slip resistance is surpassed, the presence of rivets, which possess narrower hole clearances relative to high-strength bolts, restricts the occurrence of slip in relation to a fully-bolted joint. Furthermore, research has substantiated that substituting rivets with high-strength bolts enhances the fatigue strength of the joint \cite{reemsnyder1975Fatigue}.
+
+\subsubsection{Mechanical behavior}
+
+Experiments conducted to assess the load-deformation characteristics of short bolted-riveted hybrid joints have revealed that the total resistance offered by the joint can be adequately estimated by summing up the individual resistances provided by the two different types of fasteners.
+
 Komatsu et al.\cite{KOMATSU2015} conducted tensile load tests and chemical tests on aged steel to understand its fundamental properties. Furthermore, tensile loading tests were performed on multi-bolted joints to investigate the replacement of rivets with HSB. The test results reveal that the load carrying capacity and deformability of the partially and fully replaced HSB. joints can be enhanced by introducing frictional resistance, compared to riveted joints alone.
+
+Fig.\ref{fig-hsbriv-fune} \cite{funahashi1967Experimental} and Fig.\ref{fig-hsbriv-stei} \cite{steinhardt1969-hybrid} show typical load versus deformation curves for welded, bolted, and riveted tension specimens. This figure indicates that high-strength bolted connections with normal hole clearance provide a very high initial stiffness up to the slip load of the connection. During slip, the deformations increase significantly until the bolts come into bearing. After the bolts are in bearing, the load versus deformation curve shows an increase in joint stiffness. Joint slip can be minimized by installing fitted bolts in matching drilled holes.
 
 \begin{figure}
     \centering
-\includegraphics[width=0.5\linewidth]{imgs//ch2/hsbrivet-1967-pd.png}
-    \caption{Relationship between load and deformation of Hybrid joint combined with 2 HSB and 2 rivet}
+\includegraphics[width=0.75\linewidth]{imgs//ch2/hsbrivet-1967-pd.png}
+    \caption{Relationship between load and deformation of Hybrid joint combined with 2 HSB and 2 rivet \cite{funahashi1967Experimental}}
     \label{fig-hsbriv-fune}
 \end{figure}
-\subsection{HSB-Weld}
 
-\subsection{HSB-IFB}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{imgs//ch2/hsbrive-1969.png}
+    \caption{Load versus deformation relationships for different fastening methods \cite{steinhardt1969-hybrid}}
+    \label{fig-hsbriv-stei}
+\end{figure}
 
-\label{sec-hsbweld}
+
+One limitation of high-strength bolted connections is their decreased deformation capacity. Welded connections do not experience slip, and the initial stiffness of the joint remains relatively constant until the ultimate load is reached. Based on the load-deformation relationships observed in typical fasteners, it can be inferred that the most suitable combination of fasteners is one that possesses compatible deformation characteristics. In this regard, the preferred combinations seem to be welds in conjunction with slip-resistant high-strength bolts, as well as rivets alongside bolts.
+
+Given that the joint strength of short combination joints is a sum of the strengths of individual fasteners, the specific arrangement of these fasteners within the combination joint becomes inconsequential. Consequently, both the outermost rivets and the rivets within the joint can be interchanged with high-strength bolts, as either arrangement results in a similar ultimate load. However, it should be noted that the location of fasteners does influence the joint strength, as observed in long riveted and bolted joints. In the case of long joints, the replacement of outermost rivets with high-strength bolts proves more effective in enhancing joint strength than replacing the same number of interior fasteners, primarily due to the phenomenon of "unbuttoning." The location of the bolts as well as the rivets configuration will be studied and explored as part of the research objectives of this study.
+
+\subsubsection{Fatigue strength}
+
+The research findings \cite{steinhardt1969-hybrid, reemsnyder1975Fatigue} demonstrated that substituting rivets with preloaded high-strength bolts in areas where cracking was observed or anticipated resulted in a fatigue life improvement ranging from two to six times. It is imperative to ensure the careful extraction of the rivets to be replaced and the accurate installation of the replacement bolts during the rehabilitation process to prevent the introduction of new mechanical flaws, such as burrs, nicks, and gouges. Furthermore, the tests indicated that if cracking is mitigated in the crucial region through rivet replacement, other less highly stressed areas may then become susceptible to becoming critical.
+
+
+\subsection{HSB-Weld} \label{sec-hsbweld}
 
 Adding Welds to Mechanically Fastened Joints Welded connections are rigid. Welded connections are stiff. Unlike snug-tightened bolted joints that may slip as they are loaded, welds are not expected to stretch and distribute the applied load to any great extent. In most cases, welds and bearing-type mechanical fasteners will not deform equally.
 
-When welds and mechanical fasteners are used together, load is transferred through the stiffer part; therefore, the weld can carry almost all the load, sharing little with the bolts. That is why caution needs to be taken when welds, bolts, and rivets are combined.Code Provisions. The issue of mixing mechanical fasteners and welds is addressed in AWS D1. 1:2000 Structural Welding Code—Steel. Provision 2.6.3 states that for rivets or bolts used in bearing-type connections (that is, when the bolt or rivet acts as a pin), the mechanical fasteners shouldn't be considered as sharing the load in combination with welds. If welds are used, they should be provided to carry the entire load in the connection. However, connections that are welded to one member and riveted or bolted to another are permitted.
+When welds and mechanical fasteners are used together, load is transferred through the stiffer part; therefore, the weld can carry almost all the load, sharing little with the bolts. That is why caution needs to be taken when welds, bolts, and rivets are combined.Code Provisions. The issue of mixing mechanical fasteners and welds is addressed in AWS D1. 1:2000 Structural Welding Code—Steel. Provision 2.6.3 states that for rivets or bolts used in bearing-type connections (that is, when the bolt or rivet acts as a pin), the mechanical fasteners should not be considered as sharing the load in combination with welds. If welds are used, they should be provided to carry the entire load in the connection. However, connections that are welded to one member and riveted or bolted to another are permitted.
+
+
+Holtz and Kulak (1970) \cite{holtz1970high} carried out a series of tests on combination joints. In these experiments, a double lap joint featuring both bolts and welds in the same shear plane was subjected to tension loading. They found that bolts carry only a limited amount of load at service loads (considered to be around 1/3 of ultimate load). They also observed that it is unreliable to predict the impact of friction when using pretensioned bolts. Moreover, bolts do not perform efficiently when combined with transverse welds due to the latter's limited ductility.
+
+
 
 %https://www.thefabricator.com/thefabricator/article/arcwelding/mixing-welds--bolts
 %https://pressbooks.bccampus.ca/powr4406/chapter/bolted-and-welded-joints/
 
-\section{Regulations and standards}
+\subsection{IFB-HSB}
 
-\subsection{Riveted joint}
 
-Shear resistance, per shear plane, Eurocode:
-\begin{equation}
-F_{\mathrm{v}, \mathrm{Rd}}=\frac{0,6 f_{\mathrm{ur}} A_0}{\gamma_{\mathrm{M} 2}}
-\end{equation}
+\section{Summarize for the issue of hybrid joint}
+
+During the reconstruction projects following the Second World War, the combined use of diverse connection methods with varying principles presented challenges. For instance, when reinforcing aging riveted structures by welding or partially replacing them with \ac{HSB}, difficulties arose. Joining components with combined different load transfer mechanism connection methods results in a non-stationary structure, making it difficult to accurately calculate the sharing of loads in the past. As a result, only one of the two types was considered valid for design purposes at the time, denying the cooperative actions expected from their combined use.
+
+The maintenance and repair of ageing riveted bridges is expected to face increasing challenges from now on. Bridges must achieve a compromise between suitable flexibility and rigidity. The addition of reinforcing elements to a completed bridge may upset this equilibrium and create problems. Consequently, post-construction reinforcement of a bridge may present a challenge by using hybrid connection.
+
+In addition, for new structural components, the rational use of hybrid joints can effectively improve the strength of the joints and shorten the length of the joints as much as possible, while meeting the required strength to make the joint compact.  However, unlike the reinforcement of an existing structural component, new structural components raise issues of structural stability, durability and strict requirements for allowable deformation, and require a series of tests before they can be installed.
+
+In summary, this work focuses on the following technical issues：
+
+\begin{itemize}
+    \item The primary technical challenge lies in the lack of understanding regarding the load transfer mechanism when combining connections with different mechanical principles.
+    \item To use hybrid joints effectively, it is essential to comprehend not only how the load gets transferred but also the optimal arrangement of fasteners. Different arrangements may produce different load transfer effects, so exploring the reasonable fastener arrangement scheme will be an important technical problem.
+    \item The stiffness of Friction connection and bearing connection are different. In the case of a friction connection, there will be a small elastic dislocation (slip) before occurrence, which is a different mechanical mechanism from the elastic deformation of a bearing connection. Exploring the deformation capacity of the bearing and friction combination is also an important technical subject.
+    \item After understanding the load transfer mechanism, strength and deformation performance of hybrid connections, it is necessary to define their limit states and to devise how to differentiate between the limit states and their corresponding strength equations.
+    
+\end{itemize}
+
+% \section{Regulations and standards}
+
+% \subsection{Riveted joint}
+
+% Shear resistance, per shear plane, Eurocode:
+% \begin{equation}
+% F_{\mathrm{v}, \mathrm{Rd}}=\frac{0,6 f_{\mathrm{ur}} A_0}{\gamma_{\mathrm{M} 2}}
+% \end{equation}

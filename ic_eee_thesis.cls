@@ -299,8 +299,8 @@
 \cleardoublepage % Do not change - required
 \RemoveLabels % Do not change - required
 \cleardoublepage\phantomsection
-\addcontentsline{toc}{chapter}{Conclusions}\mtcaddchapter 
-\chapter*{Conclusions}
+\addcontentsline{toc}{chapter}{Conclusions and Future research}\mtcaddchapter 
+\chapter*{Conclusions and Future research}
 \markboth{{CONCLUSIONS}}{CONCLUSIONS}
 \addtocounter{counter}{-1}
 % Edit the content of these files 
