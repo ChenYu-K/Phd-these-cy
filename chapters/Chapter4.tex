@@ -108,7 +108,7 @@ The bolt and rivet preloads were introduced in the analysis by setting up a refe
 
 For the rivet preload $N_r$ , the literature \cite{Heinemeyer2011TheConnections} reported that the rivet preload depends on the shaft length and that for rivets with a diameter of 22 mm, the rivet preload/rivet shaft yield strength ratio for a shaft length of 33 mm was 0.4 on average and the rivet preload/rivet shaft yield strength ratio for a shaft length of 75 mm was 0.7 on average. The rivet shaft force/rivet shaft yield strength ratio used in Bridge A was reported to be 0.7 on average. The average yield strength of the rivets used in Bridge A is assumed to be 295 MPa \cite{KOMATSU2015}, so rivet shaft forces of 45 $kN$ for a shaft length of 33 mm and 78.5 $kN$ for a shaft length of 75 mm were introduced.
  
-\subsection{Bearing resistance per Fastener}
+\subsection{Bearing resistance per Fastener}\label{ch4sec2-1}
 
 The bearing capacity, shear capacity and slip capacity per fastener are shown in Table \ref{ch4tab3}.
 
@@ -180,8 +180,7 @@ Therefore, this study proposes an improved bearing capacity as the design bearin
 
 where,$F_b.$ : bearing capacity by Hashimoto et al.,$F_bp$. : the improved bearing capacity proposed in this study, $n_b$: Number of high-strength bolts, $n_r$ Number of rivets, $N_b$: preload of high strength bolts. $N_r$ : preload of rivets. $\sigma_{yr}$ : Yield strength of rivet, $σ_y$ : Yield strength of the main plate, $t$ : thickness of the material to be joined, $d_r$: rivet shaft diameter.
 
-
-\section{analysis results}
+\section{Analysis results}
 
 \subsection{Limit states of use of joints in combination}
 
@@ -451,11 +450,92 @@ Table \ref{ch4tab4} shows that for the pure section yield-precedence type, the n
 
 For the bearing-precedence type, the difference between the analytical load Fa and the improved bearing capacity Fbp was small, with a maximum difference of 4.4\% and a minimum difference of 0.5\%. In the case of two high-strength bolts, there was no bias in plasticization around the hole due to the support pressure of the rivets, and the difference between the bearing load and the improved bearing capacity was the smallest.
 
+
+\section{Validation of FE model}
+
+To validate the FEM analysis used in this study, the authors conducted tensile tests on riveted joints cut out of a transverse girder of a riveted bridge that was more than 90 years old. The cut-out positions are shown in Fig. \ref{ch4figA1}.
+A total of three cases were set up: friction joint HTBall with all replaced by high-strength bolts, riveted support joint HTB0 and combined joint HTB1 with fastener position 1 as a high-strength bolt.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{imgs/ch4/figA1.pdf}
+    \caption{Cut out position of riveted joint (unit:mm) }
+    \label{ch4figA1}
+\end{figure}
+ 
+The dimensions of the analytical model and the introduced axial force of the high-strength bolt were the same as in the experiment. The friction coefficients of the contact surfaces were adjusted so that the sliding loads of the HTBalls matched. The boundary conditions in the analysis were the same as those shown in section \ref{ch4sec2-1}. The installation of the specimen is shown in Fig. \ref{ch4figA2}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{imgs/ch4/figA2.pdf}
+    \caption{Set-up for HTB1 case}
+    \label{ch4figA2}
+\end{figure}
+
+\subsection{Comparison of experimental and analytical results}
+
+The load and relative displacement relationships for HTBall, HTB0 and HTB1 are shown in Fig. \ref{ch4figA3}. The relative displacement between the contact plate and the welded material was measured at a position 10 mm from the gap in both the analysis and the experiment.
+Fig. \ref{ch4figA3} shows that the curves of the load-relative displacement relationship for the riveted HTB0 joints from the experiments and the analysis are almost identical. In HTB1, the initial stiffnesses of the two joints are almost identical up to a value of F / Fy = 0.8. However, there is a difference between the two after that point. This is thought to be due to the fact that in the experiment the slip capacity was exceeded, which resulted in minute slippage.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/ch4/figA3.pdf}
+    \caption{Relationship between load and replative displacement (compair experiment and FE analysis result)}
+    \label{ch4figA3}
+\end{figure}
+
+\subsection{Strain distribution in the joints}
+
+The strain distributions in the tensile direction on the kovar surface of the jointed material in the HTB0 and HTB1 cases are shown in Fig. \ref{ch4figA4} a and b respectively $(F / F_y = 0.6 and 1.0)$. The strain measurement positions are shown in Fig. \ref{ch4figA5}.
+Fig. \ref{ch4figA4} a and b show that the experimental and analytical strain distributions on the cobber surface of the jointed material at $F / F_y = 0.6$ are in good agreement for both HTB0 and HTB1.
+The experimental and analytical strain distributions at $F / F_y = 1$ showed a similar trend for both HTB0 and HTB1. However, the analytical results for HTB0 were smaller than the experimental results at ε1 to ε5. This may be because the actual secondary stiffness is smaller than $E/100$, although the material constitutive law in the analysis is a bilinear law with a secondary stiffness of$ E/100$ (E=200,000 MPa).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{imgs/ch4/figA4.pdf}
+    \caption{Strain distribution of main plate}
+    \label{ch4figA4}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{imgs/ch4/figA5.pdf}
+    \caption{Measuring position for the strain}
+    \label{ch4figA5}
+\end{figure}
+
+\subsection{Residual axial forces of the bolt}
+
+Fig. \ref{ch4figA6} and Fig. \ref{ch4figA7} show the relationship between experimental and analytical loads and bolt axial force survivability (bolt axial force/initial bolt axial force) for HTBall and HTB1 respectively. The axial force remaining ratio is the ratio of the bolt axial force to the pre-test value; HTB0 is excluded from the comparison because the rivet axial force could not be ascertained in the experiment.
+From Appendix Figs. 6 and 7, the changes in the remaining bolt axial force between the experiment and the analysis are in good agreement.
+
+\begin{figure}
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics[width=\linewidth]{imgs/ch4/figA6.pdf}
+    \caption{Changing of residual axial force of HTBall case}
+    \label{ch4figA6}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{imgs/ch4/figA7.pdf}
+    \caption{Changing of residual axial force of HTB1 case}
+    \label{ch4figA7}
+    \end{minipage}
+\end{figure}
+
+\subsection{Validation result}
+
+The load-relative displacement relationship and bolt axial force remaining ratio between the experimental and analytical results using the analytical model and method presented here are in good agreement. On the other hand, the strain distribution in the jointed material was in perfect agreement for$ F / F_y = 0.6$, but for $F / F_y = 1$ there was a slight deviation from the experimental data. However, the deviations were within 10%.
+In conclusion, it is considered possible to analytically evaluate the mechanical behaviour of combined joints with rivets and high-strength bolts using the analytical model and methods used in this study.
+
 \section{Summarize}
 
 In this study, the displacement of the joint, the load sharing of each fastener, and the stress properties of the main plate were used to clarify the load transfer mechanism of the combined riveted and high-strength bolted friction joints with preloads taken into account.
 
 The findings of this study are as follows.
+
 \begin{enumerate}
     \item In this study, we focused on the overall displacement of the joint and plastic deformation around the fastener hole, and defined the service limit state of the joint as the time when the load-overall displacement relationship begins to exhibit nonlinear behavior. It was found that the arrangement of the high-strength bolts had almost no effect on the service condition of the three-row joints.
 
