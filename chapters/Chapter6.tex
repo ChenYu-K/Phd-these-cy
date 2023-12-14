@@ -19,13 +19,13 @@ This study focuses on Interference fit bolts assembled at both ends of friction 
 
 \section{Interference fit bolt}
 
-A specialized high-strength bolt for bearing-type connection (hereafter known as the Interference fit bolt) is present \cite{Fisher2001,bolt-bearing,Chen2023MechanicalConnections} as shown in Fig. \ref{fig-onebbolt}. Interference fit bolts of B10T grade was utilized (courtesy of Kobelco Bolt, Ltd.) and meets the strength requirements of an F10T bolt according to the JIS-B1186 standard \cite{JISbolt}, which is equivalent to ASTM-A490 \cite{ASTM-bolt} \& Grade 10.9 \cite{ISO-bolt} and possesses the unique feature of an axially ribbed shank. When the bolt is hammered into a hole, the rib undergoes plastic deformation to ensure a tight fit and prevents excessive slipping. Interference fit bolts are employed for retrofitting steel bridge piers that have fatigue damage or corrosion by attaching the patch plate \cite{Anami-bbolt-ate}. This is because initial imperfections or corrosion leads to uneven steel plate surfaces, making it impossible for the patch plate of the friction type bolted connection to effectively contact the steel surface and transmit force. And Interference fit bolts also can reduce the fatigue damage in bolt holes, and increasing their fatigue strength \cite{Guo20205}. However, Interference fit bolts are rarely used on other bridge parts owing to their stringent installation requirements. 
+A specialized high-strength bolt for bearing-type connection (hereafter known as the Interference fit bolt) is present \cite{Fisher2001,bolt-bearing,Chen2023MechanicalConnections} as shown in Fig. \ref{ch6fig-onebbolt}. Interference fit bolts of B10T grade was utilized (courtesy of Kobelco Bolt, Ltd.) and meets the strength requirements of an F10T bolt according to the JIS-B1186 standard \cite{JISbolt}, which is equivalent to ASTM-A490 \cite{ASTM-bolt} \& Grade 10.9 \cite{ISO-bolt} and possesses the unique feature of an axially ribbed shank. When the bolt is hammered into a hole, the rib undergoes plastic deformation to ensure a tight fit and prevents excessive slipping. Interference fit bolts are employed for retrofitting steel bridge piers that have fatigue damage or corrosion by attaching the patch plate \cite{Anami-bbolt-ate}. This is because initial imperfections or corrosion leads to uneven steel plate surfaces, making it impossible for the patch plate of the friction type bolted connection to effectively contact the steel surface and transmit force. And Interference fit bolts also can reduce the fatigue damage in bolt holes, and increasing their fatigue strength \cite{Guo20205}. However, Interference fit bolts are rarely used on other bridge parts owing to their stringent installation requirements. 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{imgs/ch6/oneBbolt.png}
     \caption{Interference fit bolt for Bearing-type connection (M22, Diameter = 23.5mm, Courtesy of Kobelco Bolt, Ltd.)}
-    \label{fig-onebbolt}
+    \label{ch6fig-onebbolt}
 \end{figure}
 
 For bearing-type bolted connections, AASHTO LRFD BDS 2020 \cite{AASHTO2020} defines it as a strength limit state only for joints subjected to axial compression or joints on bracing members. Both Eurocode3 EN 1993-1-8:2021 \cite{eurocode3-21}and GB50017-2017 \cite{gb50017-2017}define that it should be designed in the same way as friction-type bolted connections, and define the serviceability limit state as slip resistance and the bearing resistance as the ultimate limit state. However, Eurocode 3 allows the bearing resistance of resin and slip resistance of injection bolts to be accumulated for design under the serviceability limit state, and Japanese's JSHB-2017 \cite{douji2017} states that bearing type bolted connections could be designed to meet serviceability limit state by bearing resistance. 
@@ -336,7 +336,7 @@ Eurocode 3 (EN 1993-1-8:2005) \cite{eurocode3-21} provisions that where the dist
     \beta_{Lf}=1-\frac{L_j - 15d}{200d}
 \end{equation}
 
-Japanease Specification for Highway Bridge (JSHB) \cite{douji2017} published by Japan Road Association states that when the number of row exceeds 8 in bolted joint, a reduction factor must be applied to the slip resistance, as shown in Table \ref{tab-jpredu}.
+Japanease Specification for Highway Bridge (JSHB) \cite{douji2017} published by Japan Road Association states that when the number of row exceeds 8 in bolted joint, a reduction factor must be applied to the slip resistance, as shown in Table \ref{ch6tab-jpredu}.
 \begin{table}[h]
     \centering
     \caption{Reduction of slip resistance of bolted joint of JSHB-JRA}
@@ -345,12 +345,12 @@ Japanease Specification for Highway Bridge (JSHB) \cite{douji2017} published by 
         Number of Row &  8 & 9 & 10 & 11 & 12 \\ \midrule
         Reduction factor & 1.00 & 0.98 & 0.96 & 0.94 & 0.92 \\ \bottomrule
     \end{tabular}
-    \label{tab-jpredu}
+    \label{ch6tab-jpredu}
 \end{table}
 
 Furthermore, due to the non-uniformity of load distribution, the bolts are unable to fracture simultaneously, consequently leading to a reduction in the ultimate limit bearing capacity.\cite{Takai2021BoltUnbuttoning,Peng2013FeaDimensions,peng2010}.
 
-Table \ref{tab-rera} presents the experimentally acquired slip loads $P_{s}$ of each case, along with their corresponding calculated slip resistance $F_{ds}$. It also shows the load reduction rate between the experimentally acquired slip loads $P_{s}$ and the calculated values $F_{ds}$. Eurocode 3 \cite{eurocode3-21} recommend that interference fit bolts should be designed by calculating slip resistance in the same way as HSB friction type connection. Slip resistance $F_{ds}$ is calculated from Equation \ref{eq-fds1} and slip load $P_s$ is the load when the first load drop occurred. The lengths of the Friction and Hybrid joint $L_j$ are both 495 mm (where $L_j$ is the distance between the centres of the end fasteners in a joint). The load reduction rate of the friction type reaches 0.79, which is lower than the values specified by Eurocode (calculated to be 0.92) and JHSB (calculated to be 0.96). It is inferred that this is due to the use of thick plate (50mm in main plate) in this experiment. Because the thick plate causes the bearing stress on the bolt to be uneven, the bolt will be more susceptible to bending deformation, resulting in loss of preload. While the Hybrid joints have a slip load reduction of 0.9, which is about 10\% higher than friction joints. The slip resistance reduction ratio for the hybrid joint without preload (Hybrid-NAF case) on the interference fit bolts was 0.92, which is approximately the same as for the hybrid joint. This is because regardless of the presence of preload in the interference fit bolt, the amount of slip until the load is increased is nearly the same for both cases. This depends on the gap in the bolt and hole wall and the plastic deformation of the rib. 
+Table \ref{tab-rera} presents the experimentally acquired slip loads $P_{s}$ of each case, along with their corresponding calculated slip resistance $F_{ds}$. It also shows the load reduction rate between the experimentally acquired slip loads $P_{s}$ and the calculated values $F_{ds}$. Eurocode 3 \cite{eurocode3-21} recommend that interference fit bolts should be designed by calculating slip resistance in the same way as HSB friction type connection. Slip resistance $F_{ds}$ is calculated from Equation \ref{eq-fds1ch6} and slip load $P_s$ is the load when the first load drop occurred. The lengths of the Friction and Hybrid joint $L_j$ are both 495 mm (where $L_j$ is the distance between the centres of the end fasteners in a joint). The load reduction rate of the friction type reaches 0.79, which is lower than the values specified by Eurocode (calculated to be 0.92) and JHSB (calculated to be 0.96). It is inferred that this is due to the use of thick plate (50mm in main plate) in this experiment. Because the thick plate causes the bearing stress on the bolt to be uneven, the bolt will be more susceptible to bending deformation, resulting in loss of preload. While the Hybrid joints have a slip load reduction of 0.9, which is about 10\% higher than friction joints. The slip resistance reduction ratio for the hybrid joint without preload (Hybrid-NAF case) on the interference fit bolts was 0.92, which is approximately the same as for the hybrid joint. This is because regardless of the presence of preload in the interference fit bolt, the amount of slip until the load is increased is nearly the same for both cases. This depends on the gap in the bolt and hole wall and the plastic deformation of the rib. 
 
 
 
@@ -368,7 +368,7 @@ Friction & 1362 & 1726 & 0.79 \\ \bottomrule
 \end{table}
 
 \begin{equation}
-    \label{eq-fds1}
+    \label{eq-fds1ch6}
     F_{ds} = \sum_n \mu \times N_0 \times m
 \end{equation}
 
