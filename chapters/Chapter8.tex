@@ -12,7 +12,7 @@
 
 \section{General conclusions}
 
-This study is separated into two parts. The initial part--\RN{1} entails repairing and enhancing aging riveted bridge through the replacement of damaged rivets with high-strength bolts (HSB) using a friction type connection. The second part-- \RN{2} discusses the use of hybrid joints in the construction of new bridges with HSB and interference fit bot (IFB), aim to enhance component strength in response to increased external live loads without enlarging the structure size. Finite element analysis, experimental and numerical analyses are carried out to elucidate the mechanical transfer mechanism of the hybrid joint, the load distribution of bearing and friction, and to propose reasonable fastener configurations methods, the strength calculation formula also is proposed.
+This study is separated into two parts. The initial part--\RN{1} entails repairing and enhancing aging riveted bridge through the replacement of damaged rivets with high-strength bolts (HSB) using a friction type connection. The second part-- \RN{2} discusses the use of hybrid joints in the construction of new bridges with HSB and interference fit bot (IFB), aim to enhance component strength in response to increased external live loads without enlarging the structure size. Finite element analysis, experimental and numerical analyses are carried out to elucidate the mechanical transfer mechanism of the hybrid joint, the load distribution of bearing and friction, and to propose reasonable fastener configurations methods, the strength calculation formula is also proposed.
 %and finally to propose a method to differentiate the limit states of the hybrid joint and to give the strength calculation formula.
 
 Based on the results of our investigation, we have made the following findings and conclusions. \par
@@ -56,19 +56,40 @@ Based on the results of our investigation, we have made the following findings a
 
 \item Long friction type bolted joint occurs at the major slip before the tensile force reaches the designed slip strength owing to the reduction in bolt preload and uneven load distribution. However, by arranging Interference body bolts at both ends of the friction type bolted joint (hybrid joint), the joint strength can be effectively augmented since Interference body bolts are unaffected by slip strength and generally have a higher bearing strength than slip strength. Hence, the hybrid joint could maintain the required strength while shortening the joint length.
 
+\item The hybrid joint has a small dispersion of the load sharing of each fastener compared to the friction type joint, suggesting that the uneven load distribution and deformation in the joint can be improved when the bearing type connections are properly installed. This allows the inner bolts of the hybrid joint to share more of the load compared to the friction joint for the same load level, reducing the load concentration on the outer fastener.
+
 \end{itemize}
 
-\textbf{Hybrid joint overall}
+
+
+\subsection*{Limit state of hybrid joint}
 
 \begin{itemize}
 
-\item The hybrid joint has a small dispersion of the data compared to the friction type joint, suggesting that the uneven load distribution and deformation in the joint can be improved when the bearing type connections are properly installed. This allows the inner bolts of the hybrid joint to share more of the load compared to the friction joint for the same load level, reducing the load concentration on the outer fastener.
+\item The service limit states can be categorized as: a.Shear yield limit state for fastener shaft $F_{hv}$, b. Bearing yield limit state for main plate $F_{hb}$, c. Net cross-section yield limit state $F_y$. The calculation equation shall taken as: 
 
-\item In a hybrid joint, the load is transferred by three processes: \RN{1} a friction transfer phase in which the load is transferred almost exclusively by friction up to a slip capacity, \RN{2} a combined transfer phase in which the load is transferred by bearing pressure and friction up to a bearing pressure load, and \RN{3} a plastic deformation phase in which the joint is plastically deformed afterwards. 
+\begin{table}[htbp]
+\centering
+\caption*{Calculate equation for hybrid joint on the SLS}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\multicolumn{3}{c}{Serviceability limit state}                                                  \\ \midrule
+\multicolumn{1}{c}{} & \begin{tabular}[c]{@{}c@{}}If b1 arranged \\ fastener for bearing\end{tabular} & \begin{tabular}[c]{@{}c@{}}If \\ not\end{tabular} \\ \cmidrule(l){2-3} 
+\begin{tabular}[c]{@{}l@{}}Shear yield resistance\\ for fastener shaft $F_{hv}$\end{tabular} &$(n_f+ \alpha_v(n_b-1)) F_s + \beta_{ls} n_b F_{vy1}$ & $(n_f+ \alpha_v n_b) F_s + \beta_{ls} n_b F_{vy1}$ \\
+\begin{tabular}[c]{@{}l@{}}Bearing yield resistance\\ for main plate $F_{hb}$ \end{tabular}   & $(n-1) F_s + \beta_{ls} n_b F_{by1}$ & $ n F_s + \beta_{ls} n_b F_{by1}$ \\
+\begin{tabular}[c]{@{}l@{}}Net cross-section yield\\ resistance $F_y$\end{tabular}   & \multicolumn{2}{c}{$ (w-d_0) t f_y$} \\ \bottomrule
+\end{tabular}
+\end{table}
 
-\item We present the SLS of hybrid joints as the bearing critical (fastener-shank shear yield or bearing yield of the plate) and net cross-section yield of the plate. The bearing strength can be calculated using Eq.\ref{eq-fdb} proposed in this study. Additionally, it is recommended that the joint is designed to undergo net cross-sectional failure rather than bearing failure. Bearing failure arises when the local stress on the joint exceeds the limit, leading to a lower load-bearing capacity than its corresponding theoretical value.
+\item In a hybrid joint, the load is transferred by three processes: \RN{1} a friction transfer phase in which the load is transferred almost exclusively by friction up to a slip capacity, \RN{2} a combined transfer phase in which the load is transferred by bearing  and friction up to serviceability limit state, and \RN{3} a plastic deformation phase in which the joint is plastically deformed afterwards. 
+
+\item Due to the shear yielding of the fasteners, the fastener shaft produces a gross cross-section plastic region and therefore the preload force is significantly reduced $\alpha_v$. In addition, for the front end of the joint, due to the influence of the additional bending moment, the connection plate produces a surface profile change and therefore gaps appear in the contact surfaces, which results in a loss of friction. In such cases, the friction resistance of the relevant fasteners should be reduced (in the case of \#1 fastener at the front end, the friction resistance should not be taken into account).
+
+\item For the calculation of bearing yielding or shear yielding, it is necessary to consider the reduction factor $\beta_{ls}$ due to the unevenness of the load sharing. As the joint proceeds to the second stage, it can be assumed that the friction of all fasteners is resisted, so the reduction factor for uneven load sharing is not need to considered. In addition, this reduction factor $\beta_{ls}$ actually replaces the reduction factor for long joints, and if this reduction factor is introduced into the calculation, it is not necessary to consider the reduction factor for long joints in the SLS resistance calculation.
 
 \end{itemize}
+
+
 
 
 
@@ -80,7 +101,7 @@ Based on the results of our investigation, we have made the following findings a
 
 \item Fatigue strength of hybrid joints
 
-The fatigue strengths of friction and bearing connections with high-strength bolts are different, so the fatigue strength of hybrid connections also needs to be discussed
+The fatigue strengths of friction and bearing connections with high-strength bolts are different, so the fatigue strength of hybrid connections also needs to be discussed.
 
 \item Long-term repeated loading of hybrid joints
 
@@ -93,5 +114,9 @@ Hybrid joints with different joint surfaces also need to be discussed because of
 \item Effect of and the dynamic friction
 
 So far the discussion on friction joints has been limited to the slip coefficient, i.e. the static friction coefficient, when calculating hybrid joints, the actual joints are in a state of dynamic friction, therefore the effect of dynamic friction on hybrid joints needs to be discussed in more depth, especially as the mechanism of static-dynamic friction changes for different connection surfaces.
-    
+
+\item Reduction factor for ultimate limit state.
+
+For the limit states, it is considered sufficient to follow the existing methods of strength calculation and classification. The only difference is that since all fasteners do not enter the bearing connection at the same time, fasteners that enter the bearing connection at the beginning may fail prematurely due to early entry into the bearing state, and therefore the strength of the limit states of the hybrid connection may be considered to require a reduction factor.
+
 \end{itemize}

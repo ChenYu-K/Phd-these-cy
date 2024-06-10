@@ -84,7 +84,7 @@ High-strength bolt &  F10T / B10T & & &  900 &  1091 \\ \bottomrule
 \end{tabular}}
 \end{table}
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{imgs/ch5/mat-pro.eps}
     \caption{Nominal stress - Nominal strain curves of materials}
@@ -115,7 +115,7 @@ The analysis results were almost identical to the test results. Because the anal
 
 For the hybrid joint, although the theoretically calculated value is the same as the analysis result, the verification of the mechanical behavior and failure mode of the hybrid joint will be conducted in a future study.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
@@ -184,6 +184,81 @@ R8B4 & \faGear & \faGear & \faCircleO & \faCircleO & \faCircleO & \faCircleO & \
 &&&\multicolumn{12}{r}{\faCircleO : High-strength hexagon bolt, \faGear : Interference-body bolt}
 \end{tabular}}
 \end{sidewaystable}
+
+
+The analytical cases are shown in Table \ref{tab-ch5fecase}. The parameters are the arrangement of bearing bolts and friction bolts and the presence or absence of axial force on the bearing bolts. The slip coefficient of -082 means 0.82.
+
+\begin{table}[]
+\centering
+\caption{ Summary of FE analysis case and the parameter of each case}
+\label{tab-ch5fecase}
+\scalebox{0.75}{
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+\multicolumn{1}{c}{Case Name} &
+  \begin{tabular}[c]{@{}c@{}}Thickness of\\ Main plate \\ $t $\\ $[mm]$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Yield strength\\of Main plate\\ $\sigma_y$\\ $[Mpa]$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Edge\\ Distance\\ $e_1$\\ $[mm]$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Spacing of\\ Bolt\\ $p$\\ $[mm]$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Number of \\ Bolt row\\ $N_b$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Number of\\ B-bolt\\ $N_{Bb}$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Preload of\\ B-bolt\\ $F_p$\\ $[kN]$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}$\beta$ \\ $F_{ds}/F_{dy}$\end{tabular} \\ \midrule
+R12-O          & 75 & 365 & 40 & 75 & 12 & 0  & 205 & 0.83 \\
+R12-B1\#1-NCF    & 75 & 365 & 40 & 75 & 12 & 1  & 0   & 0.76 \\
+R12-B1\#1        & 75 & 365 & 40 & 75 & 12 & 1  & 205 & 0.83 \\
+R12-B1\#6        & 75 & 365 & 40 & 75 & 12 & 1  & 205 & 0.83 \\
+R12-B1\#6-NCF    & 75 & 365 & 40 & 75 & 12 & 1  & 0   & 0.76 \\
+R12-B1\#12        & 75 & 365 & 40 & 75 & 12 & 1  & 205 & 0.83 \\
+R12-B2         & 75 & 365 & 40 & 75 & 12 & 2  & 205 & 0.83 \\
+R12-B2-NCF     & 75 & 365 & 40 & 75 & 12 & 1  & 0   & 0.76 \\
+R12-B4         & 75 & 365 & 40 & 75 & 12 & 4  & 205 & 0.83 \\
+R12-B4-NCF     & 75 & 365 & 40 & 75 & 12 & 4  & 0   & 0.55 \\
+R12-B12        & 75 & 365 & 40 & 75 & 12 & 12 & 205 & 0.83 \\
+R12-B12-NCF    & 75 & 365 & 40 & 75 & 12 & 12 & 0   & 0.83 \\
+               &    &     &    &    &    &    &     &      \\
+R12-O-t50-Bt1  & 50 & 420 & 40 & 75 & 12 & 0  & 205 & 1.08 \\
+R12-B2-t50-Bt1 & 50 & 420 & 40 & 75 & 12 & 2  & 205 & 1.08 \\
+R12-B4-t50-Bt1 & 50 & 420 & 40 & 75 & 12 & 4  & 205 & 1.08 \\
+R10-B2-t50-Bt1 & 50 & 420 & 40 & 75 & 12 & 2  & 205 & 0.9  \\
+R8-B2-t50-Bt1  & 50 & 420 & 40 & 75 & 12 & 2  & 205 & 0.72 \\
+               &    &     &    &    &    &    &     &      \\
+R12-O-p80   & 75 & 365 & 50 & 80 & 12 & 0  & 205 & 0.83 \\
+R12-B2-p80  & 75 & 365 & 50 & 80 & 12 & 2  & 205 & 0.83 \\
+R12-B4-p80  & 75 & 365 & 50 & 80 & 12 & 4  & 205 & 0.83 \\
+R12-O-p85   & 75 & 365 & 50 & 85 & 12 & 0  & 205 & 0.83 \\
+R12-B2-p85  & 75 & 365 & 50 & 85 & 12 & 2  & 205 & 0.83 \\
+R12-B4-p85  & 75 & 365 & 50 & 85 & 12 & 4  & 205 & 0.83 \\
+               &    &     &    &    &    &    &     &      \\
+R12-O-Bt05*   & 75 & 420 & 40 & 75 & 12 & 0  & 205 & 0.53 \\
+R12-O-p80Bt05* & 75 & 420 & 50 & 80 & 12 & 0  & 205 & 0.53 \\
+R12-O-p85Bt05* & 75 & 420 & 50 & 85 & 12 & 0  & 205 & 0.83 \\
+               &    &     &    &    &    &    &     &      \\
+R10-Or         & 75 & 365 & 40 & 75 & 10 & 2  & 205 & 0.69 \\
+R10-B2         & 75 & 365 & 40 & 75 & 10 & 2  & 205 & 0.69 \\
+R10-B4         & 75 & 365 & 40 & 75 & 10 & 4  & 205 & 0.69 \\
+R10-O-p80   & 75 & 365 & 50 & 80 & 10 & 4  & 205 & 0.69 \\
+R10-B2-p80  & 75 & 365 & 50 & 80 & 10 & 4  & 205 & 0.69 \\
+R10-B4-p80  & 75 & 365 & 50 & 80 & 10 & 4  & 205 & 0.69 \\
+R10-O-p85   & 75 & 365 & 50 & 85 & 10 & 2  & 205 & 0.69 \\
+R10-B2-p85  & 75 & 365 & 50 & 85 & 10 & 2  & 205 & 0.69 \\
+R10-B4-p85  & 75 & 365 & 50 & 85 & 10 & 4  & 205 & 0.69 \\
+               &    &     &    &    &    &    &     &      \\
+R10-B2-420     & 75 & 420 & 40 & 75 & 10 & 2  & 205 & 0.6  \\
+R10-B4-420     & 75 & 420 & 40 & 75 & 10 & 4  & 205 & 0.6  \\
+               &    &     &    &    &    &    &     &      \\
+R8-Or          & 75 & 365 & 40 & 75 & 8  & 2  & 205 & 0.55 \\
+R8-B2-082      & 75 & 365 & 40 & 75 & 8  & 2  & 205 & 0.55 \\
+R8-B4-082      & 75 & 365 & 40 & 75 & 8  & 4  & 205 & 0.55 \\
+R8-Or-p80   & 75 & 365 & 50 & 80 & 8  & 2  & 205 & 0.55 \\
+R8-B2-p80   & 75 & 365 & 50 & 80 & 8  & 2  & 205 & 0.55 \\
+R8-B4-p80   & 75 & 365 & 50 & 80 & 8  & 4  & 205 & 0.55 \\
+R8-Or-p85   & 75 & 365 & 50 & 85 & 8  & 2  & 205 & 0.55 \\
+R8-B2-p85   & 75 & 365 & 50 & 85 & 8  & 2  & 205 & 0.55 \\
+R8-B4-p85   & 75 & 365 & 50 & 85 & 8  & 4  & 205 & 0.55 \\ \bottomrule
+\end{tabular}}
+\clearpage
+\end{table}
 
 \subsection{Strength of the joint}
 The design strength of the original case (R12-O) is presented in Fig. \ref{tab-strength}. To investigate the load-sharing state and mechanical behavior of a single bolt, the load-carrying capacity (slip, bearing, and shear capacities) per bolt was calculated using Eqs. (\ref{eq-fds1}–\ref{eq-fdsy1}), and the design strength of the entire bolted joint is calculated using Eqs.(\ref{eq-fdy}–\ref{eq-fdsy}), respectively. \par
@@ -309,7 +384,7 @@ In addition, R10B2 and R8B2 exhibit almost the same slope change trend, as shown
 \label{fig-rdd}
 \end{figure}
 
-Figure \ref{fig-rdd} shows the relative displacement of the main and splice plate distribution at each bolt for the entire joint. Figure \ref{fig-f02rdd} shows the relative displacement distribution when the tensile force reaches a 0.2 mm slip load. Figure \ref{fig-fdsrdd} shows the relative displacement distribution when the tensile force reaches the design slip strength.
+Fig. \ref{fig-rdd} shows the relative displacement of the main and splice plate distribution at each bolt for the entire joint. Fig. \ref{fig-f02rdd} shows the relative displacement distribution when the tensile force reaches a 0.2 mm slip load. Fig. \ref{fig-fdsrdd} shows the relative displacement distribution when the tensile force reaches the design slip strength.
 
 Although the 0.2 mm slip load of hybrid joint R12B2 is 1.13 times higher than that of the slip-critical joint, the relative displacement distribution is approximately identical, as shown in Fig. \ref{fig-f02rdd}. This is because neither joint experienced major slip. Only elastic deformation occurred from the end of the joint to the center, and the load was primarily transmitted by friction. The hybrid joint can be designed similar to a slip-critical joint.
 
@@ -355,7 +430,7 @@ In addition, owing to the yielding of the net cross-section, the plate thickness
 \label{fig-load3d}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htbp][ht]
     \centering
     \includegraphics[width=0.95\linewidth]{imgs/ch5/how2cal-resis.pdf}
     \caption{Calculate method of friction / bearing resistance of each bolt}
@@ -387,7 +462,7 @@ In addition, owing to the yielding of the net cross-section, the plate thickness
 \label{fig-bshare}
 \end{figure}
 
-Figure \ref{fig-bshare} shows the load-share distribution of each bolt at the hybrid joint with SLS. where the blue bar represents High-strength hexagon bolt; purple bar represents Interference-body bolt. when the slip-critical joint (R12-O, R10-O) experienced major slip, the inner bolt (i.e., \#5 \#6, \#7 bolt in R12-O) could not develop the maximum friction they could resist (164 kN), and the resistance of the end bolt was also reduced by the deformation of the main plate. Therefore, a long slip-critical joint cannot reach the design slip strength. However, for a hybrid joint (e.g., R12B2), where the SLS is the bolt-shank shear yield or net cross-section yield, when the joint reaches SLS, all the inner High-strength hexagon bolt transmit almost the same amount of force (i.e., the maximum friction that they can resist). 
+Fig. \ref{fig-bshare} shows the load-share distribution of each bolt at the hybrid joint with SLS. where the blue bar represents High-strength hexagon bolt; purple bar represents Interference-body bolt. when the slip-critical joint (R12-O, R10-O) experienced major slip, the inner bolt (i.e., \#5 \#6, \#7 bolt in R12-O) could not develop the maximum friction they could resist (164 kN), and the resistance of the end bolt was also reduced by the deformation of the main plate. Therefore, a long slip-critical joint cannot reach the design slip strength. However, for a hybrid joint (e.g., R12B2), where the SLS is the bolt-shank shear yield or net cross-section yield, when the joint reaches SLS, all the inner High-strength hexagon bolt transmit almost the same amount of force (i.e., the maximum friction that they can resist). 
 
 Furthermore, Fig.\ref{fig-bshare} illustrates that when using only one Interference-body bolt at each end of the hybrid joint (i.e. R12b2, R10b2), the Interference-body bolt transmits too much tensile load compared to the High-strength hexagon bolt. This caused the bolt shank to shear yield ($F_{dsy1}$ = 450 kN) before the net cross-sectional yield of the joint occurred. However, using two Interference-body bolts at each end evenly distributes the tensile load between the two bolts, allowing the joint to maintain its elasticity before experiencing a net cross-sectional yield.
 
@@ -399,10 +474,50 @@ Furthermore, Fig.\ref{fig-bshare} illustrates that when using only one Interfere
     \label{fig-r10b24boltmises}
 \end{figure}
 
-Figure \ref{fig-r10b24boltmises} also shows the R10B4 and R10B2 case's von-Mises stress counter when tensile force equal to the bolt shear yield load for R8B2, end bolts' (\#1 and \#8) shear plane of R8B2 case occurs cross-section yield. For R8B4, the tensile forces originally concentrated on bolts \#1 and \#8 were distributed to the adjacent Interference-body bolts, resulting in a more even distribution of the bolt shear stresses and no yielding of the end Interference-body bolt.
+Fig. \ref{fig-r10b24boltmises} also shows the R10B4 and R10B2 case's von-Mises stress counter when tensile force equal to the bolt shear yield load for R8B2, end bolts' (\#1 and \#8) shear plane of R8B2 case occurs cross-section yield. For R8B4, the tensile forces originally concentrated on bolts \#1 and \#8 were distributed to the adjacent Interference-body bolts, resulting in a more even distribution of the bolt shear stresses and no yielding of the end Interference-body bolt.
 
 Based on the above results, we recommend the installation of only one Interference-body bolt at each end in practical engineering design. This is because the Interference-body bolt may experience local shear yield before the joint experiences a net cross-sectional yield, which would reduce the load-bearing capacity of the joint. Therefore, to prevent an excessive tensile load on a single bolt, it is necessary to use at least two Interference-body bolts at each end of a long hybrid joint.
 
+
+\subsubsection{Load sharing of the end bolt}
+
+The relationship between the load-bearing force of the bolt at the end (\#1) and the load made non-dimensional by the slip resistance $F_{ds}$ is shown in Fig. \ref{fig-load-non-1bs-alnon}. The relationship between the load/$F_{ds}$ and the resistance of each bolt / total load is shown in Fig. \ref{fig-load-1bs-alnon}. As shown in Fig. \ref{fig-load-non-1bs}, only the friction force of the R12-O bolt reaches its designed value at about 150 kN, causing localized slip in the friction joint. This is considered to be a reduction of preload due to $\beta$. All of cases, before $F_{ds1}$ is reached, the slope of the load sharing curves for the same number of rows of bolts coincides. This suggests that friction force is dominant for bearing type bolts before $F_{ds1}$ is reached. The slope of the load sharing curve changes around $F_{ds1}$, and the load is resisted by both friction and bearing. Fig. \ref{fig-load-1bs-alnon} shows a non-dimensionalized view of the load-sharing force of the bolts. Regardless of the number of rows, when the load is equal to the design slip resistance $F_{ds}$ for any of the hybrid joints, the \#1 bolts at the ends carry approximately 17\% of the load. In all cases except for the case where no preload is introduced, the load on the end bolts decreases after reaching 27\%.
+
+\begin{figure}
+\begin{minipage}[t]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{imgs/ch5/Load-non-1BS.eps}
+    \caption{Relationship between load with Nondimensionalization by design slip strength and the resistance of $\#1$ bolt}
+    \label{fig-load-non-1bs}
+\end{minipage}
+\hspace{0.01\textwidth}
+\begin{minipage}[t]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{imgs/ch5/Load-1BS-alnon.eps}
+    \caption{Relationship between load with Nondimensionalization by design slip strength and the resistance of \#1 bolt Nondimensionalization by load}
+    \label{fig-load-1bs-alnon}
+\end{minipage}
+\end{figure}
+
+\subsection{Reduction of the slip load}
+
+Fig. \ref{fig-bpreload-r8o} shows the friction resistance calculated from the actual preload of the bolt and the relationship between the load and the resisting force received by the \#1 bolt at the front end. The joint is elastically deformed by the tensile force due to the Poisson effect on the splice plate and the material to be jointed. As a result, the preload of the bolt also decreases, and the actual friction load is lower than the slip resistance $F_s$ calculated from the introduced preload $N$. Slip occurs when the resistance force of the bolts intersects the actual friction force. The greater the number of bolts, the greater the reduction in load when the main slip occurs in the joint.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{imgs/ch5/bpreload-r8o.eps}
+    \caption{The relationship between slip strength per Bolt(calculated by $N \times 2 \times 0.4$) and load (R8-O case)}
+    \label{fig-bpreload-r8o}
+\end{figure}
+
+The relationship between the rate of reduction of sliding load and joint length for each case is shown in Fig. \ref{fig-fdsredu} .R12-bt06-Hou plots the experimental results of previous studies. In the R12-O case, the relationship between the joint length and the rate of reduction of slip load is almost consistent with Eurocode's equation for reduction of slip load, which is below the equation for reduction of slip load in the R12-O case, because the $\beta$ of R12-O is 0.8, indicating the effect of net section yielding.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{imgs/ch5/F02-Fds-L-eq-new.eps}
+    \caption{The relation ship of Reduction of slip strength(the ratio of 0.2mm slip strength to design slip strength) and Joint length}
+    \label{fig-fdsredu}
+\end{figure}
 
 \subsection{Discussion of bearing critical of hybrid-bolted joint at SLS}
 
@@ -414,9 +529,9 @@ This analysis defined the bolt shear yield as when the von-Mises stress of the b
 
 Therefore, we present the SLS of the hybrid-bolted joint as the bearing critical (bolt-shank shear yield or bearing deformation of the plate) and net cross-sectional yield of the plate, as shown in Fig. \ref{fig-slsofhj}.
 
-Figure \ref{figc-R8B2slip} shows the deformation and von-Mises stress counter of R8B2 case, when the tensile load reached 2030 kN and the deformation was 2.7 mm, the deformation of the bolt shank was exceeded 1.5 mm (the clearance between bolt hole and High-strength hexagon bolt) and the shear plane of end-bolt shank occurs yield. So, it implies that the ``slip'' behavior of hybrid joint is produced by the plastic deformation of shear, we called bolt shear yield. However, as illustrated in Fig. \ref{fig-loadD}, since joint occurs the net cross-section yield, the curves of hybrid joints besides R8B2 and R10B2 cases were almost the same. Because the failure mode of each case was speculated to be cross-sectional failure, the slope of the curves after the slip converged. 
+Fig. \ref{figc-R8B2slip} shows the deformation and von-Mises stress counter of R8B2 case, when the tensile load reached 2030 kN and the deformation was 2.7 mm, the deformation of the bolt shank was exceeded 1.5 mm (the clearance between bolt hole and High-strength hexagon bolt) and the shear plane of end-bolt shank occurs yield. So, it implies that the ``slip'' behavior of hybrid joint is produced by the plastic deformation of shear, we called bolt shear yield. However, as illustrated in Fig. \ref{fig-loadD}, since joint occurs the net cross-section yield, the curves of hybrid joints besides R8B2 and R10B2 cases were almost the same. Because the failure mode of each case was speculated to be cross-sectional failure, the slope of the curves after the slip converged. 
 
-Figure \ref{fig-PSLS} shows the load of each case reaches the SLS. The blue bar represents the case where bolt shear yield occurred, the purple bar represents the case where slip occurred, and the orange bar represents the case where net cross-sectional yield occurred. For a joint with the same cross-section, the arrangement of Interference-body bolts affect the SLS of the joint. Hybrid joints with a small number of end-Interference-body bolts, such as R8B2, cause the end-bearing bolts to be transmitted to excessive resistance of one bolt, and bolt-shank section shear yielding occurs. Even if only one Interference-body bolt is arranged at each end of the shortened hybrid joint (e.g., R8B2), the hybrid joint can carry a load higher than the slip load of the R12-O slip-critical joint.
+Fig. \ref{fig-PSLS} shows the load of each case reaches the SLS. The blue bar represents the case where bolt shear yield occurred, the purple bar represents the case where slip occurred, and the orange bar represents the case where net cross-sectional yield occurred. For a joint with the same cross-section, the arrangement of Interference-body bolts affect the SLS of the joint. Hybrid joints with a small number of end-Interference-body bolts, such as R8B2, cause the end-bearing bolts to be transmitted to excessive resistance of one bolt, and bolt-shank section shear yielding occurs. Even if only one Interference-body bolt is arranged at each end of the shortened hybrid joint (e.g., R8B2), the hybrid joint can carry a load higher than the slip load of the R12-O slip-critical joint.
 
 \begin{figure}[htbp]
     \centering
@@ -439,7 +554,7 @@ Figure \ref{fig-PSLS} shows the load of each case reaches the SLS. The blue bar 
     \label{figc-R8B2slip}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.65\linewidth]{imgs/ch5/P-SLS.eps}
     \caption{Load when each case is at the SLS}
@@ -460,9 +575,24 @@ This equation calculates the slip strength of each High-strength hexagon bolt an
 
 In calculating the resistance of Interference-body bolts, we neglected their slip resistance, regardless of whether they were fastened with a preload. This assumption was made because Interference-body bolts resist tensile force through bearing or shear, and controlling the bolt preload can be difficult owing to the decreased preload. The plastic deformation of the bolt can be safely considered by ignoring the slip strength of the Interference-body bolt in equation.
 
+
+\subsection{Discussion the shear failure of the bolt on the ULS}
+
+Fig.\ref{fig-bshearr8} shows the Bolt shear stress when the load was reaches 3600kN, bolts for bearing type connection \#1,\#8 at both ends of B8-B2 and R8-B4, which entered the bearing state from the beginning and were subjected to high shear forces, have almost the same shear stress with R8-O. The ratio of the net section tensile strength to the shear strength of the bolts is 0.86. The ratio of the net cross-sectional ultimate strength to the shear resistance of the bolts is 0.86. The end bolts are subjected to higher shear stress than the middle bolts because of the uneven load distribution of the bolts. 
+
+All of this cases \# 1 end bolt was reached the shear ultimate stress in the shear plan cross-section of the bolt shaft.
+Although there are varying degrees of uneven load of each bolt, the friction connection (R8-o) case has more uniform shear sharing relative to the cases of R8-2 and R8-4, due to the fact that all the bolts of the friction connection start bearing at almost the same time as compared to the hybrid connection. It can be assumed that in the ultimate limit state of the hybrid connection, although the phenomenon of "unbuttoning" is more pronounced than in the case of the friction connection, the failure mode of the hybrid connection is shearing of the bolts at the ends, because the intermediate bolts have not yet failed in shear, and therefore there is still a high amount of preload (i.e., friction force) remaining, whereas a friction connection has almost no residual friction resistance when it fails in shear.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{imgs/ch5/bshear_R8.png}
+    \caption{Bolt shear stress when the load was reaches 3600kN (Deformation magnification: 2) }
+    \label{fig-bshearr8}
+\end{figure}
+
 \subsection{Validation of analysis}
 
-Figure \ref{fig-fdbpss} shows the relationship between analysis results $P_{ss}$ and design bearing yield strength $F_{dh}$ (calculated value) of the hybrid joint (R8 and R10 cases). The blue solid dot represents the analysis result $P_{ss}$ of the bearing shear yield, the red dashed line represents the calculated value $F_{dh}$, and the orange solid triangle represents the load when the net cross-section occurs. The calculated value is slightly lower than the analysis result, which is in line with our expected results, and the calculated values are within the safety range. The hybrid joint consists of four phases: Phase 1 (O-A) is the elastic deformation phase, Phase 2 (A-B) is the Interference body bolt shank shear plastic deformation phase, and Phase 3 (B-C) is the High-strength hexagon bolt entrance to the bearing-resistance phase. Phase 4 (C–) is the net cross-sectional plastic deformation of the main plate. 
+Fig. \ref{fig-fdbpss} shows the relationship between analysis results $P_{ss}$ and design bearing yield strength $F_{dh}$ (calculated value) of the hybrid joint (R8 and R10 cases). The blue solid dot represents the analysis result $P_{ss}$ of the bearing shear yield, the red dashed line represents the calculated value $F_{dh}$, and the orange solid triangle represents the load when the net cross-section occurs. The calculated value is slightly lower than the analysis result, which is in line with our expected results, and the calculated values are within the safety range. The hybrid joint consists of four phases: Phase 1 (O-A) is the elastic deformation phase, Phase 2 (A-B) is the Interference body bolt shank shear plastic deformation phase, and Phase 3 (B-C) is the High-strength bolt entrance to the bearing-resistance phase. Phase 4 (C–) is the net cross-sectional plastic deformation of the main plate. 
 
 \begin{figure}[htbp]
 \centering

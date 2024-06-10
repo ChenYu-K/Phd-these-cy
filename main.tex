@@ -13,13 +13,13 @@
 % You can add your packages below. Note that the following packages are already loaded: pgfcore, geometry, bookmark, graphicx, setspace, kantlipsum, fontspec, polygrossia (default English), minitoc, silence, background, xpatch, tikzpagenodes, totcount, fancyhdr, titlesec and the tikz libraries calc, shapes.symbols and shapes.misc  
 
 \usepackage[match]{luatexja-fontspec}
-\setmainjfont{TakaoMincho}
-\setsansjfont{TakaoGothic}
+%\setmainjfont{TakaoMincho}
+%\setsansjfont{TakaoGothic}
 \bibliographystyle{ieeetr} %elsiver
 \usepackage[figurename=Fig.,labelfont=bf,labelsep=period]{caption}
 \usepackage{subcaption}
 \usepackage{amsmath}
-
+%\usepackage{gensymb}
 \usepackage{amsfonts} 
 \usepackage{lmodern}
 \usepackage{notoccite}
@@ -28,6 +28,10 @@
 \usepackage{fontawesome}
 \usepackage[figuresright]{rotating}
 \usepackage{soul}
+\usepackage{academicons}
+\usepackage{orcidlink}
+\usepackage{ccicons}
+\usepackage{tabularx} 
 
 \hypersetup{
   colorlinks=true, % black，violet
@@ -59,7 +63,7 @@
 
 \setboolean{list_of_figures}{true} % false or true 
 \setboolean{list_of_tables}{false} % false or true 
-\setboolean{acknowledgement}{false} % false or true 
+\setboolean{acknowledgement}{true} % false or true 
 \setboolean{acronyms}{true} % false or true - 
 
 %%%%%%%%%%%%% END SETUP %%%%%%%%%%%%%%%
@@ -93,7 +97,7 @@
 \input{Chapter4.tex}
 \input{Chapter5.tex}
 \input{Chapter6.tex}
-%\input{Chapter7.tex}
+\input{Chapter7.tex}
 \input{Chapter8.tex}
 
 %\conclusions % Do not change - required
@@ -105,8 +109,10 @@
 % APPENDICES ARE OPTIONAL
 % COMMENT OUT BOTH LINES BELOW TO REMOVE THEM
 % ADD CHAPTERS TO ADD MULTIPLE APPENDICES
-%\appendix 
-%\input{AppendixA.tex}
+\appendix 
+\input{AppendixA.tex}
+\input{AppendixB.tex}
+\input{chapters/AppendixC}
 %\input{AppendixB.tex} % Example second appendix (need to create the file in "chapters")
 
 

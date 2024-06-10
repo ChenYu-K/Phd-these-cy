@@ -21,7 +21,7 @@ This study focuses on Interference fit bolts assembled at both ends of friction 
 
 A specialized high-strength bolt for bearing-type connection (hereafter known as the Interference fit bolt) is present \cite{Fisher2001,bolt-bearing,Chen2023MechanicalConnections} as shown in Fig. \ref{ch6fig-onebbolt}. Interference fit bolts of B10T grade was utilized (courtesy of Kobelco Bolt, Ltd.) and meets the strength requirements of an F10T bolt according to the JIS-B1186 standard \cite{JISbolt}, which is equivalent to ASTM-A490 \cite{ASTM-bolt} \& Grade 10.9 \cite{ISO-bolt} and possesses the unique feature of an axially ribbed shank. When the bolt is hammered into a hole, the rib undergoes plastic deformation to ensure a tight fit and prevents excessive slipping. Interference fit bolts are employed for retrofitting steel bridge piers that have fatigue damage or corrosion by attaching the patch plate \cite{Anami-bbolt-ate}. This is because initial imperfections or corrosion leads to uneven steel plate surfaces, making it impossible for the patch plate of the friction type bolted connection to effectively contact the steel surface and transmit force. And Interference fit bolts also can reduce the fatigue damage in bolt holes, and increasing their fatigue strength \cite{Guo20205}. However, Interference fit bolts are rarely used on other bridge parts owing to their stringent installation requirements. 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{imgs/ch6/oneBbolt.png}
     \caption{Interference fit bolt for Bearing-type connection (M22, Diameter = 23.5mm, Courtesy of Kobelco Bolt, Ltd.)}
@@ -32,12 +32,14 @@ For bearing-type bolted connections, AASHTO LRFD BDS 2020 \cite{AASHTO2020} defi
 
 
 \section{Experiment}
+
 \subsection{Material test}
+
 The material test specimens were prepared in accordance with JIS Z 2241 2011\cite{JIStest}. Material tests were conducted on three steel specimens of 50 mm and 28 mm thickness, respectively. The summary results are shown in Table \ref{tab-mtresult}. Plan view after material test as shown in Fig. \ref{fig-mt-1}. \par
 
-and the load-strain relationships for the 50 mm thickness specimens are shown in Figure \ref{fig-mt50-ls}
+and the load-strain relationships for the 50 mm thickness specimens are shown in Fig. \ref{fig-mt50-ls}
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{imgs/ch6/mt-1.jpg}
     \caption{Plan view after material test}
@@ -69,17 +71,87 @@ Poisson's ratio $v$ & - & 0.274 & - & 0.269 & - &- \\
 \end{tabular}
 \end{table}
 
+\subsection{Standard slip test for measurement the slip coefficient}
+
+The geometry of the standard slip test specimen is shown in Fig. \ref{fig-sliptest}, and the structural characteristics are shown in Table \ref{tab-sizeslip}. The geometry was prepared with reference to the high-strength bolt design, construction, and maintenance guidelines \cite{shishin2009}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{imgs/ch6/slip-test.pdf}
+    \caption{Shape of standard slip specimen}
+    \label{fig-sliptest}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Shape of standard slip specimen}
+\label{tab-sizeslip}
+\begin{tabular}{@{}cccccccccc@{}}
+\toprule
+ \begin{tabular}[c]{@{}c@{}}Bolt \\ grade\end{tabular}&
+  \begin{tabular}[c]{@{}c@{}}$d$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}$d_0$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Steel grade\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}$f_y$\end{tabular}　&
+  \begin{tabular}[c]{@{}c@{}} $t_m$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}$t_s$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}} $w$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}$e_1$\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}$p_1$\end{tabular} 
+  \\ \midrule
+F10T & 22 & 24.5 & SM490Y & 355 & 19 & 12 & 100 & 55 & 80
+\\ \bottomrule
+\end{tabular}
+\end{table}
+
+where, $t_m$ is the thickness of main plate, $t_s$ is the thickness of splice plate, $w$ is the width of mian plate, $e_1$ is the end distance from bolt hole, $p_1$ is the bolt spacing. 
+
+The test method for the standard slip test is shown below.
+
+\begin{enumerate}
+    \item The number of specimens shall be three. One side of the specimen is the test side and the other side is the fixed side. The bolts on the fixing side should be retightened by $10\%$ to prevent slippage at the test end. \\
+    The slip coefficient $\mu$ is calculated by the following equation.
+    \begin{equation}
+    \mu = \frac{P}{m\times n \times N}
+    \end{equation}
+    where $P$: slip load measured by slip test, $m$: number of joint faces (=2), $m$: number of bolts (=2), $N$: design bolt axial force
+    
+    \item The joint surface treatment shall be the same as that of the adopted joint.
+    In the 
+    \item test, tensile loading is performed while measuring the relative displacement between the main plate and splice plate, and if no clear slip occurs, the measured relative displacement is used to determine the slip load (here, the relative displacement is used to determine the slip load). (In this case, slip is determined when the relative displacement reaches 0.2 mm.)
+    \item The axial force introduced into the bolt is based on the standard axial force, and the test is conducted at least 12 hours after the bolt has been tightened, taking into account the effect of relaxation.
+\end{enumerate}
+
+The result of slip coefficient test as shown in table \ref{tab-slipcoef}, both the bolt preload and the slip coefficient have a low variation.
+
+\begin{table}[htbp]
+\centering
+\caption{Result of slip coefficient test}\label{tab-slipcoef}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+\multirow{2}{*}{Name} & \multicolumn{2}{c}{Preload} & \multirow{2}{*}{Slip load} & \multirow{2}{*}{Slip Coefficient} \\ \cmidrule(lr){2-3}
+ & Before loading & Avg. &  &  \\ \midrule
+\multirow{2}{*}{test-1} & 108.58 & \multirow{2}{*}{105.6} & \multirow{2}{*}{332.2} & \multirow{2}{*}{0.786} \\
+ & 102.74 &  &  &  \\
+\multirow{2}{*}{test-2} & 107.18 & \multirow{2}{*}{107.6} & \multirow{2}{*}{352.4} & \multirow{2}{*}{0.819} \\
+ & 108.42 &  &  &  \\
+\multirow{2}{*}{test-3} & 107.18 & \multirow{2}{*}{107.8} & \multirow{2}{*}{348.4} & \multirow{2}{*}{0.808} \\
+ & 108.42 &  &  &  \\
+Mean &  &  &  & 0.804 \\
+Standard Deviation &  &  &  & 0.017 \\ \bottomrule
+\end{tabular}
+\end{table}
 
 
 \subsection{Experiment detail}
 
-The experimental specimen dimensions shown in Figure \ref{fig-dimens} were selected based on previous research\cite{KAMEI2000} on the investigation results of an actual bridge. The commonly occurring single-row 10-column arrangement was used as a reference. To investigate the mechanical behavior of slip and bearing of the joints, $\beta$ is set to 0.65 to prevent the joints from being affected by the cross-sectional yield of the main plate before slip.
+The experimental specimen dimensions shown in Fig. \ref{fig-dimens} were selected based on previous research\cite{KAMEI2000} on the investigation results of an actual bridge. The commonly occurring single-row 10-column arrangement was used as a reference. To investigate the mechanical behavior of slip and bearing of the joints, $\beta$ is set to 0.65 to prevent the joints from being affected by the cross-sectional yield of the main plate before slip.
 
-The specimens were subjected to loading using a hydraulic universal testing machine with a capacity of 2000kN (provided by Tokyo Testing Machine Co. Ltd.). Considering the testing machine's loading capacity, the specimen was scaled down to a size of 16/22. Static uniaxial tension testing was conducted. The loading rate was set to 1 kN/s until either the test machine capacity was reached or failure occurred in the net cross section of plate or shear of the bolt. The loading device is depicted in Figure \ref{fig-setup}.
+The specimens were subjected to loading using a hydraulic universal testing machine with a capacity of 2000kN (provided by Tokyo Testing Machine Co. Ltd.). Considering the testing machine's loading capacity, the specimen was scaled down to a size of 16/22. Static uniaxial tension testing was conducted. The loading rate was set to 1 kN/s until either the test machine capacity was reached or failure occurred in the net cross section of plate or shear of the bolt. The loading device is depicted in Fig. \ref{fig-setup}.
 
-Figure \ref{fig-mealoc} shows the locations where the relative displacement, joint deformatioin, and strain are measured. Clip displacement gauges are used to measure relative displacement. Joint deformation is measured using an LVDT. Strain is measured using a strain gauge and a camera. Additionally, random patterns are applied to the side-2 of joint to capture the strain and displacement on the lateral side of the joint using \ac{DIC} method. Validation of \ac{DIC} methods as shown in Fig. \ref{fig-dicresult}.
+Fig. \ref{fig-mealoc} shows the locations where the relative displacement, joint deformatioin, and strain are measured. Clip displacement gauges are used to measure relative displacement. Joint deformation is measured using an LVDT. Strain is measured using a strain gauge and a camera. Additionally, random patterns are applied to the side-2 of joint to capture the strain and displacement on the lateral side of the joint using \ac{DIC} method. Validation of \ac{DIC} methods as shown in Fig. \ref{fig-dicresult}.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.4\textwidth]{imgs/ch6/DIC-RESULT.jpg}
     \caption{DIC-result}
@@ -96,7 +168,7 @@ According to JSHB\cite{douji2017}, the joint surface is coated with inorganic zi
     \label{fig-dimens}
 \end{figure*}
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.25\textwidth]{imgs/ch6/set-up.jpg}
     \caption{Experiment Set-up}
@@ -144,7 +216,7 @@ The hole creation method involved drilling a pilot hole that is 1mm smaller than
 
 The results showed that when the bolt hole is 23.6mm, the bolt can easily pass through the hole without achieving an interference fit. When the bolt hole is 23.5mm, it is not possible to insert the bolt into the hole by hand, but a hammer can be used with less force to install the bolt into the hole. When the bolt hole is 23.2mm, a significant amount of force is required to hammer the bolt into the hole.
 
-Figure \ref{fig-bcrossec} shows the cross-section of the bolt and the test plate. In both the 23.5mm and 23.2mm diameter holes, it can be observed that the ribs of the bolt have undergone plastic deformation, resulting in an interference fit. Figure \ref{fig-bcrossec} reveals that the degree of deformation is more significant in the bolt shaft ribs and the hole wall of the test piece with the 23.2mm diameter hole. In order to achieve a better interference fit for the bolt, the diameter of the bolt hole for the Interference fit bolt used in this experiment was set to 23.2mm.
+Fig. \ref{fig-bcrossec} shows the cross-section of the bolt and the test plate. In both the 23.5mm and 23.2mm diameter holes, it can be observed that the ribs of the bolt have undergone plastic deformation, resulting in an interference fit. Fig. \ref{fig-bcrossec} reveals that the degree of deformation is more significant in the bolt shaft ribs and the hole wall of the test piece with the 23.2mm diameter hole. In order to achieve a better interference fit for the bolt, the diameter of the bolt hole for the Interference fit bolt used in this experiment was set to 23.2mm.
 
 
 \begin{figure*}
@@ -168,13 +240,13 @@ Figure \ref{fig-bcrossec} shows the cross-section of the bolt and the test plate
 
 \subsection{Deformation and relative displacement}
 
-Figure \ref{fig-loaddisp} shows the relationship between the load and the whole deformation of the joint. Clear slippage occurred at the friction type joint at 1361 kN, with the load decreasing to approximately 1048 kN (a change rate of approximately 23\%). The overall deformation of the joint increased from 3.7 mm to 6.5 mm, (a change rate of approximately 75\%). For the hybrid joint, slippage occurred when the load reached 1456 kN, and the load decreased from 1456 to 1407 kN (a change rate of approximately 3\%). As for the joint deformation, it decreased from 3.955 mm to 3.989 mm (a change rate of only approximately 0.8\%). The overall load-deformation relationship of the hybrid joint remains quasi-linear up to the upper load limit of 1800 kN, although a minor amount of slip occurs, and there have only 1mm minor residual deformation. In addition, for the Hybrid-NAF case, compare to the hybrid case besides a slight decrease in the initial slope and a minor reduction in the slippage load, the trend of the curve is not significantly different.
+Fig. \ref{fig-loaddisp} shows the relationship between the load and the whole deformation of the joint. Clear slippage occurred at the friction type joint at 1361 kN, with the load decreasing to approximately 1048 kN (a change rate of approximately 23\%). The overall deformation of the joint increased from 3.7 mm to 6.5 mm, (a change rate of approximately 75\%). For the hybrid joint, slippage occurred when the load reached 1456 kN, and the load decreased from 1456 to 1407 kN (a change rate of approximately 3\%). As for the joint deformation, it decreased from 3.955 mm to 3.989 mm (a change rate of only approximately 0.8\%). The overall load-deformation relationship of the hybrid joint remains quasi-linear up to the upper load limit of 1800 kN, although a minor amount of slip occurs, and there have only 1mm minor residual deformation. In addition, for the Hybrid-NAF case, compare to the hybrid case besides a slight decrease in the initial slope and a minor reduction in the slippage load, the trend of the curve is not significantly different.
 
-Figure \ref{fig-rd10} shows the relationship between load and relative displacement at a distance of 10 mm from the end of main plate(CDT-6). Similar to the overall deformation figure, significant slippage occurred at the friction joint, with relative displacement increasing from 0.163 to 1.632 (an increase of approximately 900\%). As for the hybrid joint, the relative displacement increased from 0.184 to 0.342 (an increase of approximately 85\%). The hybrid joint exhibits a small amount of slippage similar to the results of previous studies\cite{kamei2010} on experiment of individual interference-fit bolts. This is due to the existence of small clearance between the bolt hole wall and the rib of the Interference fit bolt, resulting in inevitable slight slippage. The slip load of hybrid joints is 7\% higher than that of friction joint joints.
+Fig. \ref{fig-rd10} shows the relationship between load and relative displacement at a distance of 10 mm from the end of main plate(CDT-6). Similar to the overall deformation figure, significant slippage occurred at the friction joint, with relative displacement increasing from 0.163 to 1.632 (an increase of approximately 900\%). As for the hybrid joint, the relative displacement increased from 0.184 to 0.342 (an increase of approximately 85\%). The hybrid joint exhibits a small amount of slippage similar to the results of previous studies\cite{kamei2010} on experiment of individual interference-fit bolts. This is due to the existence of small clearance between the bolt hole wall and the rib of the Interference fit bolt, resulting in inevitable slight slippage. The slip load of hybrid joints is 7\% higher than that of friction joint joints.
 
 The value of slip load reduction and the slippage was summarized in Table \ref{tab-sumld}.
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
     \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\linewidth]{imgs/ch6/load-disp-cor.eps}
@@ -220,13 +292,13 @@ Hybrid-NAF & 0.146 & 0.327 & 0.181 & +124\% \\
 
 \subsection{Bolt preload}
 
-Figure \ref{fig-laf} shows the relationship between bolt preload reduction ratio and load of each bolt, the bolt preload reduction ratio is calculated by $N/N_0$, where $N$ is real-time bolt preload, and $N_0$ is the bolt preload before loading. 
+Fig. \ref{fig-laf} shows the relationship between bolt preload reduction ratio and load of each bolt, the bolt preload reduction ratio is calculated by $N/N_0$, where $N$ is real-time bolt preload, and $N_0$ is the bolt preload before loading. 
 
-For the Friction joint, the most significant decrease in bolt preload occurred on bolt \#10, where the preload dropped to about 90\% when slip occurred (1361kN) as shown in Figure \ref{fig-laff}. This is a 5\% difference compared to bolt \#6, which had the smallest decrease in preload.  The main reason for the significant reduction in preload at bolt \#10 is that the deformation of the splice plate at bolt \#10 is greater than that of the main plate at bolt \#1. Although the main plate had a larger net cross-sectional than the splice plate, considering the 1.1 times stress enhancement due to friction on the net cross-section of the main plate, the stress at the net cross-section of the splice plate would be almost the same as the main plate when subjected to the same tension. Moreover, it was found that the direct strain at bolt \# 10 of splice plate is greater than the strain at bolt \# 1 of main plate. Furthermore, apart from bolt \# 1, the preload of the other bolts have not decreased uniformly, with an approximate variation of 2\%. After 1361 kN was reached, a severe impact occurred due to the large slip that occurred in the joint and the momentary transition of the joint from a sliding to a bearing state, as a result, all strain gauges on the bolts were damaged and it was not possible to obtain bolt preload data.
+For the Friction joint, the most significant decrease in bolt preload occurred on bolt \#10, where the preload dropped to about 90\% when slip occurred (1361kN) as shown in Fig. \ref{fig-laff}. This is a 5\% difference compared to bolt \#6, which had the smallest decrease in preload.  The main reason for the significant reduction in preload at bolt \#10 is that the deformation of the splice plate at bolt \#10 is greater than that of the main plate at bolt \#1. Although the main plate had a larger net cross-sectional than the splice plate, considering the 1.1 times stress enhancement due to friction on the net cross-section of the main plate, the stress at the net cross-section of the splice plate would be almost the same as the main plate when subjected to the same tension. Moreover, it was found that the direct strain at bolt \# 10 of splice plate is greater than the strain at bolt \# 1 of main plate. Furthermore, apart from bolt \# 1, the preload of the other bolts have not decreased uniformly, with an approximate variation of 2\%. After 1361 kN was reached, a severe impact occurred due to the large slip that occurred in the joint and the momentary transition of the joint from a sliding to a bearing state, as a result, all strain gauges on the bolts were damaged and it was not possible to obtain bolt preload data.
 
-For the hybrid joint as shown in Figure \ref{fig-lafhy} , an observation was made that, at the load of 1361kN, there was a uniform distribution of bolt reduction ratio with a variation of around 1\% when compared to the friction type joint. Although we did not measure preload for the interference fit bolt, based on the data from HSB, we posit that the hybrid joint's load distribution is more uniform in comparison to the friction joint. Moreover, in the event that slip occurs at the joint, the variance of each bolt's preload is not significant, even after reaching 1456kN. When load reached 1800kN, the maximum reduction ratio in preload variation is only 6\%. Therefore, it can be considered that the load distribution of hybrid joints is more uniform and the load transmission is smoother than that of friction joints.
+For the hybrid joint as shown in Fig. \ref{fig-lafhy} , an observation was made that, at the load of 1361kN, there was a uniform distribution of bolt reduction ratio with a variation of around 1\% when compared to the friction type joint. Although we did not measure preload for the interference fit bolt, based on the data from HSB, we posit that the hybrid joint's load distribution is more uniform in comparison to the friction joint. Moreover, in the event that slip occurs at the joint, the variance of each bolt's preload is not significant, even after reaching 1456kN. When load reached 1800kN, the maximum reduction ratio in preload variation is only 6\%. Therefore, it can be considered that the load distribution of hybrid joints is more uniform and the load transmission is smoother than that of friction joints.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[t]{0.7\textwidth}
     \centering
@@ -241,17 +313,17 @@ For the hybrid joint as shown in Figure \ref{fig-lafhy} , an observation was mad
     \caption{Hybrid joint }
     \label{fig-lafhy}
     \end{subfigure}
-    \caption{The relationship between Bolt preload reduction ratio and load of each bolt. todo figure laff delate the [\%]}
+    \caption{The relationship between Bolt preload reduction ratio and load of each bolt. [\%]}
     \label{fig-laf}
 \end{figure}
 
 \subsection{Distribution of relative displacement}
 
-The Distribution of relative displacement (When load = 0.8$F_{sf}$ = 1088kN, while $F_{sf}$ is Friction type joint slip load) is as shown in Figure \ref{fig-rdbar}. Green bar represents the friction joint and the orange bar represents the hybrid joint. For the positions RD-1 and RD-2 at the ends of the joint, the relative displacement of the hybrid joint is significantly lower in comparison to the friction type joint. This low relative displacement can be attributed to the interference fit of the bolts \# 1 and \# 2, making it more difficult to generate relative displacement when the elastic slip stage is nearing its end. However, at the other end of the hybrid joint, at interference fit bolts \# 9 and \# 10, the relative displacement at RD8, 9 and 10 is actually higher than that of the friction type joint.It is speculated that the higher relative displacement observed at bolts \#9 and \#10 may be attributed to a suboptimal interference fit.
+The Distribution of relative displacement (When load = 0.8$F_{sf}$ = 1088kN, while $F_{sf}$ is Friction type joint slip load) is as shown in Fig. \ref{fig-rdbar}. Green bar represents the friction joint and the orange bar represents the hybrid joint. For the positions RD-1 and RD-2 at the ends of the joint, the relative displacement of the hybrid joint is significantly lower in comparison to the friction type joint. This low relative displacement can be attributed to the interference fit of the bolts \# 1 and \# 2, making it more difficult to generate relative displacement when the elastic slip stage is nearing its end. However, at the other end of the hybrid joint, at interference fit bolts \# 9 and \# 10, the relative displacement at RD8, 9 and 10 is actually higher than that of the friction type joint.It is speculated that the higher relative displacement observed at bolts \#9 and \#10 may be attributed to a suboptimal interference fit.
 
 In addition, the hybrid joint has a more uniform distribution of relative displacement compared to the friction joint. This finding is consistent with the results discussed in section 3.3 regarding the distribution of bolt preload reduction. As a result, it can be inferred that the hybrid joint demonstrates a more uniform load distribution mechanism. The load sharing mechanism discussed in this paper is also similar to the analytical discussions found in previous studies \cite{Chen2023MechanicalConnections}.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{imgs/ch6/RD-bar.eps}
     \caption{Distribution of Relative displacement (When load = 0.8$F_{sf}$ = 1088kN, while $F_{sf}$ is Friction type joint slip load) }
@@ -260,13 +332,13 @@ In addition, the hybrid joint has a more uniform distribution of relative displa
 
 \subsection{Strain of the plate}
 
-The Relationship between Load and strain are shown in Figure \ref{fig-LS}, Where the measurement position are shown in Figure \ref{fig-mealoc}. Figure \ref{fig-s1ss2} shows the S1 and SS2 strain of the end of friction type joint, it is evident that the strain SS2 on the inner side of the splice plate has a steeper slope than S1 of the main plate. This indicates that the inner side of the splice plate undergoes a greater deformation in the tensile direction (referred to as the y-direction) compared to the main plate under the same load. Consequently, the deformation ($0.3\delta_y$) of the splice plate perpendicular to the tensile direction (x-direction) also increases. The deformation of the splice plate in the x-direction (i.e. the reduction in thickness) directly leads to a decrease in the bolt preload. This is because the deformation of the main plate at S1 is suppressed and part of the load is transferred to the splice plate by interfacial friction, causing the deformation of the splice plate at SS2 to be slightly greater than that of the main plate at S1. This also explains why the bolt preload decreased faster for the inner bolt \# 10 than for the outer bolt \# 1.
+The Relationship between Load and strain are shown in Fig. \ref{fig-LS}, Where the measurement position are shown in Fig. \ref{fig-mealoc}. Fig. \ref{fig-s1ss2} shows the S1 and SS2 strain of the end of friction type joint, it is evident that the strain SS2 on the inner side of the splice plate has a steeper slope than S1 of the main plate. This indicates that the inner side of the splice plate undergoes a greater deformation in the tensile direction (referred to as the y-direction) compared to the main plate under the same load. Consequently, the deformation ($0.3\delta_y$) of the splice plate perpendicular to the tensile direction (x-direction) also increases. The deformation of the splice plate in the x-direction (i.e. the reduction in thickness) directly leads to a decrease in the bolt preload. This is because the deformation of the main plate at S1 is suppressed and part of the load is transferred to the splice plate by interfacial friction, causing the deformation of the splice plate at SS2 to be slightly greater than that of the main plate at S1. This also explains why the bolt preload decreased faster for the inner bolt \# 10 than for the outer bolt \# 1.
 
 Compared to the friction joint, the hybrid joint exhibited higher slope of direct strain S1 and load. At 1456 kN, there was a minor slip, resulting in a slight change in slope. However, the strain remained quasi-linear until reaching the maximum load of 1800 kN. In contrast, for the friction joint, non-linear behavior was observed at around 800 kN, possibly due to uneven load distribution, reaching the limit of the end bolts' slip resistance. Due to the reduction in bolt preload, the slip resistance capacity decreases as the load increases until slip occurs.
 
 Furthermore, focus on direct strain at position S3 that has already transmitted a portion of the load through bolt \# 1; this non-linear behavior becomes more evident and there is some residual strain after unloading. Nevertheless, there is no discernible non-linear behavior in the hybrid joint. The slop decreases only slightly during slip and after unloading, remains linear without the presence of residual strain. It can be inferred that the load-strain relationship of the hybrid joint is quasi-linear overall (up to the maximum load of 1800kN).
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
     \begin{subfigure}[t]{0.6\textwidth}
         \includegraphics[width=\linewidth]{imgs/ch6/S1SS2-F.eps}
@@ -287,7 +359,7 @@ Furthermore, focus on direct strain at position S3 that has already transmitted 
 
 \subsection{Cross-section observation after slipping}
 
-Figure \ref{fig-csob} shows the Cross-section of Hybrid joint. The cross-sectional diagram was obtained from the hybrid joint that underwent a load of up to 1800kN. Figure \ref{fig-csob1} shows the cross-sectional diagram of bolts \#1 - \# 3, revealing that the deformation of the rib on the non-bearing side is very small as observed in the magnified portion of bolt \#1 on the right side. Likewise, the magnified section of Bolt \#2 on the opposite side of the bearing suggests minor deformation of the rib. It appears that some ribs do not make contact with the hole wall when the interference fit bolt is hammered into the hole. Consequently, the desired interference fit is not produced, resulting in a minor slip in the joint. This slip is believed to be caused by the clearance created during the bolt installation, as well as slight plastic deformation of the rib.
+Fig. \ref{fig-csob} shows the Cross-section of Hybrid joint. The cross-sectional diagram was obtained from the hybrid joint that underwent a load of up to 1800kN. Fig. \ref{fig-csob1} shows the cross-sectional diagram of bolts \#1 - \# 3, revealing that the deformation of the rib on the non-bearing side is very small as observed in the magnified portion of bolt \#1 on the right side. Likewise, the magnified section of Bolt \#2 on the opposite side of the bearing suggests minor deformation of the rib. It appears that some ribs do not make contact with the hole wall when the interference fit bolt is hammered into the hole. Consequently, the desired interference fit is not produced, resulting in a minor slip in the joint. This slip is believed to be caused by the clearance created during the bolt installation, as well as slight plastic deformation of the rib.
 
 \begin{figure*}
     \centering
@@ -309,7 +381,7 @@ Figure \ref{fig-csob} shows the Cross-section of Hybrid joint. The cross-section
 \end{figure*}
 
 
-Figure \ref{fig-dicdisp} shows the displacement of the hybrid joint case at a load of 200kN, measured by DIC methods, taken from the side of the joint. It was found that the displacement on the nut side of the joint (i.e. SP2 side) is greater than the displacement on the bolt head side (i.e. SP1 side). This observation is consistent with the results obtained from cross-sectional observations. Insufficient interference fit resulted in an increase in displacement and a slight occurrence of slippage.
+Fig. \ref{fig-dicdisp} shows the displacement of the hybrid joint case at a load of 200kN, measured by DIC methods, taken from the side of the joint. It was found that the displacement on the nut side of the joint (i.e. SP2 side) is greater than the displacement on the bolt head side (i.e. SP1 side). This observation is consistent with the results obtained from cross-sectional observations. Insufficient interference fit resulted in an increase in displacement and a slight occurrence of slippage.
 
 \begin{figure*}
     \centering
@@ -386,14 +458,14 @@ where $\delta_{yb}$ is the bolt strain of y-direction (axial direction), $d_{ib}
 
 Therefore, result as the amount of bolt preload does not have a significant effect on the slip behavior, and it can be considered that the reduction of slip load is related to the bearing capacity of the rib, as insufficient contact area of the rib results in excessive contact pressure and compression plastic deformation. 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{imgs/ch6/nor-load-disp.eps}
     \caption{The relationship between normalised load and normalised deformation. (Normalised load is the load divided by the sliding load $F_s$, and normalised deformation is the deformation divided by the joint length $L_j$).}
     \label{fig-ldnor}
 \end{figure}
 
-Figure \ref{fig-ldnor} shows the relationship between normalised load and normalised deformation. It can be seen that the initial slop is higher for the Hybrid-NAF case, this is due to the bearing resistance of the interference fit bolts is not included in the calculation of the slip resistance, comparing this with the behaviour of the friction joint, it can be confirmed that the bearing resistance is included in the load sharing of the Hybrid-NAF joint result a high initial slope of Hybrid-NAF case, despite the minor amount of slip that occurs. The minor amount of slip is due to the inadequacy of the interference fit,  which results in the interference fit bolt in not being able to fully resist the portion of the load lost as a result of the slip that occurs. 
+Fig. \ref{fig-ldnor} shows the relationship between normalised load and normalised deformation. It can be seen that the initial slop is higher for the Hybrid-NAF case, this is due to the bearing resistance of the interference fit bolts is not included in the calculation of the slip resistance, comparing this with the behaviour of the friction joint, it can be confirmed that the bearing resistance is included in the load sharing of the Hybrid-NAF joint result a high initial slope of Hybrid-NAF case, despite the minor amount of slip that occurs. The minor amount of slip is due to the inadequacy of the interference fit,  which results in the interference fit bolt in not being able to fully resist the portion of the load lost as a result of the slip that occurs. 
 
 
 \subsection{Limit state}

@@ -18,7 +18,7 @@ However, riveting requires skilled techniques and has problems and hazards such 
 
 Steel riveted bridges have significant cultural and historical value as part of our constructive heritage from the previous century. Numerous iron and steel riveted bridges are of historical importance, requiring restoration and preservation, and ongoing use. A large number of riveted bridges have been rebuilt due to age and corrosion, but many riveted bridges are still in service \cite{COLLETTE2014}. Most of the riveted bridges that remain today are more than 60 years old from the time of construction and, although it depends on the maintenance method, some age-related deterioration has been reported, including corrosion as shown in Fig.\ref{fig-corriv} where almost all rivet heads have disappeared, fatigue cracking and rivet loosening as shown in Fig.\ref{fig-losriv} and Fig. \ref{fig-rivetisu}.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[t]{0.85\linewidth}
         \centering
@@ -37,7 +37,7 @@ Steel riveted bridges have significant cultural and historical value as part of 
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{imgs/ch2/rivet-issue.pdf}
     \caption{corrosion and loosing of aging rivet}
@@ -52,7 +52,7 @@ There are three types of resistance present in a riveted joint: friction, bearin
 
 Riveted joints can be classified into approximately five types of failure model, depending on the strength of the rivet and the strength of the steel. Fig. \ref{fig-beafalmode} shows a fracture image of a single shear rivet. However, since the fracture of the main plate can be prevented by considering the placement of the rivets (model c--e), the shear strength of the rivets and the bearing strength are considered, and the strength of the bearing type connection is calculated using the smaller of the two values. 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics{imgs/ch2/failure-mode-bea.pdf}
     \caption{Failure mode of bearing type connection}
@@ -66,7 +66,7 @@ For strength calculations of rivets, refer to Section \ref{secbc} on bearing typ
 
 Research has shown that riveted connections have been extensively studied in various countries in the past. However, most of the research has focused on the study of sound riveted connections, while studies on the deterioration of connections over time have evaluated the relationship between the structural integrity of the riveted structure and the service life, and have reported on the occurrence of damage and component performance degradation. The residual carrying capacity of corroded riveted beams and the estimation formulas for their carrying capacity have been specifically assessed through experiments and finite element analysis. However, these studies primarily focus on the residual carrying capacity of riveted connections and the residual performance of materials. There is less research on the repair and strengthening methods of riveted bridges, especially when rivets are replaced by high-strength bolts due to corrosion, and the changes in joint performance and load transfer mechanisms are not yet well understood.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{imgs/ch2/lap-connec.pdf}
     \caption{Single \& Double lap connection}
@@ -74,7 +74,7 @@ Research has shown that riveted connections have been extensively studied in var
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{imgs/ch2/bstressdistr-0.pdf}
     \caption{Stress distribution of double-lap riveted connection}
@@ -104,7 +104,7 @@ Previous research findings \cite{Zhou1994FatigueMembers} indicate that the clamp
 
 The above mentioned previous studies mainly conducted tests in laboratory settings utilizing relatively long rivet shafts. Nevertheless, the actual clamping force introduced during riveting real bridges, particularly in-situ, differs to some extent from these experimental findings due to mistakes made during the riveting operation. A previous study8) removed rivets from real bridge girders and flanges to measure the residual rivet clamping force. Akesson \cite{Akesson2010} and Baron \& Larsson \cite{Baron1953TheJoints} reported comparable outcomes. Both sets of experimental data indicated that the length of the rivet shaft had a significant impact on the clamping force. Fig.\ref{fig-preload-rivet}  showed that a relatively long rivet shaft increased the average clamping force while decreasing its variance. Moreover, Leonetti \cite{Leonetti2020RivetBridges} also found that the number of plates also had an influence on the clamping force of the rivet. The misalignment of the holes of the plates has been reported to be caused by construction errors.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{imgs/ch2/preload-rivet.pdf}
     \caption[The variability of the clamping stress as a function of the grip length for carbon steels.]{The variability of the clamping stress as a function of the grip length for carbon steels. (figure cite from \cite{Leonetti2020RivetBridges}, experimental data from Åkesson \cite{Akesson2010},Wilson and Thomas \cite{Wilson1938FatigueJoints}, and Zhou \cite{Zhou1994FatigueMembers}. Also the average trend from Baron \& Larson \cite{Baron1953TheJoints}, and upper and lower bounds from van Maarschalkerwaart \cite{VanMaarschalkerwaart1982FatigueJoints} are reported.)}
@@ -121,7 +121,7 @@ However, the primary focus of these studies is on the residual carrying capacity
 
 Friction-type High-strength bolt connections have been widely used in building steel structures recently due to their ease of installation, higher bearing capacity, and superior anti-fatigue performance. The high-strength bolt connection can be classified into bearing type and friction type based on the difference in force transmission patterns as shown in \ref{fig-fricandbearing}. In the case of the bearing type, the connection's bearing capacity depends on the resistance of the hole wall and the shear resistance of the bolts. In the case of the friction type, the force is transmitted through friction between the faying surfaces of the plates. The resistance of the bearing type connection is typically higher than that of the friction type. However, the bearing type connection is not directly suitable for fatigue and dynamic loads.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{imgs/ch2/fricandbearing.pdf}
     \caption{Schematic of load transmit mechanism of friction-type and bearing-type bolted connection}
@@ -181,7 +181,7 @@ Furthermore, due to the non-uniformity of load distribution, the bolts are unabl
 
 Considering the installation space requirements and strength problems associated with long-bolted joints, a rational compact joint must be developed to allow the use of fewer bolts to transmit more load, which could also improve the serviceability limit capacity of the joints.
 
-\subsection{Technical Problem} %%todo , add the long bolted joint figure.
+\subsection{Technical Problem}
 Problems arise when utilizing long or large friction-type bolted joints as the joint length increases. Firstly, these excessively long bolted joints can cause interference with secondary members, such as stiffeners and diaphragms, located in close proximity to the joint as shown in Fig. \ref{fig-boxhsbinter}. Therefore, it becomes necessary to reduce the joint length while maintaining the design strength. Typically, a friction-type bolted joint combined with a weld is employed to meet the design strength requirements of a joint. Previous studies have demonstrated the reliability and feasibility of friction-type bolted joints combined with welds \cite{solodov2021,Thomas2000,Chang2019361,KHANDEL2022107036}. Combinations of welded-bolted connections are sometimes utilized in steel structures to improve their strength. However, However, this combination methods is inefficient in terms of load bearing capacity enhancement, also the certain environments, such as those with limited space or requiring work at height, are not conducive to onsite welding during bridge construction. Additionally, welding destroys the original coating of steel parts, necessitating reapplication of the protective paint to the joints. Consequently, the construction of combined welded-bolted connections for steel bridge joints that require onsite joining becomes highly challenging. Thus, suitable approaches are required to reduce the length of bolted joints without compromising their strength.
 
 \begin{figure}[htbp]
@@ -234,7 +234,7 @@ On the other hand, \ac{JSRS} by \ac{RTRI} \cite{rtri2009Design} states that the 
 
 Where, $d$ is nominal diameter of the bolt, $t$ is thickness of the main plate, $f_y$ is the yield strength for main plate.
 
-AASHTO MBE \cite{aashtombe2018Manual} states that the design of rivets can be directly referred to AASHTO LRFD BDS for bearing type connection, and the specifications states that the effective bearing area $A_{b}$ of a fastener is its diameter $d$ multiplied by the thickness of the main plate $t$ on which it rests， and should be designed for strength limit states。 The bearing strengths are as follows:
+AASHTO MBE \cite{aashtombe2018Manual} states that the design of rivets can be directly referred to \ac{AASHTO} \ac{LRFD} BDS for bearing type connection, and the specifications states that the effective bearing area $A_{b}$ of a fastener is its diameter $d$ multiplied by the thickness of the main plate $t$ on which it rests， and should be designed for strength limit states。 The bearing strengths are as follows:
 
 AASHTO LRFD BDS 9th editions:
 
@@ -367,7 +367,7 @@ On the other hand, Kulak \cite{Kulak1988guide} states that the maximum bearing c
 
 The definition of each symbol for the joint is shown in the following Fig. \ref{fig-symbol}.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{imgs//ch2/symbol.pdf}
     \caption{The use of the symbols}
@@ -382,7 +382,7 @@ Eurocode 3 also state that the block tearing should be avoided. For a bolt group
 
 where, $A_{nt}$ is the net area subjected to tension, $A_{gv}$ is the gross area subjected to shear, $A_{nv}$ is the net area subjected to shear.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{imgs/ch2/ch2figeu5-13.pdf}
     \caption{The use of the symbols}
@@ -392,18 +392,18 @@ where, $A_{nt}$ is the net area subjected to tension, $A_{gv}$ is the gross area
 
 \subsection{Interference fit bolt}
 
-A specialized high-strength bolt for bearing-type connection is present, the bolt have rib around the bolt shaft, the outermost diameter include rib should be over than the bolt hole, so when hanmer into the bolt, the rib will have occur plastic deformation and general interference fit effect, hereafter known as the Interference fit bolt \cite{Kulak1988guide,bolt-bearing,Chen2023MechanicalConnections} as shown in Fig. \ref{fig-onebbolt}. The B10T grade interference fit bolts were used (courtesy of Kobelco Bolt, Ltd.) and meets the strength requirements of an F10T bolt according to the JIS-B1186 standard \cite{jis2018JIS}, which is equivalent to ASTM-A490 \cite{ASTM-bolt} \& Grade 10.9 \cite{ISO-bolt} and possesses the unique feature of an axially ribbed shank. When the bolt is hammered into a hole, the rib undergoes plastic deformation to ensure a tight fit and prevents excessive slipping. Interference fitting bolts are used to retrofit steel bridge piers that have fatigue damage or corrosion by attaching the patch plate \cite{Anami-bbolt-ate}. This is because initial imperfections or corrosion leads to uneven steel plate surfaces, making it impossible for the patch plate of the friction type bolted connection to effectively contact the steel surface and transmit force. And Interference fit bolts also can reduce the fatigue damage in bolt holes, and increasing their fatigue strength \cite{Guo20205}. However, interference fit bolts are rarely used on other bridge parts due to their stringent installation requirements. 
+A specialized high-strength bolt for bearing-type connection is present, the bolt have rib around the bolt shaft, the outermost diameter include rib should be over than the bolt hole, so when hanmer into the bolt, the rib will have occur plastic deformation and general interference fit effect, hereafter known as the Interference fit bolt \cite{Kulak1988guide,bolt-bearing,Chen2023MechanicalConnections} as shown in Fig. \ref{fig-onebbolt-ch1}. The B10T grade interference fit bolts were used (courtesy of Kobelco Bolt, Ltd.) and meets the strength requirements of an F10T bolt according to the JIS-B1186 standard \cite{jis2018JIS}, which is equivalent to ASTM-A490 \cite{ASTM-bolt} \& Grade 10.9 \cite{ISO-bolt} and possesses the unique feature of an axially ribbed shank. When the bolt is hammered into a hole, the rib undergoes plastic deformation to ensure a tight fit and prevents excessive slipping. Interference fitting bolts are used to retrofit steel bridge piers that have fatigue damage or corrosion by attaching the patch plate \cite{Anami-bbolt-ate}. This is because initial imperfections or corrosion leads to uneven steel plate surfaces, making it impossible for the patch plate of the friction type bolted connection to effectively contact the steel surface and transmit force. And Interference fit bolts also can reduce the fatigue damage in bolt holes, and increasing their fatigue strength \cite{Guo20205}. However, interference fit bolts are rarely used on other bridge parts due to their stringent installation requirements. 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{imgs/ch2/oneBbolt.png}
     \caption{Bearing-type Inteference fit bolt (M22, Diameter = 23.5mm), Made in Kobelco Bolt, Ltd.}
-    \label{fig-onebbolt}
+    \label{fig-onebbolt-ch1}
 \end{figure}
 
 Fig.\ref{fig-cs-b1} shows the cross-sectional diagram of the inteference fit bolt, The cross-sectional diagram was obtained from the hybrid joint that underwent a load of up to 1800kN. Revealing that the deformation of the rib on the non-bearing side is very small as observed in the magnified portion of bolt \#1 on the right side. It has been discovered that despite accurately drilled bolt holes, the interference fit of the rib is not behaving as expected, resulting in a small gap that directly impacts load transfer efficiency. The method of interference fit requires further exploration.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{imgs/ch2/cs-b1.pdf}
     \caption{Sawed-throug cross-section view of interference fit bolt}
@@ -447,20 +447,18 @@ The bearing resistance of resin shall taken as:
 
 where, $\beta$ is a coefficient depending on the thickness ratio of the main plates. $t_{b,resin}$ is the effective bearing thickness of the resin. 
 
-%todo why the bearing area of resin should be consider the effective area.
 
 \subsection{Other: Mechanical bearing blind rivet-bolt}
 
-The above two types of bolted connections have been used in actual steel construction, in addition to these two types of connection, this year Nakamoto et al. (2022) \cite{Nakamoto2022MBBRB} also proposed the \ac{MBBRB}, which can be installed on one side and transmits the load through the bearing force between the bolt and the wall of the bolt hole, as well as the friction force on the joint surface as shown in Figure \ref{fig-MBBRB}. The load-displacement relationship of the \ac{MBBRB} is equivalent to that of the frictional joint using M22F8T up to the slip load. Therefore, the same service limit state can be applied to the MBBRB joint as to the frictional joint.
+The above two types of bolted connections have been used in actual steel construction, in addition to these two types of connection, this year Nakamoto et al. (2022) \cite{Nakamoto2022MBBRB} also proposed the \ac{MBBRB}, which can be installed on one side and transmits the load through the bearing force between the bolt and the wall of the bolt hole, as well as the friction force on the joint surface as shown in Fig. \ref{fig-MBBRB}. The load-displacement relationship of the \ac{MBBRB} is equivalent to that of the frictional joint using M22F8T up to the slip load. Therefore, the same service limit state can be applied to the MBBRB joint as to the frictional joint.
 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\linewidth]{imgs//ch2/onesidebearingbolt.jpg}
     \caption{Cross-section view of Mechanical Bearing Blind Rivet-Bolts}
     \label{fig-MBBRB}
 \end{figure}
-
 
 
 \section{Hybrid joint}
@@ -469,7 +467,7 @@ Joints are usually made of the same type of fastener, however, in some cases two
 
 The earliest research into hybrid joint was carried out after 1950, when high-strength bolts and welding technology became available as shown in Fig. \ref{fig-schehyb}. Due to the deterioration of riveted bridges, repair work was carried out on riveted connections, and high-strength bolts with better structural performance became one of the alternatives, but the prevailing view at the time was that connections with different mechanical load transfer mechanisms should not be combined, and, in addition, the prevailing research focused on discussing the performance of high-strength bolts and welds.
 
-\begin{figure}[ht]
+\begin{figure}[htbp][ht]
     \centering
     \includegraphics[width=0.75\linewidth]{imgs//ch2/hybrid-sche.pdf}
     \caption{Schematic diagram of Double cover butt hybrid joint (Welding-fasteners)}
@@ -481,7 +479,7 @@ The earliest research into hybrid joint was carried out after 1950, when high-st
 Aging rivets need to be replaced due to factors such as corrosion of the rivet head and loosening of rivets caused by repeated loading. Despite the requirement for repairs and maintenance of riveted bridges, replacement of original rivets with new ones is not preferred due to the loss of riveting technology and poor constructability of the rivets. In Japan, the use of HSB to replace rivets and form hybrid joints is a common method. Although there are numerous issues that need to be addressed, such as determining the reliability of the slip coefficient of the faying surface and clarifying the mechanism of load transmission. Fig.\ref{fig-bridrivhsb} shows a riveted bridge that is undergoing repair with a mixture of rivets and high-strength bolts. Generally, the original rivets will be removed first, and depending on the situation, it will be chosen whether to replace the cover plate or not, and if necessary, some simple sandblasting and grinding will be performed on the connection surface in order to improve the slip coefficient of the connection surface, and finally the installation of high-strength bolts will be carried out.
 
 %
-\begin{figure}[ht]
+\begin{figure}[htbp][ht]
     \centering
     \includegraphics[width=0.75\linewidth]{imgs//ch2/bridge-rivet-HSB.jpg}
     \caption{Riveted joint combined with high-strength bolts. (Hazukawa riveted bridge, Fukui, Japan)}
@@ -508,14 +506,14 @@ Komatsu et al.\cite{KOMATSU2015} conducted tensile load tests and chemical tests
 
 Fig.\ref{fig-hsbriv-fune} \cite{funahashi1967Experimental} and Fig.\ref{fig-hsbriv-stei} \cite{steinhardt1969-hybrid} show typical load versus deformation curves for welded, bolted, and riveted tension specimens. This figure indicates that high-strength bolted connections with normal hole clearance provide a very high initial stiffness up to the slip load of the connection. During slip, the deformations increase significantly until the bolts come into bearing. After the bolts are in bearing, the load versus deformation curve shows an increase in joint stiffness. Joint slip can be minimized by installing fitted bolts in matching drilled holes.
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
 \includegraphics[width=0.75\linewidth]{imgs//ch2/hsbrivet-1967-pd.png}
     \caption{Relationship between load and deformation of Hybrid joint combined with 2 HSB and 2 rivet \cite{funahashi1967Experimental}}
     \label{fig-hsbriv-fune}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{imgs//ch2/hsbrive-1969.png}
     \caption{Load versus deformation relationships for different fastening methods \cite{steinhardt1969-hybrid}}
