@@ -2,97 +2,106 @@
 
 %ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-\renewcommand{\nomname}{List of Symbols and Acronyms}
+
+\renewcommand{\nomname}{List of Symbols}
 %%%%%%%%%%%%%%%%%%%%%%%
 
+\renewcommand\nomgroup[1]{%
+  \item[\bfseries
+  \ifstrequal{#1}{A}{Symbols}{%
+  \ifstrequal{#1}{B}{Number Sets}{%
+  \ifstrequal{#1}{C}{Other Symbols}{}}}%
+]}
 
-\nomenclature{$\sigma_{bs}$}{Bearing strength}
-\nomenclature{$\sigma_{yp}$}{Yield strength of the main plate}
-\nomenclature{$\sigma_{yf}$}{Yield strength of the fastener}
 
-\nomenclature{$\sigma_{ct-m22}$}{Equivalent contact pressure for M22-F10T bolt}
-\nomenclature{$\tau_{yf}$}{Shear strength of fastener}
+
+\nomenclature[A]{$\sigma_{bs}$}{Bearing strength}
+\nomenclature[A]{$\sigma_{yp}$}{Yield strength of the main plate}
+\nomenclature[A]{$\sigma_{yf}$}{Yield strength of the fastener}
+
+\nomenclature[A]{$\sigma_{ct-m22}$}{Equivalent contact pressure for M22-F10T bolt}
+\nomenclature[A]{$\tau_{yf}$}{Shear strength of fastener}
 %A
-\nomenclature{$A_{cts}$}{specimens size for compact slip test}
-\nomenclature{$A_{b}$}{Effective bearing area}
-\nomenclature{$A_{s}$}{Effective shear area of fastener shaft}
+\nomenclature[A]{$A_{cts}$}{specimens size for compact slip test}
+\nomenclature[A]{$A_{b}$}{Effective bearing area}
+\nomenclature[A]{$A_{s}$}{Effective shear area of fastener shaft}
 
 %B
 %C
 %D
-\nomenclature{$d$}{Nominal diameter of the bolt}
-\nomenclature{$d_f$}{Diameter of fastener}
-\nomenclature{$d_h$}{Diameter of fastener hole}
-\nomenclature{$d_1$}{Diameter of the hole at outermost fastener}
+\nomenclature[A]{$d$}{Nominal diameter of the bolt}
+\nomenclature[A]{$d_f$}{Diameter of fastener}
+\nomenclature[A]{$d_h$}{Diameter of fastener hole}
+\nomenclature[A]{$d_1$}{Diameter of the hole at outermost fastener}
 %E
-\nomenclature{$e_1$}{The distance between end of plate and the end fastener hole center}
-\nomenclature{$e_1$}{edge distance from the centre of a fastener hole to the adjacent edge of any part}
+\nomenclature[A]{$e_1$}{The distance between end of plate and the end fastener hole center}
+\nomenclature[A]{$e_1$}{edge distance from the centre of a fastener hole to the adjacent edge of any part}
 %F
-\nomenclature{Fastener}{Generic term for welds, bolts, rivets, or other connecting device.}
-\nomenclature{$F_{bs1}$}{Bearing resistance of one fastener}
-\nomenclature{$F_{bjr1}$}{Bearing resistance of one fastener under RTRI}
-\nomenclature{$F_{b,CS}$}{Design Bearing resistance of CSSS}
-\nomenclature{$F_{b,EC3}$}{Design Bearing resistance of Eurocode 3}
-\nomenclature{$F_{b,JSHB}$}{Design Bearing resistance of JSHB}
-\nomenclature{$F_{b,AASHTO}$}{Design Bearing resistance of AASHTO}
-\nomenclature{$F_{vf,CS}$}{Design fastener shaft Shear resistance of CSSS}
-\nomenclature{$F_{vf,EC3}$}{Design fastener shaft Shear resistance of Eurocode 3}
-\nomenclature{$F_{vf,JSHB}$}{Design fastener shaft Shear resistance of JSHB}
-\nomenclature{$F_{vf,AASHTO}$}{Design fastener shaft Shear resistance of AASHTO}
 
-\nomenclature{$F_{vp1,AIJ}$}{Design end plate shear resistance of AIJ with effective cross-sectional area}
+\nomenclature[A]{$F_{bs1}$}{Bearing resistance of one fastener}
+\nomenclature[A]{$F_{bjr1}$}{Bearing resistance of one fastener under RTRI}
+\nomenclature[A]{$F_{b,CS}$}{Design Bearing resistance of CSSS}
+\nomenclature[A]{$F_{b,EC3}$}{Design Bearing resistance of Eurocode 3}
+\nomenclature[A]{$F_{b,JSHB}$}{Design Bearing resistance of JSHB}
+\nomenclature[A]{$F_{b,AASHTO}$}{Design Bearing resistance of AASHTO}
+\nomenclature[A]{$F_{vf,CS}$}{Design fastener shaft Shear resistance of CSSS}
+\nomenclature[A]{$F_{vf,EC3}$}{Design fastener shaft Shear resistance of Eurocode 3}
+\nomenclature[A]{$F_{vf,JSHB}$}{Design fastener shaft Shear resistance of JSHB}
+\nomenclature[A]{$F_{vf,AASHTO}$}{Design fastener shaft Shear resistance of AASHTO}
+
+\nomenclature[A]{$F_{vp1,AIJ}$}{Design end plate shear resistance of AIJ with effective cross-sectional area}
 
 
-\nomenclature{$F_{sh1}$}{Shear resistance of one fastener}
-\nomenclature{$F_{slip1}$}{Slip resistance of one fastener}
-\nomenclature{$F_{yp}$}{Net cross-section yield resistance of main plate}
+\nomenclature[A]{$F_{sh1}$}{Shear resistance of one fastener}
+\nomenclature[A]{$F_{slip1}$}{Slip resistance of one fastener}
+\nomenclature[A]{$F_{yp}$}{Net cross-section yield resistance of main plate}
 
-\nomenclature{$f_{yf}$}{yield strength stress of fastener}
-\nomenclature{$f_{yb}$}{yield strength stress of bolt}
-\nomenclature{$f_{yr}$}{yield strength stress of rivet}
-\nomenclature{$f_{u}$}{Tensile strength stress for the main plate}
-\nomenclature{$f_{uf}$}{Tensile strength stress for fastener}
-\nomenclature{$f_{ub}$}{Tensile strength stress for HSB}
-\nomenclature{$f_{ur}$}{Tensile strength stress for rivet}
+\nomenclature[A]{$f_{yf}$}{yield strength stress of fastener}
+\nomenclature[A]{$f_{yb}$}{yield strength stress of bolt}
+\nomenclature[A]{$f_{yr}$}{yield strength stress of rivet}
+\nomenclature[A]{$f_{u}$}{Tensile strength stress for the main plate}
+\nomenclature[A]{$f_{uf}$}{Tensile strength stress for fastener}
+\nomenclature[A]{$f_{ub}$}{Tensile strength stress for HSB}
+\nomenclature[A]{$f_{ur}$}{Tensile strength stress for rivet}
 
 %G
 %H
 %I
 %J
 %K
-\nomenclature{$k_m$}{material reduction factor to compute bearing resistance per bolt}
+\nomenclature[A]{$k_m$}{material reduction factor to compute bearing resistance per bolt}
 
 
 %L
-\nomenclature{$L_{c}$}{clear distance between fastener holes}
+\nomenclature[A]{$L_{c}$}{clear distance between fastener holes}
 
 %M
-\nomenclature{$m$}{The number of shear plane}
+\nomenclature[A]{$m$}{The number of shear plane}
 %N
-\nomenclature{$n$}{The number of fastener}
-\nomenclature{$n_b$}{The number of fastener for bearing type connection}
-\nomenclature{$n_f$}{The number of fastener for friction type connection}
-\nomenclature{$N_0$}{initial perload befor loading}
-\nomenclature{$N_{cp}$}{Converted preload for compact slip test}
-\nomenclature{$N_f$}{Perload of fasteners}
-\nomenclature{$N_r$}{Perload of rivets}
-\nomenclature{$N_b$}{Perload of boltes}
-\nomenclature{$N_{ifb}$}{Perload of interference fit bolts}
+\nomenclature[A]{$n$}{The number of fastener}
+\nomenclature[A]{$n_b$}{The number of fastener for bearing type connection}
+\nomenclature[A]{$n_f$}{The number of fastener for friction type connection}
+\nomenclature[A]{$N_0$}{initial perload befor loading}
+\nomenclature[A]{$N_{cp}$}{Converted preload for compact slip test}
+\nomenclature[A]{$N_f$}{Perload of fasteners}
+\nomenclature[A]{$N_r$}{Perload of rivets}
+\nomenclature[A]{$N_b$}{Perload of boltes}
+\nomenclature[A]{$N_{ifb}$}{Perload of interference fit bolts}
 %O
 %P
 %Q
 %R
-\nomenclature{$r_b$}{Radius of bolt shaft}
-\nomenclature{$r_r$}{Radius of rivet shaft}
-\nomenclature{$r_h$}{Radius of fastener hole}
+\nomenclature[A]{$r_b$}{Radius of bolt shaft}
+\nomenclature[A]{$r_r$}{Radius of rivet shaft}
+\nomenclature[A]{$r_h$}{Radius of fastener hole}
 %S
 %T
-\nomenclature{$t$}{Thickness of the main plate}
+\nomenclature[A]{$t$}{Thickness of the main plate}
 %U
 %V
-\nomenclature{$v$}{Poisson's ratio}
+\nomenclature[A]{$v$}{Poisson's ratio}
 %W
-\nomenclature{$w$}{Width of the main plate}
+\nomenclature[A]{$w$}{Width of the main plate}
 %X
 %Y
 %Z
@@ -100,58 +109,3 @@
 
 
 \printnomenclature
-
-\begin{acronym}
-
-%A
- \acro{AASHTO}{The American Association of State Highway and Transportation Officials}
- \acro{AIJ}{Architectural Institute of Japan}
- \acro{ASD}{Allowable Stress Design}
-%B
-%C
-\acro{CSSS}{Chinese Standard for design of steel structures}
-\acro{CPSC}{The U.S. Consumer Product Safety Commission}
-%D
-\acro{DIC}{Digital Image Correlation}
-%E
-\acro{ECCS}{European Convention for Constructional Steelwork}
-\acro{EDX}{Energy Dispersive X-ray Spectroscopy}
-%F
-%G
-%H
-\acro{HSB}{High-Strength Bolt}
-%I
-\acro{iSRR}{Injected Steel-Reinforced Resin}
-\acro{IFB}{Interference Fit High-Strength Bolt}
-%J
-\acro{JSHB}{Japan Specifications for Highway Bridges}
-\acro{JRA}{Japan Road Association}
-\acro{RTRI}{Japan Railway Technical Research Institute}
-\acro{JSRS}{Japanese Design Standards for Railway Structures}
-%K
-%L
-\acro{LRFD}{Load and Resistance Factor Design}
-
-%M
-%M
-\acro{MBBRB}{Mechanical Bearing Blind Rivet-Bolt}
-%O
-%P
-%Q
-%R
-\acro{RIBJ}{Resin Injection Bolted Joint}
-%S
-%T
-%U
-%V
-%W
-%X
-%Y
-%Z
-
- % ADD MORE ACRONYMS AS NEEDED WITH
- % \acro{example}
- % WHEN YOU USE THE ACRONYM IN THE TEXT
- % USE THE COMMAND \ac{example}
-\end{acronym}
-

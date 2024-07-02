@@ -1,4 +1,4 @@
-\chapter{Numerical Analysis of Rivet-HSB hybrid Connection}
+\chapter{Finite Element Analysis of Rivet-HSB Hybrid Connection}
 \label{ch4}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -12,7 +12,7 @@
 
 
 
-\section{Background and Objectives}
+\section{Introduction}
 
 Steel structures constructed in the early days of welding technology used riveted joints consisting of multiple layers of thin plates. Today, the majority of existing riveted bridges are more than 60 years old. Many riveted bridges that have been in service for a long period of time have experienced corrosion damage at the support and girder points, where rainwater tends to accumulate, and at the rivet heads, where the coating film is difficult to adhere to. In a previous survey of riveted bridges \cite{okamoto2011investigation}, it was reported that most of the rivet heads were corroded. Therefore, appropriate repair and reinforcement of such corrosion damage is necessary to keep bridges in service safely.
 
@@ -26,7 +26,9 @@ In a typical riveted bridge, the strength of the riveted material is lower than 
 
 In this study, a three-dimensional elasto-plastic finite displacement analysis was conducted using rivet and high-strength bolt arrangements as parameters to elucidate the load transfer mechanism of a joint using a riveted joint and a high-strength bolt friction joint, considering the preload introduced during tightening. In order to focus on the yielding around the rivet holes in the main plate due to the supporting pressure of the rivets, the plate width b was varied while the plate thickness t was kept constant.
 
-\section{Analysis model and analysis case}
+\section{Investigate the Load Transfer Mechanism of Rivet and HSB}
+
+\subsection{Finite element (FE) analysis}
 \label{ch4sec2}
 
 For the FEM analysis, the general-purpose structural analysis code Abaqus / Standard 2018 \cite{Smith2020} was used to perform a three-dimensional elastoplastic finite displacement analysis. The analytical model is shown in Fig. \ref{fig-femodel-hsbrive} and the analysis cases in Table 1. As shown in Figure 2, the analytical model was part of a two-sided riveted joint at the transverse girder joint of an aged riveted bridge (hereafter referred to as "A bridge"). The joint consists of six rivets per row and three per column on each side. The thickness of the joint is 9.2 mm for the main plate and 12 mm for the bracing plate. The modeling range of the analytical model was one-quarter model in the plate width direction for symmetry. The analytical model was modeled using a three-dimensional, eight-node solid element (reduced integral element) for all of the main plate, the bracing plate, the bolts, and the washers. Boundary nonlinearities were taken into account by setting contact boundaries on the joint surfaces between the main plate and the bracing plate, between the bolt and bolt hole, and between the rivet and rivet hole. The rivet hole is modeled as 23.5 mm so that the rivet and hole wall make contact in advance. When replacing the rivet hole with a high-strength bolt, the bolt hole is enlarged to 26.5 mm with a clearance of 2.25 mm on each side.
@@ -109,7 +111,7 @@ The bolt and rivet preloads were introduced in the analysis by setting up a refe
 
 For the rivet preload $N_r$ , the literature \cite{Heinemeyer2011TheConnections} reported that the rivet preload depends on the shaft length and that for rivets with a diameter of 22 mm, the rivet preload/rivet shaft yield strength ratio for a shaft length of 33 mm was 0.4 on average and the rivet preload/rivet shaft yield strength ratio for a shaft length of 75 mm was 0.7 on average. The rivet shaft force/rivet shaft yield strength ratio used in Bridge A was reported to be 0.7 on average. The average yield strength of the rivets used in Bridge A is assumed to be 295 MPa \cite{KOMATSU2015}, so rivet shaft forces of 45 $kN$ for a shaft length of 33 mm and 78.5 $kN$ for a shaft length of 75 mm were introduced.
  
-\subsection{Bearing resistance per Fastener}\label{ch4sec2-1}
+\subsubsection{Bearing resistance per Fastener}\label{ch4sec2-1}
 
 The bearing capacity, shear capacity and slip capacity per fastener are shown in Table \ref{ch4tab3}.
 
@@ -150,7 +152,7 @@ In the area subjected to bearing, plastic flow is unlikely to occur due to the s
 where, $\sigma_{bs}$: bearing strength, $\sigma_{yp}$ : yield strength of the main plate, $t$: thickness of the main plate, $d_f$ : diameter of fastener, $F_{bs1}$: bearing resistance of one fastener, $\sigma_{yf}$ : yield strength of the fastener, $\tau_{yf}$ : shear strength of fastener, $F_{sh1}$ : shear resistance of one fastener, $F_{s1}$ : slip resistance of one fastener, $m$ : the number of shear plane, $N_f$ : perload of fastener.
 
 
-\subsection{Design Strength of Joints}
+\subsubsection{Design Strength of Joints}
 
 In this study, the design bearing capacity for the service limit was obtained as follows
 
@@ -181,9 +183,9 @@ Therefore, this study proposes an improved bearing capacity as the design bearin
 
 where,$F_b.$ : bearing capacity by Hashimoto et al.,$F_bp$. : the improved bearing capacity proposed in this study, $n_b$: Number of high-strength bolts, $n_r$ Number of rivets, $N_b$: preload of high strength bolts. $N_r$ : preload of rivets. $\sigma_{yr}$ : Yield strength of rivet, $σ_y$ : Yield strength of the main plate, $t$ : thickness of the material to be joined, $d_r$: rivet shaft diameter.
 
-\section{Analysis results}
+\subsection{Results and Discussions}
 
-\subsection{Limit states of use of joints in combination}
+\subsubsection{Limit states of use of joints in combination}
 
 In this study, we focused on the overall displacement of the joint and plasticization around the hole, and defined the service limit state of the joint as the time when the load-overall displacement relationship of the joint begins to exhibit nonlinear behavior. The nonlinear behavior of the joint is governed by the yielding of the rivet hole or the pure section.
 
@@ -253,7 +255,7 @@ $γ=,F-y./,F-bp.$ (10)
 γ>1 : Bearing yield first type %支圧先行
 
 
-\subsection{Mechanical behavior}
+\subsubsection{Mechanical behavior}
 
 Fig. \ref{ch4fig10} shows the Mises stress contours and the fracture plan of the base material of the specimen under study at the maximum load of HSBall-y.
 
@@ -308,7 +310,7 @@ Figures 11.b and 12.b show the case with one high-strength bolt, while Figures 1
 
 The relationship between load and relative displacement for the net cross-section yield first and bearing yield first cases are shown in Fig. \ref{ch4fig13} and Fig. \ref{ch4fig14}, respectively. The relative displacement on the horizontal axis is the relative displacement in the direction of load between the bracing plate and the welded material at a position 10 mm from the edge of the welded material on the play side at the joint cover surface.
 
-\subsection{Net section yield-precedence type}
+\subsubsection{Net section yield-precedence type}
 
 Fig. \ref{ch4fig11} shows that the initial stiffness of the riveted joints (HSB0-y) is lower than that of the combined and friction joints (HSBall-y), and in all cases, net section yielding occurred at the point of initial stiffness change.
 
@@ -325,7 +327,7 @@ Fig. \ref{ch4fig13} shows that the slope between load and relative displacement 
     \label{ch4fig13}
 \end{figure}
 
-\subsection{Bearing yield first}
+\subsubsection{Bearing yield type}
 
 Fig. \ref{ch4fig12} shows that the initial stiffness of the case with two high-strength bolts (HSB23-b) was similar to that of the friction-jointed HSBall-b. For HSBall-b, the displacement increased while the load decreased at 263.7 $kN$, and the analytical values generally agreed with the sliding capacity, Fslip  = 258.3 $kN$. In the case of the combined joint, the load increased even when the slip capacity was exceeded, and the displacement increment was small.
 
@@ -340,7 +342,7 @@ Fig. \ref{ch4fig14} shows that in all cases, the point of change in the slope of
     \label{ch4fig14}
 \end{figure}
 
-\subsection{Load Transfer Mechanism}
+\subsubsection{Load Transfer Mechanism}
 
 As shown in Fig. \ref{ch4fig15}, the combined joint transmits loads through three processes: (1) a friction transmission phase in which loads are transmitted almost exclusively by friction up to a slip capacity $F_{slip}$ , (2) a combined transmission phase in which loads are transmitted by bearing pressure and friction up to a bearing load $P_{bya}$ , and (3) a plastic deformation phase in which the joint is plastically deformed afterwards.
 
@@ -419,7 +421,7 @@ In the case where a high-strength bolt is placed at fastener position 1 (HSB1-b)
 
 On the other hand, in the HSB0-b, HSB2-b and HSB3-b cases, the slope of the frictional force (F1) due to the rivet at fastener position 1 changed when the load was 50 $kN$ and the frictional force remained constant. This may be due to the fact that the limit value of the rivet friction force is reached at an early stage when a less rigid rivet joint is placed at fastener position 1, where the force acting on the material to be welded is greatest.
 
-\subsection{Stress properties of materials to be welded}
+\subsubsection{Stress properties of materials to be welded}
 
 \begin{figure}[htbp]
     \centering
@@ -452,7 +454,7 @@ Table \ref{ch4tab4} shows that for the pure section yield-precedence type, the n
 For the bearing-precedence type, the difference between the analytical load Fa and the improved bearing capacity Fbp was small, with a maximum difference of 4.4\% and a minimum difference of 0.5\%. In the case of two high-strength bolts, there was no bias in plasticization around the hole due to the support pressure of the rivets, and the difference between the bearing load and the improved bearing capacity was the smallest.
 
 
-\section{Validation of FE model}
+\subsection{Validation of FE Model}
 
 To validate the FEM analysis used in this study, the authors conducted tensile tests on riveted joints cut out of a transverse girder of a riveted bridge that was more than 90 years old. The cut-out positions are shown in Fig. \ref{ch4figA1}.
 A total of three cases were set up: friction joint HTBall with all replaced by high-strength bolts, riveted support joint HTB0 and combined joint HTB1 with fastener position 1 as a high-strength bolt.
@@ -474,7 +476,7 @@ The dimensions of the analytical model and the introduced axial force of the hig
     \label{ch4figA2}
 \end{figure}
 
-\subsection{Comparison of experimental and analytical results}
+\subsubsection{Comparison of experimental and analytical results}
 
 The load and relative displacement relationships for HTBall, HTB0 and HTB1 are shown in Fig. \ref{ch4figA3}. The relative displacement between the contact plate and the welded material was measured at a position 10 mm from the gap in both the analysis and the experiment.
 Fig. \ref{ch4figA3} shows that the curves of the load-relative displacement relationship for the riveted HTB0 joints from the experiments and the analysis are almost identical. In HTB1, the initial stiffnesses of the two joints are almost identical up to a value of F / Fy = 0.8. However, there is a difference between the two after that point. This is thought to be due to the fact that in the experiment the slip capacity was exceeded, which resulted in minute slippage.
@@ -486,7 +488,7 @@ Fig. \ref{ch4figA3} shows that the curves of the load-relative displacement rela
     \label{ch4figA3}
 \end{figure}
 
-\subsection{Strain distribution in the joints}
+\subsubsection{Strain distribution in the joints}
 
 The strain distributions in the tensile direction on the kovar surface of the jointed material in the HTB0 and HTB1 cases are shown in Fig. \ref{ch4figA4} a and b respectively $(F / F_y = 0.6 and 1.0)$. The strain measurement positions are shown in Fig. \ref{ch4figA5}.
 Fig. \ref{ch4figA4} a and b show that the experimental and analytical strain distributions on the cobber surface of the jointed material at $F / F_y = 0.6$ are in good agreement for both HTB0 and HTB1.
@@ -506,7 +508,7 @@ The experimental and analytical strain distributions at $F / F_y = 1$ showed a s
     \label{ch4figA5}
 \end{figure}
 
-\subsection{Residual axial forces of the bolt}
+\subsubsection{Residual axial forces of the bolt}
 
 Fig. \ref{ch4figA6} and Fig. \ref{ch4figA7} show the relationship between experimental and analytical loads and bolt axial force survivability (bolt axial force/initial bolt axial force) for HTBall and HTB1 respectively. The axial force remaining ratio is the ratio of the bolt axial force to the pre-test value; HTB0 is excluded from the comparison because the rivet axial force could not be ascertained in the experiment.
 From Appendix Figs. 6 and 7, the changes in the remaining bolt axial force between the experiment and the analysis are in good agreement.
@@ -526,13 +528,13 @@ From Appendix Figs. 6 and 7, the changes in the remaining bolt axial force betwe
     \end{minipage}
 \end{figure}
 
-\subsection{Validation result}
+\subsubsection{Validation results}
 
 The load-relative displacement relationship and bolt axial force remaining ratio between the experimental and analytical results using the analytical model and method presented here are in good agreement. On the other hand, the strain distribution in the jointed material was in perfect agreement for$ F / F_y = 0.6$, but for $F / F_y = 1$ there was a slight deviation from the experimental data. However, the deviations were within 10%.
 In conclusion, it is considered possible to analytically evaluate the mechanical behaviour of combined joints with rivets and high-strength bolts using the analytical model and methods used in this study.
 
 
-\section{Investigate the replacement of the bolt}
+\section{Investigate the Replacement of The Bolt}
 
 The model was developed in Abaqus, and the FE mesh and boundary conditions imposed are shown in Fig. \ref{fig-l5}. To simulate the dead load, distributed loads were applied to the joint end surface. The elements applied in the model were three-dimensional eight node solid elements with reduced integration (C3D8R).
 
@@ -701,7 +703,7 @@ Fig. \ref{fig-l11} shows the relationship between load and displacement for each
     \label{fig-l11}
 \end{figure}
 
-\section{Investigate for the long riveted joint}
+\section{Investigate for The Long Riveted Joint}
 
 In the previous section, in the case of a hybrid joint using three rows of rivets and a high-strength bolt friction connection, although nonlinear behavior is not exhibited until the inner rivet holes plasticize, the degree of plasticization is not uniform and the plasticization zone increases as one moves away from the center of the joint. However, when the number of rivet rows is small, as in the case of the subject studied in section \ref{ch4sec2}, the plasticization bias at each rivet position is small, and it is considered possible to evaluate the plasticization of the rivet holes at the initial stage of nonlinear behavior by multiplying the nominal bearing stress by the number of rivets. However, which discusses only one-row, three-row joints, the number of rivets in a row actually increases, the force acting on the rivets is not uniform, and there is a large possibility that localized yielding will occur first.
 
@@ -790,10 +792,13 @@ Fig.\ref{fig-5rholedef} shows the deformation of each case each fastener's hole.
     \label{fig-5rholedef}
 \end{figure}
 
-\section{Summarize}
-In this study, the displacement of the joint, the load sharing of each fastener, and the stress properties of the main plate were used to clarify the load transfer mechanism of the combined riveted and high-strength bolted friction joints with preloads taken into account.
+\section{Conclusions}
 
-The findings of this study are as follows.
+In this chapter, a three-dimensional elasto-plastic finite displacement analysis was conducted using rivet and high-strength bolt arrangements as parameters to elucidate the load transfer mechanism of a joint using a riveted joint and a high-strength bolt friction joint, considering the preload introduced during tightening. In order to focus on the yielding around the rivet holes in the main plate due to the supporting pressure of the rivets, the plate width b was varied while the plate thickness t was kept constant.
+
+In this chapter, the displacement of the joint, the load sharing of each fastener, and the stress properties of the main plate were used to clarify the load transfer mechanism of the combined riveted and high-strength bolted friction joints with preloads taken into account.
+
+The findings of this chapter are as follows.
 
 \begin{enumerate}
     \item In this study, we focused on the overall displacement of the joint and plastic deformation around the fastener hole, and defined the service limit state of the joint as the time when the load-overall displacement relationship begins to exhibit nonlinear behavior. It was found that the arrangement of the high-strength bolts had almost no effect on the service condition of the three-row joints.
@@ -808,7 +813,7 @@ The findings of this study are as follows.
 
 \end{enumerate}
 
-\subsection{Load redistribution when remove rivet}
+\textbf{Load redistribution when remove rivet}
  
 When replace the rivet, the load sharing behavior will change, especially remove one rivet, the load will transfer to the other rivet, the transfer mechanism is important. An FE analysis was conducted to simulate the load redistribution when the rivet was removed under a dead load. Based on the results obtained, the following conclusions were inferred:
 

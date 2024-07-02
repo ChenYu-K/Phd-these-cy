@@ -271,6 +271,9 @@
 \input{chapters/ListAcronyms.tex} % OPTIONAL CAN BE REMOVED
 }{}
 
+
+\input{chapters/ListTerms}
+
 \ifthenelse{\boolean{list_of_figures}}{
 \cleardoublepage\phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}\mtcaddchapter

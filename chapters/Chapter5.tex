@@ -1,4 +1,4 @@
-\chapter{Numerical Analysis of IFB-HSB hybrid Connection}
+\chapter{Finite Element Analysis of IFB-HSB Hybrid Connection}
 \label{ch5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -18,11 +18,11 @@ In this chapter, we proposed a method to reduce the joint length and maintains o
 
 \section{Definition of slip and bearing critical for hybrid joint}
 
-Worldwide, the standard load-bearing capacity test on slip-critical bolted joints considers a two-bolt-connected specimen, and the load applicable to a splice plate with a relative displacement between 0.15 and 0.20 mm is applied as the ultimate slip load. However, Xu et al.\cite{xu2011} proposed that the standard for more than five rows of bolt connections is not applicable.  Peng et al.\cite{Peng2013} conducted a slip test using a 12-row bolted joint. For the design slip load, the end bolt at the plate experienced 0.45 mm total slip, with an elastic deformation at the middle bolt of 0.1 mm. When the total slip at the end bolts reached 0.2 mm, the middle bolts experienced only 0.02 mm slip. This suggests that, by adhering to Japan's general slip assessment method \cite{2012AIJStructures}, it is unfeasible to ascertain the ultimate slip load for long-bolted joints. Comparing the load-carrying capacity of long- and short-bolted joints using this standard is also unattainable as the 0.15--0.2 mm slip range is inappropriate for connections consisting of more than five rows. A slip of 0.15--0.20 mm is already experiencing full slip for short connections, whereas for bolts in the long connection, the majority are not completely in slip. \par
+Worldwide, the standard load-bearing capacity test on slip-critical bolted joints considers a two-bolt-connected specimen, and the load applicable to a splice plate with a relative displacement between 0.15 and 0.20 mm is applied as the ultimate slip load. However, Xu et al.\cite{xu2011} proposed that the standard for more than five rows of bolt connections is not applicable.  Peng et al.\cite{Peng2013} conducted a slip test using a 12-row bolted joint. For the design slip load, the end bolt at the plate experienced 0.45 mm total slip, with an elastic deformation at the middle bolt of 0.1 mm. When the total slip at the end bolts reached 0.2 mm, the middle bolts experienced only 0.02 mm slip. This suggests that, by adhering to Japan's general slip assessment method \cite{AIJ2012AIJStructures}, it is unfeasible to ascertain the ultimate slip load for long-bolted joints. Comparing the load-carrying capacity of long- and short-bolted joints using this standard is also unattainable as the 0.15--0.2 mm slip range is inappropriate for connections consisting of more than five rows. A slip of 0.15--0.20 mm is already experiencing full slip for short connections, whereas for bolts in the long connection, the majority are not completely in slip. \par
 
 For hybrid-bolted joints, the relative displacement is somewhat constrained by the Interference body bolt installed at the end, such that the bolt on the inside could share more tensile force when evaluating the 0.2 mm relative displacement at the end. However, because the end bolts transmit tensile forces to the steel plate through the bearing, and the forces on the end bolts are considered to share more than 30\% of the tensile force before the slip of long-bolted joints \cite{Zhanghuazhi2000,chinarailway2005}, it is necessary to confirm whether the resistance on the Interference body bolt exceeds the designed load-bearing capacity of the bolt. 
 
-In this study, we defined the bearing-critical of the hybrid-bolted joint when the end bolts of the hybrid bolt joint reached the shear yield strength or the end-bolt holes reached the bearing/shear strength (that is, the end bolt must satisfy Eq.\ref{eq-FV}). And the slip-critical when the relative displacement reaches 0.2 mm. The 0.2 mm slip strength was defined with reference to the Architectural Institute of Japan \cite{2012AIJStructures} which states that slip occurs when the relative displacement reaches 0.2 mm, where the relative displacement for the main and splice plates is measured to be 10 mm from the end of the main plate. 
+In this study, we defined the bearing-critical of the hybrid-bolted joint when the end bolts of the hybrid bolt joint reached the shear yield strength or the end-bolt holes reached the bearing/shear strength (that is, the end bolt must satisfy Eq.\ref{eq-FV}). And the slip-critical when the relative displacement reaches 0.2 mm. The 0.2 mm slip strength was defined with reference to the Architectural Institute of Japan \cite{AIJ2012AIJStructures} which states that slip occurs when the relative displacement reaches 0.2 mm, where the relative displacement for the main and splice plates is measured to be 10 mm from the end of the main plate. 
 
 \begin{equation}
     F_{v,Ed.ser.end} \leq min\{F_{v,Rd.ser}, F_{b,Rd.ser}\}
@@ -43,7 +43,7 @@ The slip coefficient ($\mu_{0.2}$) was calculated using Eq.\ref{eq-slipcof}.
 where $n$ denotes the number of bolts, $m$ denotes the number of slip planes, $N_d$ denotes the axial force of the bolt before loading, and $P_{0.2slip}$ denotes the load when the joint's relative displacement reaches 0.2 mm.
 
 
-\section{Finite element analysis}
+\section{Finite Element (FE) Analysis}
 
 \begin{figure}[htbp]
     \centering
@@ -192,7 +192,7 @@ The analytical cases are shown in Table \ref{tab-ch5fecase}. The parameters are 
 \centering
 \caption{ Summary of FE analysis case and the parameter of each case}
 \label{tab-ch5fecase}
-\scalebox{0.75}{
+\scalebox{0.8}{
 \begin{tabular}{@{}lcccccccc@{}}
 \toprule
 \multicolumn{1}{c}{Case Name} &
@@ -335,7 +335,7 @@ where $\sigma_y$ and $\sigma_u$ are the yield and ultimate strengths of the main
 %Slip strength with Eurocode3 or ASSHTO evaluate the relative displacement of each location(10mm,center of joint and end of joint) %deformation of net cross-section when end bolt is bearing-type (effict, where is different.) transfer mechanism 
 %%%
 
-The relationship between the load and deformation of the joint is shown in Fig. \ref{fig-loadD}, where deformation is taken from the joint end located at the applied load. The relationship between the load and relative displacement is shown in Fig. \ref{fig-loadrd}. Relative displacement is referenced to the AIJ's \cite{2012AIJStructures} recommendation and taken from the location of distance 10 mm from the inner end of the plate. Peng et.al \cite{Peng2013} investigated the correctness of a 0.2 mm relative displacement slippage estimation for long-bolted joints. In Fig. \ref{fig-loadD}, the square represents the R12-o case (original slip-critical bolted joint), the circle represents a hybrid joint with two Interference-body bolts, and the triangle represents a hybrid joint with four Interference-body bolts. The dash-dotted line $F_{ds}$ and dashed line $F_{dy}$ represent the design slip strength and net cross-sectional yield strength of the R12-o case, respectively.
+The relationship between the load and deformation of the joint is shown in Fig. \ref{fig-loadD}, where deformation is taken from the joint end located at the applied load. The relationship between the load and relative displacement is shown in Fig. \ref{fig-loadrd}. Relative displacement is referenced to the AIJ's \cite{AIJ2012AIJStructures} recommendation and taken from the location of distance 10 mm from the inner end of the plate. Peng et.al \cite{Peng2013} investigated the correctness of a 0.2 mm relative displacement slippage estimation for long-bolted joints. In Fig. \ref{fig-loadD}, the square represents the R12-o case (original slip-critical bolted joint), the circle represents a hybrid joint with two Interference-body bolts, and the triangle represents a hybrid joint with four Interference-body bolts. The dash-dotted line $F_{ds}$ and dashed line $F_{dy}$ represent the design slip strength and net cross-sectional yield strength of the R12-o case, respectively.
 
 \begin{figure}[htbp]
     \begin{subfigure}[t]{0.49\textwidth}
@@ -478,10 +478,9 @@ Fig. \ref{fig-r10b24boltmises} also shows the R10B4 and R10B2 case's von-Mises s
 
 Based on the above results, we recommend the installation of only one Interference-body bolt at each end in practical engineering design. This is because the Interference-body bolt may experience local shear yield before the joint experiences a net cross-sectional yield, which would reduce the load-bearing capacity of the joint. Therefore, to prevent an excessive tensile load on a single bolt, it is necessary to use at least two Interference-body bolts at each end of a long hybrid joint.
 
+\textbf{Load sharing of the end bolt}
 
-\subsubsection{Load sharing of the end bolt}
-
-The relationship between the load-bearing force of the bolt at the end (\#1) and the load made non-dimensional by the slip resistance $F_{ds}$ is shown in Fig. \ref{fig-load-non-1bs-alnon}. The relationship between the load/$F_{ds}$ and the resistance of each bolt / total load is shown in Fig. \ref{fig-load-1bs-alnon}. As shown in Fig. \ref{fig-load-non-1bs}, only the friction force of the R12-O bolt reaches its designed value at about 150 kN, causing localized slip in the friction joint. This is considered to be a reduction of preload due to $\beta$. All of cases, before $F_{ds1}$ is reached, the slope of the load sharing curves for the same number of rows of bolts coincides. This suggests that friction force is dominant for bearing type bolts before $F_{ds1}$ is reached. The slope of the load sharing curve changes around $F_{ds1}$, and the load is resisted by both friction and bearing. Fig. \ref{fig-load-1bs-alnon} shows a non-dimensionalized view of the load-sharing force of the bolts. Regardless of the number of rows, when the load is equal to the design slip resistance $F_{ds}$ for any of the hybrid joints, the \#1 bolts at the ends carry approximately 17\% of the load. In all cases except for the case where no preload is introduced, the load on the end bolts decreases after reaching 27\%.
+The relationship between the load-bearing force of the bolt at the end (\#1) and the load made non-dimensional by the slip resistance $F_{ds}$ is shown in Fig. \ref{fig-load-non-1bs}. The relationship between the load/$F_{ds}$ and the resistance of each bolt / total load is shown in Fig. \ref{fig-load-1bs-alnon}. As shown in Fig. \ref{fig-load-non-1bs}, only the friction force of the R12-O bolt reaches its designed value at about 150 kN, causing localized slip in the friction joint. This is considered to be a reduction of preload due to $\beta$. All of cases, before $F_{ds1}$ is reached, the slope of the load sharing curves for the same number of rows of bolts coincides. This suggests that friction force is dominant for bearing type bolts before $F_{ds1}$ is reached. The slope of the load sharing curve changes around $F_{ds1}$, and the load is resisted by both friction and bearing. Fig. \ref{fig-load-1bs-alnon} shows a non-dimensionalized view of the load-sharing force of the bolts. Regardless of the number of rows, when the load is equal to the design slip resistance $F_{ds}$ for any of the hybrid joints, the \#1 bolts at the ends carry approximately 17\% of the load. In all cases except for the case where no preload is introduced, the load on the end bolts decreases after reaching 27\%.
 
 \begin{figure}
 \begin{minipage}[t]{0.49\linewidth}
@@ -647,7 +646,7 @@ R8-B4     & 1312 &                       & 2459 & 1721 & 2608 & 2501 & 1.31 & 1.
 
 
 
-\section{Summarize}
+\section{Conclusions}
 
 In order to solve the issues of reduced slip load and interference with secondary members resulting from long bolted joints, we propose a hybrid joint solution that combines Interference body bolts for bearing-type connection and High-strength hexagon bolt for slip-critical connection to reduce the joint length without sacrificing strength. The finite element analysis was conducted by setting joint length and bolt arrangement as parameters to analyze the mechanical behavior of the hybrid joint. 
 
