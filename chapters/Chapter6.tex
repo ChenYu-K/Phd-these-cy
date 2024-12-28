@@ -14,7 +14,7 @@
 
 Chapter \ref{ch5} presented a method that combined the bearing-type bolts at both ends of the friction type bolted joint (hereinafter known as the Hybrid bolted joint). The result showed that the 12-row hybrid joint could improve about 20\% slip load than the 12-row friction bolted joint. However, this result is based on numerical analysis and does not take into account the actual assembly of interference fit bolts.
 
-This study focuses on Interference fit bolts assembled at both ends of friction type bolted joint. Tensile tests were performed with three specimens: friction type bolted joints (hereafter known as friction joint), hybrid joints and hybrid joints with Interference fit bolts without preload application. The purpose of this study is to elucidate the load transmission mechanism of the hybrid joints, the slip resistance, and to verify whether the Interference fit bolts can be assembled in the friction joints to improve the strength of the joints.
+This chapter focuses on Interference fit bolts assembled at both ends of friction type bolted joint. Tensile  experiments  were performed with three specimens: friction type bolted joints (hereafter known as friction joint), hybrid joints and hybrid joints with Interference fit bolts without preload application. The purpose of this study is to elucidate the load transmission mechanism of the hybrid joints, the slip resistance, and to verify whether the Interference fit bolts can be assembled in the friction joints to improve the strength of the joints.
 
 
 \section{Interference Fit Bolt}
@@ -31,7 +31,7 @@ A specialized high-strength bolt for bearing-type connection (hereafter known as
 For bearing-type bolted connections, AASHTO LRFD BDS 2020 \cite{AASHTO2020} defines it as a strength limit state only for joints subjected to axial compression or joints on bracing members. Both Eurocode3 EN 1993-1-8:2021 \cite{eurocode3-21}and GB50017-2017 \cite{gb50017-2017}define that it should be designed in the same way as friction-type bolted connections, and define the serviceability limit state as slip resistance and the bearing resistance as the ultimate limit state. However, Eurocode 3 allows the bearing resistance of resin and slip resistance of injection bolts to be accumulated for design under the serviceability limit state, and Japanese's JSHB-2017 \cite{douji2017} states that bearing type bolted connections could be designed to meet serviceability limit state by bearing resistance. 
 
 
-\section{Experiment}
+\section{Standard test}
 
 \subsection{Material test}
 
@@ -71,7 +71,7 @@ Poisson's ratio $v$ & - & 0.274 & - & 0.269 & - &- \\
 \end{tabular}
 \end{table}
 
-\subsection{Standard slip test for measurement the slip coefficient}
+\subsection{Standard slip coefficient test}
 
 The geometry of the standard slip test specimen is shown in Fig. \ref{fig-sliptest}, and the structural characteristics are shown in Table \ref{tab-sizeslip}. The geometry was prepared with reference to the high-strength bolt design, construction, and maintenance guidelines \cite{shishin2009}.
 
@@ -106,7 +106,7 @@ F10T & 22 & 24.5 & SM490Y & 355 & 19 & 12 & 100 & 55 & 80
 
 where, $t_m$ is the thickness of main plate, $t_s$ is the thickness of splice plate, $w$ is the width of mian plate, $e_1$ is the end distance from bolt hole, $p_1$ is the bolt spacing. 
 
-The test method for the standard slip test is shown below.
+The procedure for the standard slip coefficient test is shown below.
 
 \begin{enumerate}
     \item The number of specimens shall be three. One side of the specimen is the test side and the other side is the fixed side. The bolts on the fixing side should be retightened by $10\%$ to prevent slippage at the test end. \\
@@ -142,10 +142,10 @@ Standard Deviation &  &  &  & 0.017 \\ \bottomrule
 \end{tabular}
 \end{table}
 
-
+\section{Tensile experiment for hybrid connections}
 \subsection{Detail of Set-up}
 
-The experimental specimen dimensions shown in Fig. \ref{fig-dimens} were selected based on previous research\cite{KAMEI2000} on the investigation results of an actual bridge. The commonly occurring single-row 10-column arrangement was used as a reference. To investigate the mechanical behavior of slip and bearing of the joints, $\beta$ is set to 0.65 to prevent the joints from being affected by the cross-sectional yield of the main plate before slip.
+The experimental specimen dimensions as shown in Fig. \ref{fig-dimens} were selected based on previous research\cite{KAMEI2000} on the investigation results of an actual bridge. The commonly occurring single-row 10-column arrangement was used as a reference. To investigate the mechanical behavior of slip and bearing of the joints, $\beta$ is set to 0.65 to prevent the joints from being affected by the cross-sectional yield of the main plate before slip.
 
 The specimens were subjected to loading using a hydraulic universal testing machine with a capacity of 2000kN (provided by Tokyo Testing Machine Co. Ltd.). Considering the testing machine's loading capacity, the specimen was scaled down to a size of 16/22. Static uniaxial tension testing was conducted. The loading rate was set to 1 kN/s until either the test machine capacity was reached or failure occurred in the net cross section of plate or shear of the bolt. The loading device is depicted in Fig. \ref{fig-setup}.
 
@@ -184,9 +184,9 @@ According to JSHB\cite{douji2017}, the joint surface is coated with inorganic zi
 
 Interference fit bolts are installed using a hole with a diameter of 23.2mm. According to AASHTO \cite{AASHTO2020}, the common M16F10T bolt is installed using a 17mm diameter hole. Taking relaxation into account, the preload during installation for all bolts is 117kN \cite{douji2017}.
 
-\subsection{Cases}
+\subsection{Experimental specimens}
 
-The experimental specimens are shown in Table \ref{tab-expcase}. Previous research \cite{Chen2023MechanicalConnections} found that for long bolted joints with single columns of 8-12 rows, at least two or more Interference fit bolts should be used at each end of the joint to prevent excessive load sharing and premature shear yield of the bolts. Moreover, during the tightening process of the bolts, the bolt shank may undergo shrinkage caused by the Poisson's ratio effect, potentially leading to a loss of effectiveness in the interference fit. Therefore, in this experiment, the Hybrid case employs two Interference fit bolts at each end, whereas the Hybrid-NAF case means no preload for the interference fit bolt, which is only tightened to 5-10kN using a ratchet.
+The experimental specimens are listed in Table \ref{tab-expcase}. Previous research \cite{Chen2023MechanicalConnections} found that for long bolted joints with single columns of 8-12 rows, at least two or more Interference fit bolts should be used at each end of the joint to prevent excessive load sharing and premature shear yield of the bolts. Moreover, during the tightening process of the bolts, the bolt shank may undergo shrinkage caused by the Poisson's ratio effect, potentially leading to a loss of effectiveness in the interference fit. Therefore, in this experiment, the Hybrid case employs two Interference fit bolts at each end, whereas the Hybrid-NAF case means no preload for the interference fit bolt, which is only tightened to 5-10kN using a ratchet.
 
 \begin{table*}[htbp]
 \centering
@@ -207,7 +207,7 @@ Hybrid-NAF & \faGear&\faGear&\faCircleO&\faCircleO&\faCircleO&\faCircleO&\faCirc
 \end{table*}
 
 
-\section{Results and Discussion}
+\section{Results and discussions}
 
 \subsection{Installation of Interference fit bolt}
 
@@ -326,7 +326,7 @@ In addition, the hybrid joint has a more uniform distribution of relative displa
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{imgs/ch6/RD-bar.eps}
+    \includegraphics[width=0.65\textwidth]{imgs/ch6/RD-bar.eps}
     \caption{Distribution of Relative displacement (When load = 0.8$F_{sf}$ = 1088kN, while $F_{sf}$ is Friction type joint slip load) }
     \label{fig-rdbar}
 \end{figure}
@@ -341,13 +341,13 @@ Furthermore, focus on direct strain at position S3 that has already transmitted 
 
 \begin{figure}[htbp]
 \centering
-    \begin{subfigure}[t]{0.6\textwidth}
+    \begin{subfigure}[t]{0.7\textwidth}
         \includegraphics[width=\linewidth]{imgs/ch6/S1SS2-F.eps}
         \caption{S1,and SS2 for Friction type joint}
         \label{fig-s1ss2}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.6\textwidth}
+    \begin{subfigure}[t]{0.7\textwidth}
         \includegraphics[width=\linewidth]{imgs/ch6/S3-FH.eps}
         \caption{s1 and s3 for Friction and Hybrid joint}
         \label{fig-s3FH}
@@ -410,7 +410,8 @@ Eurocode 3 (EN 1993-1-8:2005) \cite{eurocode3-21} provisions that where the dist
 \end{equation}
 
 Japanease Specification for Highway Bridge (JSHB) \cite{douji2017} published by Japan Road Association states that when the number of row exceeds 8 in bolted joint, a reduction factor must be applied to the slip resistance, as shown in Table \ref{ch6tab-jpredu}.
-\begin{table}[h]
+
+\begin{table}[htbp]
     \centering
     \caption{Reduction of slip resistance of bolted joint of JSHB-JRA}
     \begin{tabular}{cccccc}
@@ -479,21 +480,20 @@ However, in this experiment, slight slippage occurred in the hybrid joint, which
 
 Despite this, hybrid joints in the slip limit state exhibit greater strength compared to friction joints. The load distribution is also more even and the relative displacement of the ends is smaller. Consequently, the performance of hybrid joints is superior to that of existing friction joints under the current slip limit specification, and the study concludes that designing hybrid joints under the current slip limit specification is feasible.
 
+
+
 \section{Conclusions}
 
-This study focuses on interference fit bolts assembled at both ends of friction type bolted joint to elucidate the slip resistance and deformation of the hybrid joints, and to verify whether the interference fit bolts can be assembled in the friction type joints to improve the strength of the joint. Tensile tests were performed with three specimens: friction type bolted joint, hybrid joint, and hybrid joint with non-preload interference fit bolts. 
+This chapter experimentally investigated the slip resistance and deformation of hybrid joints with IFBs at both ends of friction-type bolted joints. Tensile  experiments  were conducted on friction-type joints, hybrid joints, and hybrid joints with non-preload IFBs.
 
-On the basis of the results of our investigation, we have made the following findings and conclusions. \par
+\subsubsection*{Slip resistance and load distribution}
+\begin{itemize}
+    \item The slip load of a 10-row hybrid joint with four IFBs at both ends was approximately 7\% higher than that of friction-type joints. Variations in preload resulted in slip loads 10\% higher for hybrid joints than friction-type joints.
+    \item Hybrid joints reduced uneven load distribution and deformation compared to friction-type joints, allowing inner bolts to share more load. Reduced outermost displacement (RD1) improved deformation performance under slip limit specifications.
+\end{itemize}
 
-\begin{enumerate}
-
-\item The slip load of a 10-row hybrid joint assembled with four interference fit bolts at both ends is approximately 7\% higher than that of a friction-type joint. If the initial preload of the bolts is considered inconsistent, the result of dividing the slip load by the corresponding calculated slip resistance is approximately 10\% higher for the hybrid joint than that for the friction-type joint.
-
-\item The distributions of relative displacements and reduction in the preload on the individual bolts of the joint show that the hybrid joint has a small dispersion of the data when compared with the friction-type joint, suggesting that the uneven load distribution and deformation of the joint can be improved by installing interference fit bolts. This allows the inner bolts of the hybrid joint to share a greater part of the load than the friction-type joint for the same load level, thus reducing the load concentration on the outer bolts. The deformation of the hybrid joint improves owing to the considerable reduction in the outermost relative displacement RD1. The performance of hybrid joints is superior to that of the existing friction-type joints under the current slip limit specification. 
-
-\item The overall load--deformation relationship of the hybrid joint remains quasi-linear up to the upper load limit of 1800 kN, although a minor amount of slip occurs. Moreover, the total residual deformation of the hybrid joint is only 0.2\% relative to the length $L_j$ of the joint. In contrast, the friction-type bolted joint produces a residual deformation of 0.75\% when loaded to 1600 kN. Therefore, within the quasi-linear range, it can be expected that the hybrid joint will have a high serviceability limit strength.
-
-\item The observation of the cross section showed that the rib portion of the interference fit bolt tail did not provide a good interference fit (the rib was not in contact with the hole wall or the contact area was too small). This resulted in the interference fit bolt being unable to fully resist the portion of load lost due to the slip, causing a minor slip to occur. This is also illustrated by the fact that the displacement of the splice plate SP2 on the nut side is greater than that of the splice plate SP1 on the head side of the bolt.
-
-
-\end{enumerate}
+\subsubsection*{Load-deformation behavior and observations}
+\begin{itemize}
+    \item Hybrid joints exhibited quasi-linear load-deformation behavior up to 1800 kN, with residual deformation only 0.2\% of joint length $L_j$. In contrast, friction-type joints showed 0.75\% residual deformation at 1600 kN.
+    \item Observations revealed insufficient interference fit in some IFBs, causing minor slip. Displacement differences between splice plates SP1 and SP2 further illustrated this issue.
+\end{itemize}

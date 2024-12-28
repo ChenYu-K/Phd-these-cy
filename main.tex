@@ -53,12 +53,12 @@
 %%%%%%%%%%%%%%%% SETUP %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % EDIT THE FOLLOWING INFORMATION WITH YOUR DATA
-\title{Study on Limit States of Hybrid Joint With Friction and Bearing Type Connection}
-\subtitle{（摩擦接合と支圧接合を併用したハイブリッド継手の限界状態に関する研究）} % use \subtitle{} to remove it
+\title{Study on Limit Strength of Hybrid Joint with Friction and Bearing Type Connection}
+\subtitle{（摩擦接合と支圧接合を併用したハイブリッド継手の限界強度に関する研究）} % use \subtitle{} to remove it
 \author{Chen Yu}
 
 \supervisor{Prof.Dr Takashi Yamaguchi \\[1mm] Prof. x Kitou} %UK: Dr no dot, prof has dot
-\submityear{2024}
+\submityear{2025}
 % PICK A DEGREE FROM THE LIST BELOW 
 % DO NOT MODIFY THE NAMES
 \course{Engineering}
@@ -93,14 +93,14 @@
 % BY CREATING .TEX FILES IN THE FOLDER chapters
 % AND ADDING \input{namechapter.tex} BELOW
 
-\input{Chapter1.tex}
-\input{Chapter2.tex}
+%\input{Chapter1.tex}
+%\input{Chapter2.tex}
 \input{Chapter3.tex}
 \input{Chapter4.tex}
 \input{Chapter5.tex}
 \input{Chapter6.tex}
-\input{Chapter7.tex}
-\input{Chapter8.tex}
+%\input{Chapter7.tex}
+%\input{Chapter8.tex}
 
 %\conclusions % Do not change - required
 % EDIT THE CONTENT OF THE FILE
@@ -111,10 +111,14 @@
 % APPENDICES ARE OPTIONAL
 % COMMENT OUT BOTH LINES BELOW TO REMOVE THEM
 % ADD CHAPTERS TO ADD MULTIPLE APPENDICES
+
 \appendix 
-% \input{AppendixA.tex}
-% \input{AppendixB.tex}
-% \input{chapters/AppendixC}
+
+%\def\thechapter{Appendix \Alph{chapter}}
+
+\input{AppendixA.tex}
+\input{AppendixB.tex}
+%\input{chapters/AppendixC} %Resin injection bolted joint
 %\input{AppendixB.tex} % Example second appendix (need to create the file in "chapters")
 
 
@@ -127,7 +131,7 @@
 
 \addcontentsline{toc}{chapter}{\bibname}
 \singlespacing
-\bibliography{package/references,package/refmen}
+\bibliography{package/references}
 
 
 \end{document}

@@ -1,4 +1,4 @@
-\chapter{Experiment of Rivet-HSB Hybrid Connection}
+\chapter{Finite Element Analysis of Rivet-HSB Hybrid Connection}
 \label{ch3}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,690 +9,694 @@
 \onehalfspacing % CHAPTER
 % COPY THEM IN ANY NEW CHAPTER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 \section{Introduction}
 
+Steel structures constructed in the early days of welding technology used riveted joints consisting of multiple layers of thin plates. Today, the majority of existing riveted bridges are more than 60 years old. Many riveted bridges that have been in service for a long period of time have experienced corrosion damage at the bearing and girder points, where rainwater tends to accumulate, and at the rivet heads, where the coating film is difficult to adhere to. In a previous survey of riveted bridges \cite{okamoto2011investigation}, it was reported that most of the rivet heads were corroded. Therefore, appropriate repair and reinforcement of such corrosion damage is necessary to keep bridges in service safely.
 
-Rivets were widely used in the world to fasten steel members in the early days, and also used for cross-section connections for steel bridges. Since 1950, countries worldwide have been issued design specifications for high-strength bolts connection, and high-strength bolts connection have gradually replaced rivet connections. However, many riveted bridges are still in service \cite{Collette2014Experimental1880s1890s}. Some of the rivets might be corroded and loosen due to deterioration of the paint coating. The reduction of the volume of a rivet's head is severely affected fatigue life \cite{Heinemeyer2011TheConnections}. Studies have also pointed out the influence of rivets' material loss on these bridge structure elements' remaining bearing capacity \cite{Hashimoto2010,Macho2016}. For structural performance recovery or to extend their service life, the riveted bridges have to repair or reinforce by replacing the corroded rivets with high-strength bolts. Replacing the rivets with a high-strength bolt for changing to the frictional joint is a desirable approach to repairing the corroded riveted joint \cite{KOMATSU2015}.
-    
-Applying such repair, whether it satisfies the frictional joints' performance requirements depends on the slip coefficient. However, the riveted joint surface's slip coefficient with red lead paint for corrosion is not specified. Therefore, giving a proper evaluation of the slip coefficient is one of the purposes of this paper.
-Lead is an excellent anti-corrosive, lead-based paint that could be well protecting a steel structure from the element. Especially red lead (Pb3O4) was once widely used for bridges anti-corrosion paint. However, Lead-based paint has been a significant cause of lead poisoning. Countries around the world are beginning to call for an end to the use of Lead-based paint. \ac{CPSC} has already started banning lead-based paint in 1977 \cite{CPSC1977}. In 1987, Japan completely stopped using red lead as anti-corrosion paints for steel structures \cite{rtri1987Steel}. So far, the use of red lead has been completely discontinued and replaced by inorganic resin coatings. Red lead and rivets are used on steel bridges almost in the same period. Since rivets are designed to transmit load by shearing force, the friction performance of riveted joint surfaces with red lead paint is unspecified. 
+There are three main methods of repairing corroded riveted joints: a: replacement with new rivets, b: replacement with \ac{HSB} pressure joints, and c: replacement with \ac{HSB} friction joints. a: rivet material is difficult to obtain, tools and skilled workers are scarce, and the conditions for on-site installation are severe with respect to fire and noise. b: it is difficult to remove the rivet without losing the rivet hole, and the pressure bolts require high accuracy in bolt diameter. As for point b, it is difficult to remove the rivet without losing the rivet hole when removing the rivet, which is a major problem for pressure bolts with high accuracy requirements for the bolt hole diameter. Therefore, from the viewpoints of workability and economy, it is generally considered that the most effective method is to replace c with a \ac{HSB} for friction welding. However, slip of the friction surface, which is one of the limiting conditions of friction joints, depends greatly on the friction coefficient of the joint surface, but the condition of the joint surface of aged riveted bridges is unknown due to aging. Therefore, it is necessary to confirm whether the slip coefficient specified in the \ac{JSHB} \cite{douji2017} is guaranteed. Therefore, as an efficient repair and reinforcement method, a method that combines load transfer by frictional force and load transfer by bearing pressure at riveted joints has been proposed by using both rivets and \ac{HSB}s, instead of replacing all rivets with \ac{HSB}s. However, sufficient knowledge has not been accumulated on the load carrying capacity and load transfer mechanism of joints using rivets and \ac{HSB}s for friction joints, and design methods have not yet been established for repairing such joints. In fact, as shown in Figure 1, the load transfer mechanisms of friction joints with \ac{HSB}s and riveted joints are different. The road map stipulates that joints with different load transfer mechanisms, such as a joint method that combines a \ac{HSB} friction joint and a rivet joint (hereinafter referred to as HSB-rivet hybrid joint), should not be used because their load transfer mechanisms have not been clarified. Therefore, it is a challenge to elucidate the load transfer mechanism of joints with riveted and \ac{HSB}ed joints that have different jointing methods.
 
-In this study, the authors have got the opportunity to obtain a 90-year-old riveted bridge's cross-beam. The joint part was cut out from this bridge's cross-beam and evaluated the riveted joint surface's aging condition in natural corrosion weakening by microscope observation and elemental analysis. In addition, the small-scale slip test is conducted to investigate the joint surface's slip coefficient of the riveted joints experimentally. Finally, the pressure distribution test is conducted using a pressure measurement film to explore the pressure distribution and the effective contact pressure area of riveted joints' surface.
+Naito et al. \cite{naito2007basic} conducted tensile tests on riveted joints after 35 years of service by replacing all rivets with \ac{HSB} bearing joints or \ac{HSB} friction joints as a basic performance study. The results showed that the slope of the curve up to the design load for riveted joints was larger than that for riveted joints, \ac{HSB} bearing joints (without preload), and \ac{HSB} friction joints, in that order. On the other hand, there was no significant difference in the slope of the curves of the riveted joints up to the design load in the practical range. This indicates the possibility of replacing old rivets with \ac{HSB}s without changing the surface treatment. However, this study was conducted when the slip coefficient was greater than 0.25, and when the slip coefficient was less than 0.25 [4], it would be difficult to replace all the rivets.
 
-The girders of steel riveted bridges are often thin plates and the same applies to the joints. For riveted joints, the joint bearing capacity is generally determined by the rivet/main plate bearing pressure or the shear of the rivet, but it may also be determined by the yielding of the main plate. This study investigates repair and reinforcement methods for riveted joints where the main plate is yield-precedent (thin plate), by replacing the rivets with high-strength bolts.
+Hashimoto et al. \cite{hashimoto2008} performed FEM analysis of a joint in which a riveted joint was partially replaced by a \ac{HSB} friction joint, and proposed a simple bearing strength calculation formula that cumulates the design slip capacity by \ac{HSB}s and the bearing strength by rivets as indicated in the Design Standard for \ac{RTRI} \cite{rtri2009Design}. This study assumes that the thickness of the main plate is 12mm to 28mm and the materials are SS400 and SM490Y, and focuses on the failure of the rivets rather than the main plate. In addition, the preload introduced into the rivet (hereafter referred to as the rivet preload $N_r$) is not considered.
 
-The following three methods can be used to repair rivets that have corroded due to age-related deterioration. The following three methods can be identified as methods of repairing rivets that have corroded due to age: (1) replacement with new rivets, (2) high-strength bolt support joints, and (3) replacement with high-strength bolt friction type joints. However, the application of method (1) is difficult due to the fact that few construction engineers are available. Therefore, replacement with a support high-strength bolt is the most promising method. However, the adoption of a support joint is difficult to control the hole diameter, and from the viewpoint of reliable construction on site, the most promising method is the replacement with a high-strength bolt for friction bonding. In addition, from the viewpoints of economy and workability, partial replacement is often considered preferable to total replacement. In this study, joint tensile tests are carried out to determine the load carrying capacity of existing riveted joints when partially or fully replaced with high-strength bolts for friction joints, and the slip coefficient that can be expected in the design.
+In a typical riveted bridge, the strength of the riveted material is lower than that of the rivet, and the bearing strength is governed by the strength of the riveted material. In addition, preloads are introduced during actual riveting due to thermal effects. Therefore, material strength and rivet preload are considered to influence the load transfer mechanism and failure mode of the combined joint.
 
+In this study, a three-dimensional elasto-plastic finite displacement analysis was conducted using rivet and \ac{HSB} arrangements as parameters to elucidate the load transfer mechanism of a joint using a riveted joint and a \ac{HSB} friction joint, considering the preload introduced during tightening. In order to focus on the yielding around the rivet holes in the main plate due to the bearinging pressure of the rivets, the plate width b was varied while the plate thickness t was kept constant.
 
-\section{Slip coefficient of riveted joint}
+\section{Load transfer mechanism of Rivet-HSB hybrid connections}
 
+\subsection{Finite element (FE) analysis}
+\label{ch4sec2}
 
-
-\subsection{Joint faying surface's aging condition}
-
-The bridge of the research object has been in use for 90 years. The bridge's paint was probably damaged, and the joint surface was probably corroded due to aging. In order to investigate the condition of the aging bridge joint's surface, 40mm x 40mm compact specimens cut out from the joint to conduct microscope observation, Fourier-transform infrared spectroscopy analysis (FT-IR), and \ac{EDX} analysis.
-
-\subsubsection{Microscope observation} \label{ch3sec2-1}
-
-Depending on where the specimen was taken out, the red lead's aging condition has been found different. The research has shown that the red lead paint adjacent to the rivet hole has been compromised due to high temperature and clamping force by riveting. The friction coefficient may be affected by this \cite{Leonetti2020RivetBridges}.
-
-The red lead on the joint surface has partly peeled off, and the black oxide of the steel can be observed, which indicates that the red lead's adhesion has become poor over aging, as shown in Fig. \ref{ch3fig2b}
+For the FEM analysis, the general-purpose structural analysis code Abaqus / Standard 2018 \cite{Smith2020} was used to perform a three-dimensional elastoplastic finite displacement analysis. The analytical model is shown in Fig. \ref{fig-femodel-hsbrive} and the analysis cases in Table 1. As shown in Figure 2, the analytical model was part of a two-sided riveted joint at the transverse girder joint of an aged riveted bridge (hereafter referred to as "A bridge"). The joint consists of six rivets per row and three per column on each side. The thickness of the joint is 9.2 mm for the main plate and 12 mm for the bracing plate. The modeling range of the analytical model was one-quarter model in the plate width direction for symmetry. The analytical model was modeled using a three-dimensional, eight-node solid element (reduced integral element) for all of the main plate, the bracing plate, the bolts, and the washers. Boundary nonlinearities were taken into account by setting contact boundaries on the joint surfaces between the main plate and the bracing plate, between the bolt and bolt hole, and between the rivet and rivet hole. The rivet hole is modeled as 23.5 mm so that the rivet and hole wall make contact in advance. When replacing the rivet hole with a \ac{HSB}, the bolt hole is enlarged to 26.5 mm with a clearance of 2.25 mm on each side.
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig2a.png}
-    \caption{Normally}
-    \label{ch3fig2a}  
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig2b.png}
-    \caption{Seriously}
-    \label{ch3fig2b}  
-    \end{subfigure}
-    \caption{Faying surface for riveted joint}
+    \includegraphics[width=0.75\linewidth]{imgs//ch4/femodel-hsbrive.pdf}
+    \caption{FE Analysis model of hybrid joint combined with HSB and rivet (e.g. HSB1-b, Unit: mm)}
+    \label{fig-femodel-hsbrive}
 \end{figure}
 
-As shown in Fig. \ref{ch3fig3}, the joint surface was observed with an electron microscope of 50 times and 600 times, more detailed diagrams will be listed in Appendix \ref{app-obsur}. The orange-red substance is red lead, and the black primer is the black oxide of steel. No obvious traces of rust are found on the joint surface. The light reflecting material in the picture is a resin coating, and it will be confirmed by elemental analysis for the next section.
+
+% 
+\begin{sidewaystable}[htbp]
+\caption{Analysis case and designed strength}
+\label{tab-anacase-rivet}
+\centering
+\begin{tabular}{@{}lcccccccccccc@{}}
+\toprule
+\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Case\\ Name\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Number \\ of Bolt\\ $n_{hsb}$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Number\\ of Rivet\\ $n_{r}$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Width\\ $b$\\ {[}mm{]}\end{tabular}} & \multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Designed \\ preload of Rivet\\ $N_r$ $[kN]$\\ Length of rivet shank\end{tabular}} & \begin{tabular}[c]{@{}c@{}}Designed \\ preload of\\ Bolt\\ $N_{hsb}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Slip \\ resistance\\ $F_{slip}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Net \\ Cross-section\\ yiled resistance\\ $F_{yp}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Modified \\ bearing\\ resistance\\ $F_{bp}$\end{tabular} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}$F_{yp}/F_{bp}$\\ $\gamma$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}$F_{yp}/F_{slip}$\\ $\beta$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Expected \\ Serviceability \\ Limit State\end{tabular}} \\ \cmidrule(lr){5-6}
+ &  &  &  & $33mm$ & $75mm$ & $[kN]$ & $[kN]$ & $[kN]$ & $[kN]$ &  &  &  \\ \midrule
+HSB0-y & 0 & 3 & \multirow{8}{*}{102} & \multirow{7}{*}{45} & \multirow{7}{*}{78.5} & - & 70.8 & 199.2 & 249.6 & 0.80 & 2.81 & \multirow{8}{*}{\begin{tabular}[c]{@{}c@{}}Net \\ Cross-section \\ yiled limit\end{tabular}} \\
+HSB1-y & \multirow{3}{*}{1} & \multirow{3}{*}{2} &  &  &  & \multirow{7}{*}{205} & 138.0 & 191.6 & \multirow{2}{*}{257.2} & 0.74 & 1.39 &  \\
+HSB2-y &  &  &  &  &  &  & 138.0 & 199.2 &  & 0.77 & 1.44 &  \\
+HSB3-y &  &  &  &  &  &  & 123.9 & 199.2 & 243.2 & 0.82 & 1.61 &  \\
+HSB12-y & \multirow{3}{*}{2} & \multirow{3}{*}{1} &  &  &  &  & 205.2 & 191.6 & 264.7 & 0.72 & 0.93 &  \\
+HSB13-y &  &  &  &  &  &  & 191.1 & 191.6 & \multirow{2}{*}{250.7} & 0.76 & 1.00 &  \\
+HSB23-y &  &  &  &  &  &  & 191.1 & 199.2 &  & 0.79 & 1.04 &  \\
+HSBall-y & 3 & 0 &  & \multicolumn{2}{c}{-} &  & 258.3 & 191.6 & - & - & - &  \\ \midrule
+HSB0-b & 0 & 3 & \multirow{6}{*}{160} & \multirow{5}{*}{45} & \multirow{5}{*}{78.5} & - & 70.8 & 346.3 & 249.6 & 1.39 & 4.89 & \multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}bearing \\ deformation\\ limit\end{tabular}} \\
+HSB1-b & \multirow{3}{*}{1} & \multirow{3}{*}{2} &  &  &  & \multirow{5}{*}{205} & 138.0 & 338.7 & \multirow{2}{*}{257.2} & 1.32 & 2.46 &  \\
+HSB2-b &  &  &  &  &  &  & 138.0 & 346.3 &  & 1.35 & 2.51 &  \\
+HSB3-b &  &  &  &  &  &  & 123.9 & 346.3 & 243.2 & 1.42 & 2.80 &  \\
+HSB23-b & 2 & 1 &  &  &  &  & 191.1 & 346.3 & 250.7 & 1.38 & 1.81 &  \\
+HSBall-b & 3 & 0 &  & \multicolumn{2}{c}{-} &  & 258.3 & 338.7 & - & - & - & Slip limit \\ \bottomrule
+\end{tabular}
+\end{sidewaystable}
+
+
+The boundary nonlinearity was modeled using the penalty method for contact and Coulomb friction for friction. In the literature \cite{rtri1992Manual}, it is reported that a slip coefficient of 0.25 to 0.28 can be expected when rivets are replaced with \ac{HSB}s while leaving leadite on the joint surface. On the other hand, in a separate test conducted by the authors to confirm the coefficient of slip of joint surfaces with lead-pan coating, the coefficient of slip at girder joints ranged from 0.15 to 0.38 \cite{Chen2021}. Based on the above, a coefficient of friction of 0.21 was given as the coefficient of friction for the case with lead-pan coating in this analysis, referring to the average value of the coefficient of slip in the literature.
+
+In this study, a total of 14 analytical cases shown in Table \ref{tab-anacase-rivet} were set up using the rivet and \ac{HSB} arrangements and the plate width b of the material to be joined as parameters. The cross-sectional shapes of the analysis cases do not change the bearing strength of the main plate, so the plate thickness and material are not changed, and only the plate width is changed.
+
+For the names of the analysis cases, the number indicates the location of the \ac{HSB}, and y: Net cross-section yielding type and b: bearing yield type indicate the expected serviceability limit state. 
+
+\ac{Fasteners} were positioned from the outside of the joint to the inside as shown in Fig. \ref{fig-femodel-hsbrive}, from \# 1 to \# 3. For example, HSB1-y means a case with one \ac{HSB} at fastener position 1 and a rivet in combination with a yield type. HSBall is a case where all fastener positions \# 1, \# 2, and \# 3 are \ac{HSB}s.
+
+The stress-strain relationships of the materials used in the analysis are shown in Fig. \ref{fig-anarivet-mt} and the mechanical properties in Table \ref{tab-anarivet-mt}. The constitutive law of each material was modeled as a bilinear type with a quadratic stiffness of $E/100 (E=200,000 MPa)$, and the mechanical properties of the main plate and the riveted plate were obtained from material test results cut from the transverse girder of the A Bridge. For the mechanical properties of the rivets, the results of tensile tests \cite{KOMATSU2015} on the rivets of the Hokko Bridge (completed in 1932), which uses the same type of rivets as those of the A Bridge, were used.
+
+
+\begin{table}[htbp]
+    \centering
+    \caption{Mechanical properties of materials}
+    \label{tab-anarivet-mt}
+    \begin{tabular}{cccc}
+    \toprule
+        \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}} Member\end{tabular}}  &
+        \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}} Class\end{tabular}} & 
+        Yiled Strength & Ultimate Strength\\ 
+         &  & $N/mm^2$ & $N/mm^2$ \\ \midrule
+        Steel plate & St39 & 275.8 & 454 \\
+        Rivet & Sv34 & 295 & 389 \\
+        HTB	& F10T & 900 & 1000 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3a.jpeg}
-    \caption{50X}
-    \label{ch3fig3a}  
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3b.jpeg}
-    \caption{600X}
-    \label{ch3fig3b}  
-    \end{subfigure}
-    \caption{Microscope observation}
-    \label{ch3fig3}
+    \includegraphics[width=0.55\linewidth]{imgs//ch4/rivet-mt-ch3.pdf}
+    \caption{Stress-strain relationship used in the analysis}
+    \label{fig-anarivet-mt}
 \end{figure}
 
-\subsubsection{FT-IR and EDX analysis}
+In the analysis, initial preloads were introduced to the rivets and \ac{HSB}s in Step 1, and tensile forces due to forced displacement were applied to the end of the material to be joined in Step 2.
 
-This study randomly selected three specimens from different positions of the joint and conducted FT-IR analysis on the joint surface. Furthermore, the presence of elements on the joint surface detected by EDX analysis. FT-IR spectra of the joint surface are illustrated in Fig. \ref{ch3fig4}. The spectrum consists of many sharp and weak bands in the region of 700–900 cm-1, in addition to a few bands in the region of 1,500–2,000 cm-1. Most of the main peaks corresponding to vinyl acetate (C4H6O2) were detected \cite{baskaran2004Vibrational}, but no main peaks corresponding to Iron (III) oxide (Fe2O3) were found. The study has shown that incorporating various metallic additives into polymer matrices can produce polymer-matrix composites and improve their properties for specific applications \cite{dong2006Polyvinylbutyral}. In order to enhance the adhesion of red lead, a resin-based primer is usually applied before the red lead. It can be considered that the vinyl acetate detected by FT-IR acts as a resin-based primer to enhance the adhesion of red lead.
+The bolt and rivet preloads were introduced in the analysis by setting up a reference section in the center of the rivet and \ac{HSB} shafts and applying initial bolt preloads to the reference section using the bolt loading option in Abaqus / Standard. In subsequent loading steps, the reference section displacement changed by the introduction of the bolt preload is fixed so that changes in the bolt preload can be taken into account. The Poisson's ratio $v$ of the rivet is set to 0 because the rivet's axial diameter is reduced by the Poisson's effect when the preload is introduced and the initial state of bearing between the rivet and rivet hole cannot be reproduced.
+
+For the rivet preload $N_r$ , the literature \cite{Heinemeyer2011TheConnections} reported that the rivet preload depends on the shaft length and that for rivets with a diameter of 22 mm, the rivet preload/rivet shaft yield strength ratio for a shaft length of 33 mm was 0.4 on average and the rivet preload/rivet shaft yield strength ratio for a shaft length of 75 mm was 0.7 on average. The rivet shaft force/rivet shaft yield strength ratio used in Bridge A was reported to be 0.7 on average. The average yield strength of the rivets used in Bridge A is assumed to be 295 MPa \cite{KOMATSU2015}, so rivet shaft forces of 45 kN for a shaft length of 33 mm and 78.5 kN for a shaft length of 75 mm were introduced.
+ 
+\subsubsection{Bearing resistance per Fastener}\label{ch4sec2-1}
+
+The bearing strength, shear capacity and slip capacity per fastener are shown in Table \ref{ch4tab3}.
+
+\begin{table}[htbp]
+\caption{Resistance per fastener}
+\label{ch4tab3}
+\centering
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\multicolumn{2}{c}{\multirow{3}{*}{Fastener}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Friction\\ Coefficient\end{tabular}} & Preload & \multicolumn{3}{c}{Resistance per fastener [kN]} \\ \cmidrule(l){5-7} 
+\multicolumn{2}{c}{} &  & $N_f$ & Slip & Bearing & Shear \\
+\multicolumn{2}{c}{} & $\mu$ & $[kN]$ & $F_{s1}$ & $F_{bs1}$ & $F_{sh1}$ \\ \midrule
+\multirow{2}{*}{Rivet} & 33mm & \multirow{3}{*}{0.21} & 45 & 18.9 & \multirow{2}{*}{89.4} & \multirow{2}{*}{127.3} \\
+ & 75mm &  & 78.5 & 32.97 &  &  \\
+\multicolumn{2}{c}{HSB} &  & 205 & 86.1 & 83.7 & 395.0 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+In the bearing area, plastic flow is unlikely to occur due to the surrounding restraints, and strength above the yield strength can be expected. For this reason, the bearing strength $\sigma_{bs}$ should be 1.5 times the yield strength of the main plate $\sigma_{yp}$ as shown in Equation \ref{eq-sigbs}. In this study, the bearing resistance per rivet $F_{bjr1}$ was calculated from the railroad standard equation \ref{eq-fbs}. The shear strength of the rivets is given by Equation \ref{eq-tauyf}, and the shear yield capacity per rivet, $F_v1$, is calculated from Equation \ref{eq-fsh1}. The slip resistance per fastener $F_{s1}$ is given by Equation \ref{eq-fs1}.
+
+\begin{equation}\label{eq-sigbs}
+    \sigma_{bs}=1.5\sigma_{yp}
+\end{equation}
+\begin{equation}\label{eq-fbs}
+    F_{bjr1}=d_f t\sigma_{bs}
+\end{equation}
+\begin{equation}\label{eq-tauyf}
+    \tau_{yf}=\sigma_{yf}/\sqrt{3}
+\end{equation}
+\begin{equation}\label{eq-fsh1}
+    F_{v1}=\pi (0.5d_f)^2 \tau_{yf} m
+\end{equation}
+\begin{equation}\label{eq-fs1}
+    F_{s1}=\mu m N_f
+\end{equation}
+
+where, $\sigma_{bs}$: bearing strength, $\sigma_{yp}$ : yield strength of the main plate, $t$: thickness of the main plate, $d_f$ : diameter of fastener, $F_{bs1}$: bearing resistance of one fastener, $\sigma_{yf}$ : yield strength of the fastener, $\tau_{yf}$ : shear strength of fastener, $F_{sh1}$ : shear resistance of one fastener, $F_{s1}$ : slip resistance of one fastener, $m$ : the number of shear plane, $N_f$ : perload of the fastener.
+
+
+\subsubsection{Strength of the hybride Joints}
+
+In this chapter, the bearing strength for the service limit was obtained as follows
+
+The slip resistance $F_{slip}$ and the net cross-section yield resistance 
+$F_{yp}$ of the joint is calculated from the total value of each fastener in Eq. \ref{fslip-ch4} and Eq. \ref{fyp-ch4} respectively.
+
+\begin{equation}\label{fslip-ch4}
+    F_{slip} = \sum F_{s1}
+\end{equation}
+\begin{equation}\label{fyp-ch4}
+    F_{yp} = (w-d_1)t\times \sigma_{yp}
+\end{equation}
+
+where, $F_{slip}$ : slip resistance of the joint, $w$ : width of the main plate, $d1$ : diameter of the hole at outermost fastener.
+
+It is assumed that after the main slip occurs, the frictional resistance force is not taken into account and the load is entirely carried by the bearing resistance in a friction joint \cite{rivet1977}. However, in actual behavior, the frictional resistance force remains to some extent even after slip occurs. On the other hand, the road map and railroad standards do not clearly indicate the limit state of bearing strength in riveted joints.
+
+In the literature \cite{hashimoto2008}, the bearing strength of a combined joint using rivets and \ac{HSB}s was proposed as shown in Eq. \ref{eq-fbhashi}. However, this equation does not take into account the design bearing strength at the service limit and the rivet preload that affects the load transfer condition. On the other hand, the bearing strength of the rivet in Eq. \ref{eq-fbhashi} uses the yield strength of the rivet and focuses on the yield of the rivet shaft, which may not be appropriate when the material to be joined is a thin plate or when the yield strength of the material to be joined is lower than the rivet.
+
+Therefore, this study proposes an improved bearing strength as the design bearing strength of a combined joint that considers the preload of the rivet and focuses on the yield of the rivet hole in the material to be jointed.,$F_{bm}$. The improved bearing strength is proposed as the design bearing strength of the joints with rivet holes. The improved bearing strength $F_{bp}$. is calculated as the sum of the slip capacity and bearing strength of each fastener using Eq. \ref{eq-fbp}. Here, the bearing strength per rivet is not the standard bearing strength of the railroad, but the yield strength of the material to be jointed $1.5σ_y$. but from the yield strength of the material to be jointed $1.0 σ_y$. The bearing strength per rivet is calculated based on the yield strength of the material to be joined, rather than the standard bearing strength of the railway. The effective area of bearing strength assumes that the shaft of the rivet is in contact with the hole and that load is transmitted in the projected area of the rivet shaft.
+
+\begin{equation}\label{eq-fbhashi}
+    F_{b,hashimoto}=n_b μmN_b + n_r \times 1.5d_r tσ_yr
+\end{equation}
+\begin{equation} \label{eq-fbp}
+    F_{bp,rivet}=μm(n_b N_b+n_r N_r)+n_r d_r tσ_y
+\end{equation}
+
+where,$F_b.$ : bearing strength by Hashimoto et al.,$F_bp$. : the improved bearing strength proposed in this study, $n_b$: Number of \ac{HSB}s, $n_r$ Number of rivets, $N_b$: preload of high strength bolts. $N_r$ : preload of rivets. $\sigma_{yr}$ : Yield strength of rivet, $σ_y$ : Yield strength of the main plate, $t$ : thickness of the material to be joined, $d_r$: rivet shaft diameter.
+
+\subsection{Results and discussions}
+
+\subsubsection{Limit states strength}
+
+In this study, we focused on the overall displacement of the joint and plasticization around the hole, and defined the service limit state of the joint as the time when the load-overall displacement relationship of the joint begins to exhibit nonlinear behavior. The nonlinear behavior of the joint is governed by the yielding of the rivet hole or the net cross-section.
+
+In this analysis, the bearing load $P_{bya}$ is defined as the load at which all the rivet holes in the main plate yield. Yield of a rivet hole is defined as the time when equivalent plastic strain occurs at all six integration points of the rivet hole wall, as shown in Fig. \ref{fig-posieqqe}. \ac{The net cross-sectional yield load} is defined as the equivalent plastic strain appeared at the whole net cross-sectional location of the side at the end of the bolt position.
 
 \begin{figure}[htbp]
     \centering
-    \begin{minipage}[t]{0.7\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig4.png}
-    \caption{FT-IR spectra of the joint surface}
-    \label{ch3fig4}  
+    \includegraphics[width=0.75\linewidth]{imgs//ch4/posi-eqqe.pdf}
+    \caption{Equivalent strain and the rivet hole deformation}
+    \label{fig-posieqqe}
+\end{figure}
+
+Fig. \ref{fig-ls-ch4} shows the relationship between load and equivalent plastic strain of the fastener hole in the riveted HSB0-b joint, and Fig. \ref{fig-ld-htb0b} shows the relationship between load and overall displacement of HSB0-b. As shown in Fig. \ref{fig-femodel-hsbrive}, the overall displacement is the amount of forced displacement applied to the end of the joint.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics{imgs/ch4/LS-ch4.pdf}
+    \caption{Relationship between load and strain}
+    \label{fig-ls-ch4}
     \end{minipage}
-    \begin{minipage}[t]{0.7\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig5.png}
-    \caption{EDX-spectrum of the joint surface}
-    \label{ch3fig5}  
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics{imgs/ch4/ld-htb0b.pdf}
+    \caption{Relationship between load and displacement (HSB0-b)}
+    \label{fig-ld-htb0b}
     \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics{imgs/ch4/lfhd-ch4.pdf}
+    \caption{Relationship between load and fastener hole deformation (HSB1-b)}
+    \label{fig-lfhd-ch4}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics{imgs/ch4/ld-htb1b.pdf}
+    \caption{Relationship between load and displacement (HSB1-b)}
+    \label{fig-8ch4}
+    \end{minipage}
+
 \end{figure}
 
-From Fig. \ref{ch3fig5}, it can be inferred that the lead oxide on the joint surface was confirmed to exist on the joint surface, and there was also iron oxide. By means of FT-IR spectra that can confirm iron oxide is not red rust (iron(III) oxide), but a black oxide film formed when the steel is manufactured.
+Fig.\ref{fig-lfhd-ch4} and Fig. \ref{fig-8ch4} show the load-displacement relationship for HSB1-b and the total deformation of the three fastener holes, respectively. Note that the bearing load $P_{bya}$ is plotted as △.
 
-
-\subsection{Small-scale slip test}
-
-\subsubsection{Loading and measuring methods}
-
-Fig. \ref{ch3fig6} shows a loading machine and loading methodology, and Fig. \ref{ch3fig6a}, Fig. \ref{ch3fig6b} shows the general diagram and the detailed diagram, respectively. A screw-jack applies a horizontal load to two sets of specimens until it reaches the target clamping force. And they are then applying a vertical load to the specimens by a universal loading machine. There is a Displacement Transducer on each side of specimens, and they will be initialed to monitor the slip of the test specimen after the horizontal load is complete. Both horizontal and vertical loads applied were monitored by using a load cell.
+Fig. \ref{fig-ld-htb0b} shows that the bearing strength of HSB0-b ($P_{bya}$ = 245 kN) is comparable to the improved bearing strength proposed in this study ($F_{bp}$ = 249.6 kN). Fig.\ref{fig-lfhd-ch4}, \ref{fig-8ch4} and \ref{fig-9-ch4} show that the load-total displacement relationship for both the riveted and combined joints exhibited nonlinear behavior once the bearing strength load $P_{bya}$ was reached.
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[t]{0.58\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig6a.png}
-    \caption{General diagram}
-    \label{ch3fig6a}  
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.38\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig6b.png}
-    \caption{Detailed diagram}
-    \label{ch3fig6b}  
-    \end{subfigure}
-    \caption{Test setup}
-    \label{ch3fig6}
+    \begin{minipage}[t]{1\textwidth}
+    \includegraphics{imgs/ch4/ch4fig9.pdf}
+    \caption{Mises stress counter of the joint (thickness center of main plate)}
+    \label{fig-9-ch4}
+    \end{minipage}
+    \begin{minipage}[t]{1\textwidth}
+    \includegraphics{imgs/ch4/ch4fig10.pdf}
+    \caption{Experiment result and mises stress contour of the main plate (Load = experimental max load, HSBall-y case)}
+    \label{ch4fig10}
+    \end{minipage}
 \end{figure}
 
-The universal loading machine will be loading on 0.5 kN/s until a slip occurred. Then, the slip coefficient is calculated by the relationship between the vertical load and displacement.
 
-\subsubsection{Specimens}
+Fig. \ref{fig-9-ch4} shows the Mises stress contours at the center of the thickness of the material to be welded when HSB0-b and HSB1-b reach the bearing load $P_{bya}$ .
 
-A total of 48 set specimens are cut out from the same riveted bridge's joint. The position of cut out and the size of specimens as shown in Figure 7a, and b respectively. In order to explore the influence of the clamping force on the slip coefficient, the specimens are divided into three groups according to the different clamping forces introduced. The three groups of specimens are 24 sets of 100\% standard clamping forces, 12 sets of 75\%, and 50\% standard clamping forces $N$. 
+Fig. \ref{fig-9-ch4} shows that the degree of plasticization of the rivet holes is not uniform at a bearing load $P_{bya}$ , and is smallest at fastener position 3 and largest at fastener position 1. The $\gamma$ in eq.\ref{ch4-gamma} is used to classify the service limit state of the combined joints as the net cross-sectional yield type when $\gamma$ is greater than 1 and the bearing yield type when $\gamma$ is less than 1. 
+
+\begin{equation}\label{ch4-gamma}
+    \gamma = F_y/F_{bp}.
+\end{equation}
+
+
+
+\subsubsection{Mechanical behavior}
+
+Fig. \ref{ch4fig10} shows the Mises stress contours and the fracture plan of the base material of the specimen under study at the maximum load of HSBall-y. Fig. \ref{ch4fig10} shows that the deformation and failure location of the net cross-section obtained from the FEM analysis were almost consistent with the experimental results. 
+
+Fig. \ref{ch4fig11}.b and \ref{ch4fig12}.b show the case with one \ac{HSB}, while Figures \ref{ch4fig11}.c and \ref{ch4fig12}.c show the enlarged view near the net section yield load for the case with two \ac{HSB}s. Here, the obtained bearing load $P_{bya}$ is indicated by a large symbol. The slope between the load and the overall displacement of the joint is defined as the \ac{Stiffness}, and \ac{The initial stiffness change point} is defined as the time when the entire joint begins to exhibit nonlinear behavior.
 
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig7a.png}
-    \caption{Cross-beam}
-    \label{ch3fig7a}  
+    \includegraphics[width=\linewidth]{imgs/ch4/fig11-a.pdf}
+    \caption{Overall}
+    \label{ch4fig11-a}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+    \includegraphics[width=\linewidth]{imgs/ch4/fig11-b.pdf}
+    \caption{Enlarged figure ($n_b=1, n_r=2$)}
+    \label{ch4fig11-b}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig7b.png}
-    \caption{Specimens section}
-    \label{ch3fig7b}  
+    \includegraphics[width=\linewidth]{imgs/ch4/fig11-c.pdf}
+    \caption{Enlarged figure ($n_b=2, n_r=1$)}
+    \label{ch4fig11-c}
     \end{subfigure}
-    \caption{Specimens' cut out location and size}
+    \caption{Relationship between load and displacement (Net cross-section yielding type)}
+    \label{ch4fig11}
 \end{figure}
 
-The standard clamping force is calculated by multiplying the standard bolt contact pressure by the contact area. The assumed contact pressure area was calculated as the contact pressure distributed at 45° \cite{rotscher1927maschinenelemente}, as shown in Fig. \ref{ch3fig8}. When the splice plate's thickness is 12 mm, the standard bolt contact pressure can be calculated as 64.9 N/mm2. Here it is assumed that the bolt is the most commonly used F10T-M22 in Japanese bridges.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+    \includegraphics[width=\linewidth]{imgs/ch4/fig12-a.pdf}
+    \caption{Overall}
+    \label{ch4fig12-a}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+    \includegraphics[width=\linewidth]{imgs/ch4/fig12-b.pdf}
+    \caption{Enlarged figure ($n_b=1, n_r=2$)}
+    \label{ch4fig12-b}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+    \includegraphics[width=\linewidth]{imgs/ch4/fig12-c.pdf}
+    \caption{Enlarged figure ($n_b=2, n_r=1$)}
+    \label{ch4fig12-c}
+    \end{subfigure}
+    \caption{Relationship between load and displacement (bearing yield type)}
+    \label{ch4fig12}
+\end{figure}
 
+The relationship between load and relative displacement for the Net cross-section yielding and bearing yielding cases are shown in Fig. \ref{ch4fig13} and Fig. \ref{ch4fig14}, respectively. The relative displacement on the horizontal axis is the relative displacement in the direction of load between the bracing plate and the welded material at a position 10 mm from the edge of the welded material on the play side at the joint cover surface.
+
+\subsubsection{Net cross-section yielding type}
+
+Fig. \ref{ch4fig11} shows that the initial stiffness of the riveted joints (HSB0-y) is lower than that of the combined and friction joints (HSBall-y), and in all cases, net cross-section yielding occurred at the point of initial stiffness change.
+
+Fig. \ref{ch4fig11-b} shows that the load at the initial stiffness change point was the same for all cases with a single \ac{HSB} (HSB1-y, 2-y, 3-y), but the slope of the curve after that point was larger for the case with the \ac{HSB} placed at fastener position 1 (HSB1), the net cross-section position. This is considered to be due to the fact that when the \ac{HSB} is placed at fastener position 1, the load transfer by frictional force outside the net cross-sectional position is larger.
+
+Fig. \ref{ch4fig11-c} shows that the initial stiffness of the cases with two \ac{HSB}s (HSB13-y, 23-y, and 12-y) is the same as that of the HSB friction joint (HSBall-y). However, the initial stiffness change point and subsequent stiffnesses were lower for HSB-23-y, where only fastener position 1 was not replaced, than for the other cases with two \ac{HSB}s and HSBall-y. The behavior after net cross-sectional yielding showed that HSBall-y experienced a drop in load when the load was 243 kN. This was due to the preload loss of the \ac{HSB} caused by net cross-section yielding, which resulted in slippage. However, for HSB13-y and HSB12-y, the slope change of the curve near the slip capacity was small because the load was transmitted by the bearing pressure of the rivets even after the slip capacity was exceeded.
+
+Fig. \ref{ch4fig13} shows that the slope between load and relative displacement before the net section yield load was exceeded was the smallest for HSB0-y and was similar for HSBall-y and the combined joint. The initial relative displacement increment was smaller for the combined joints when the \ac{HSB} was used as the fastener closer to the location where the relative displacement was obtained.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/ch4/fig13.pdf}
+    \caption{Relationship between load and relative displacement (Net cross-section yielding type)}
+    \label{ch4fig13}
+\end{figure}
+
+\subsubsection{Bearing yield type}
+
+Fig. \ref{ch4fig12} shows that the initial stiffness of the case with two \ac{HSB}s (HSB23-b) was similar to that of the friction-jointed HSBall-b. For HSBall-b, the displacement increased while the load decreased at 263.7 kN, and the analytical values generally agreed with the sliding capacity, $F_{slip}$  = 258.3 kN. In the case of the combined joint, the load increased even when the slip capacity was exceeded, and the displacement increment was small.
+
+From Fig. \ref{ch4fig12-b}, \ref{ch4fig12-c}, the curves after exceeding the bearing pressure load $P_{bya}$ (indicated by the larger plots) (overall displacement of 1mm~3mm) were at the top for the riveted joint (HSB0-b) and at the bottom for the HSB23-b case. This is because there are three rivets resisting bearing force in the riveted joints, and in the HSB23-b case, the load is resisted by the bearing force per rivet and the friction of two \ac{HSB}s before the \ac{HSB}s enter the bearing force.
+
+Fig. \ref{ch4fig14} shows that in all cases, the point of change in the slope of the curve of the relative displacement-load relationship (indicated by the large plot) was equivalent to the slip capacity $F_{slip}$ . In addition, HSBall-b, which was frictionally joined with \ac{HSB}s, exhibited clear slippage, while the other joints with rivets did not exhibit slippage.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/ch4/fig14.pdf}
+    \caption{Relationship between load and relative displacement (bearing yield type)}
+    \label{ch4fig14}
+\end{figure}
+
+\subsubsection{Load Transfer Mechanism}
+
+As shown in Fig. \ref{ch4fig15}, the combined joint transmits loads through three processes: (1) a friction transmission phase in which loads are transmitted almost exclusively by friction up to a slip capacity $F_{slip}$ , (2) a combined transmission phase in which loads are transmitted by bearing pressure and friction up to a bearing load $P_{bya}$ , and (3) a plastic deformation phase in which the joint is plastically deformed afterwards.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/ch4/fig15.pdf}
+    \caption{Schematic diagram of a hybrid joint.}
+    \label{ch4fig15}
+\end{figure}
+
+The initial stiffness is determined in the friction transfer phase. The slope of the curve in the combined transfer phase is constant, although it is less than the initial stiffness, and represents the elastic behavior in the bearing state. The slope of the curve then changes and exhibits non-linearity when the bearing load $P_{bya}$ is exceeded in the case of the pressure-precedence type and when the net sectional yield load $F_y$ is exceeded in the case of the yield type. This is considered to be due to the development of plasticization in the bearing state or plasticization in the entire width direction of the net cross-sectional position.
+
+Fig. \ref{ch4fig16} shows the normalized load displacement relationship for the bearing yield and Net cross-section yielding types of combined joints. The vertical axis is non-dimensionalized using the analytical load Fa , which is the minimum value of the net section yield load, slip load, and bearing load in each case obtained from the analysis.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics[width=\linewidth]{imgs/ch4/fig16.pdf}
+    \caption{Relationship between load and overall displacement}
+    \label{ch4fig16}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics[width=\linewidth]{imgs/ch4/fig17.pdf}
+    \caption{Relationship between load and the relative displacement of each position}
+    \label{ch4fig17}
+    \end{minipage}
+\end{figure}
+
+Fig. \ref{ch4fig16} shows that the slope of the curve after $F / F_a = 1$ is higher for the bearing yield type than for the Net cross-section yielding type. The amount of elongation is relatively small because the deformation of the Net cross-section yielding type is localized until the maximum load is reached.
+
+Fig. \ref{ch4fig17} shows the relationship between local relative deformation and load for HSB1-b. HSB-1, Rivet-2, and Rivet-3 show the relative displacement of the bonding plate and the bonded material at the center position of the fastener on each of the cover surfaces. The hole deformation (total) shows the sum of the hole deformations of all fastener holes.
+
+Fig. \ref{ch4fig17} shows that the relative displacements of the contact plate and the welded material at the center of each fastener were about the same, which confirms that no localized slippage occurred. The relative displacement at 10 mm from the edge of the joint is almost equal to the sum of the hole deformation, and it can be judged that the amount of bearing deformation and relative displacement of the joint behaves almost the same. In other cases, the results were similar to those of HSB1.
+
+This indicates that the combined riveted and HSB friction joints do not exhibit slip and that the relative deformation calculated from the hole deformation of the joint and the main plate due to bearing deformation is the same as the relative displacement calculated from the displacement of the jointed plate and the main plate's faying surfaces. 
+
+Fig. \ref{ch4fig18} shows the load sharing at ratios $F / P_{bya}$ = 0.25, 0.5, 1 for tensile load $F$ and bearing load $P_{bya}$. The hole deformation in the loading direction at $F / P_{bya}$ = 0.5, 1 is shown in Fig. \ref{ch4fig19}. The bearing resistance force is the contact force between the fastener shaft and the fastener hole in the material to be joined in the load direction, and the friction resistance force is the shear friction force acting on the contact surface between the bracing plate and the material to be joined. It is confirmed that the total force of bearing resistance and friction resistance is equal to the total load.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.65\linewidth]{imgs/ch3/fig8.pdf}
-\caption{Definition of clamping area (unit: mm)}
-\label{ch3fig8}  
+\includegraphics[width=\textwidth]{imgs/ch4/fig18.pdf}
+\caption{Load sharing of each case (bearing yield type)}
+\label{ch4fig18}
 \end{figure}
 
-For example, for the M22 size bolt, the euivalent contact area $A_{ct-m22}$ is:
-\begin{equation*}
-    A_{ct-m22} = \pi (r_h-r_b)^2
-\end{equation*}
+Fig. \ref{ch4fig18} shows that when $F / P_{bya}$ = 0.25, the riveted and combined joints resisted almost entirely by friction, and the load sharing increased when the \ac{HSB} was placed outside the joint, with HSB1-b sharing 35.1 kN (more than half the total load), HSB2-b 20.7 kN (less than half the total load), and HSB3-b sharing about 45\% of the total load. The load-bearing strength of HSB2-b was 20.7 kN (more than half of the total load) and that of HSB3-b was about 45%.
 
-Where, the  bolt shank radius $r_b$ is 11 mm, bolt hole radius $r_h$ is 11.75 mm.
-the equivalent contact pressure $\sigma_{ct-m22}$ is:
-\begin{equation*}
-    \sigma_{ct-m22} = \frac{N}{A_{M22}} = 64.9 Mpa
-\end{equation*}
+When $F / P_{bya}$ = 0.5, cases HSB2-b and HSB3-b without a \ac{HSB} at fastener position 1 resisted 16.4\% and 11\% of the total load, respectively, but in both cases most of the bearing pressure was shared by the rivets at outer fastener position 1. On the other hand, the load sharing for HSB1-b was the same as when $F / P_{bya}$ = 0.25. When a \ac{HSB} was placed at fastener position 1 in the bearing yield type, the bearing pressure of the rivets did not carry most of the load, and the load was shared through the frictional force of each fastener.
 
-Where, $N$ is the bolt standard preload, M22-F10T bolt is 205 kN.
-The applied horizontal force (Converted preload) $N_{cp}$ is 
-\begin{equation*}
-    N_{cp} = \sigma_{ct-m22} \times A_{cts} =64.9 \times 40 \times 40 = 103.8 kN
-\end{equation*}
-Where, $A_{cts}$ is specimens size for small-scale slip test
+When $F / P_{bya}$ = 1, each fastener exceeded the slip capacity per fastener in all cases. In addition, the load carried by fastener position 1 was about 35\% of the total load, and the load carried by each fastener was almost equally distributed. The friction of the \ac{HSB}s and the bearing pressure of the rivets worked together to resist the load.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{imgs/ch4/fig19.pdf}
+\caption{Fastener hole deformation $\delta_{hd}$ of each case (bearing yield type)}
+\label{ch4fig19}
+\end{figure}
+
+Fig. \ref{ch4fig19} further illustrates the fastener hole deformation $\delta_{hd}$ in each case at $F / P_{bya}$ = 0.5 and 1. At $F / P_{bya}$ = 0.5, the deformation of the fastener holes in HSB0-b, HSB1-b, and HSB2-b gradually decreases from fastener position 1 to position 3. For example, in HSB0-b, the deformation at position 1 is 0.053 mm, which is significantly larger than the deformation at position 3 (0.013 mm). Similarly, in HSB1-b, position 1 experiences a deformation of 0.034 mm, while position 3 shows only 0.01 mm. This trend indicates that the load is concentrated at fastener position 1, resulting in greater deformation at this location.
+
+When $F / P_{bya}$ = 1, the deformation of the fastener holes increases compared to $F / P_{bya}$ = 0.5, but the distribution pattern remains consistent. In HSB0-b, the deformation at position 1 reaches 0.108 mm, while position 3 shows a smaller deformation of 0.032 mm. A similar trend is observed in HSB1-b and HSB2-b, where the deformation at position 1 is significantly higher than at positions 2 and 3. Notably, in HSB3-b, the deformation at position 3 is negligible (close to 0), indicating that the load is primarily resisted by the fasteners at positions 1 and 2. This result aligns with the load-sharing behavior shown in Fig. \ref{ch4fig18}, where fastener position 1 carries a significant portion of the load.
+
+From a combined analysis of Fig. \ref{ch4fig18} and Fig. \ref{ch4fig19}, it can be concluded that the load-sharing behavior and the corresponding fastener hole deformations are highly dependent on the placement of the \ac{HSB} and the fastener positions. When the \ac{HSB} is placed at fastener position 1, the load is more evenly distributed among the fasteners, leading to reduced deformation at the outer fastener positions. Conversely, when the \ac{HSB} is absent at position 1, the load is concentrated at this location, resulting in greater deformation of the fastener holes. At $F / P_{bya}$ = 1, the slip capacity of each fastener is exceeded, and the combined action of friction and bearing resistance ensures load sharing among the fasteners. The deformation trends in Fig. \ref{ch4fig19} validate the load-sharing patterns observed in Fig. \ref{ch4fig18}, highlighting the critical role of fastener placement and \ac{HSB} configuration in optimizing joint performance.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{imgs//ch4/fast-time-load.pdf}
+    \caption{Times change for Friction / Bearing forces and loads of each case}
+    \label{fig-fastime}
+\end{figure}
+
+Fig. \ref{fig-fastime} shows the relationship between load and friction/bearing forces. The dotted lines F1 -- F3 represent the frictional forces applied by fasteners 1, 2, and 3, and the solid lines B1~B3 represent the bearing forces applied by fasteners 1, 2, and 3, with X, □, and △ representing fasteners 1 through 3, respectively.
+
+Fig. \ref{fig-fastime} shows that the frictional force due to the rivets did not decrease in any case up to the bearing load, because the bearing deformation of the rivets and the yield deformation of the welded material were slight. On the other hand, after $F / P_{bya}  = 1.25$, the frictional force due to the rivets gradually decreased for HSB1-b and HSB2-b. Therefore, the rivet frictional force can resist the load until the bearing load is reached in the combined use joint.
+
+In the case where a \ac{HSB} is placed at fastener position 1 (HSB1-b), the frictional force shared by each fastener increases linearly, there is almost no load sharing by the bearing force before the sliding capacity, and the rigidity of the entire joint is high.
 
 
-\subsubsection{Test result}
 
-The test results are summarized in Table \ref{ch3tab1}. The table summarizes the slip coefficients and their variation of all the specimens with 100\%, 75\%, and 50\% of standard clamping force.
+\section{Load redistribution mechanism after replaced the rivet}
+
+Analysis conditions and modeling methods are consistent with the previous section, using the same modeling and meshing methods. The material properties of bolts, rivets, and steel plates are also the same.
+
+% The model was developed in Abaqus, and the FE mesh and boundary conditions imposed are shown in Fig. \ref{fig-l5}. To simulate the dead load, distributed loads were applied to the joint end surface. The elements applied in the model were  \ac{C3D8R}.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{imgs/ch4/fig-l5.pdf}
+%     \caption{Schematic illustration of FE model}
+%     \label{fig-l5}
+% \end{figure}
+
+% The mechanical properties and stress–strain curves of the steel plates, rivets, and bolts are shown in Table \ref{tab-l1} and Fig. \ref{fig-l6}. Material properties were used nominal values of recommendation by Japanese Industrial Standards. In fact, the properties were based on the rivets and steel plates used in the target bridge, as well as those of \ac{HSB}s utilized in most Japanese bridges.
+
+% \begin{table}[htbp]
+% \centering
+% \caption{Summary of material properties} \label{tab-l1}
+% \begin{tabular}{@{}cccccc@{}}
+% \toprule
+% Member &
+%   Material &
+%   \begin{tabular}[c]{@{}c@{}}Yong's modulus E\\ {[}Mpa{]}\end{tabular} &
+%   Poisson's ratio $v$ &
+%   \begin{tabular}[c]{@{}c@{}}$f_y$\\ {[}Mpa{]}\end{tabular} &
+%   \begin{tabular}[c]{@{}c@{}}$f_u$\\ {[}Mpa{]}\end{tabular} \\ \midrule
+% Rivet & SV400 & 200,000 & 0.3 & 245 & 500  \\
+% Bolt  & F10T  & 200,000 & 0.3 & 900 & 1000 \\
+% Plate & SM570 & 200,000 & 0.3 & 460 & 520  \\ \bottomrule
+% \end{tabular}
+% \end{table}
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{imgs/ch4/fig-l6.pdf}
+%     \caption{Stress–strain curves of materials considered in present study}
+%     \label{fig-l6}
+% \end{figure}
+
+% It is previously demonstrated that a clamping force exists in rivets and that it is positively correlated with the rivet shank length \cite{Leonetti2020RivetBridges}. However, significant scattering occurs in the clamping force generated by each rivet, and bridge designers generally disregard the clamping force of the rivet. The clamping force generated by the rivet was not considered in the present study to simplify the evaluation of the rivet transfer force.
+
+% A penalty friction formulation from Abaqus was used in the FE model to simulate the Coulomb friction behavior. In the Chapter \ref{ch3}, the slip test was conducted for 90-year-old riveted joints, and the results showed that the average slip coefficient
+% of the riveted joints was 0.27. The friction coefficient between the connected and cover plates in this model was set to the same value of 0.27.
+
+\subsection{FE analysis case}
+
+To elucidate the load redistribution mechanism of the joint when individual rivets are replaced, the location of the replaced rivet was analyzed in the present study. Table \ref{tab-l2} shows the analysis cases, where RP1 represents the replacement of rivet \# 1.
 
 \begin{table}[htbp]
 \centering
-\caption{Summary of the slip coefficient and estimation of variability}
-\label{ch3tab1}
-\scalebox{0.95}{
-\begin{tabular}{@{}cccccccc@{}}
+\caption{Analysis cases}\label{tab-l2}
+\begin{tabular}{@{}cccccc@{}}
 \toprule
-\multirow{3}{*}{Specimens} &
-  \multicolumn{3}{c}{Slip coefficient} &
-  \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Standard \\ Deviation \\ (SD, $\sigma$) \end{tabular}} &
-  \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Standard \\ Error \\ (SE) \end{tabular}} &
-  \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Coefficient \\ of Variation \\ (C.V.) \end{tabular}} &
-  \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}The \\ Number \\ of data \end{tabular}} \\ \cmidrule(lr){2-4}
-        & \multirow{2}{*}{Average} & \multirow{2}{*}{Max}   & \multirow{2}{*}{Min}   &        &        &        &    \\
-        &   &     &     &        &        &        &    \\ \midrule
-All     & 0.274   & 0.386 & 0.173 & 0.0525 & 0.0076 & 0.1917 & 48 \\
-100\%CF & 0.291   & 0.386 & 0.192 & 0.0491 & 0.0100 & 0.1688 & 24 \\
-75\%CF  & 0.240   & 0.341 & 0.173 & 0.0482 & 0.0139 & 0.2009 & 12 \\
-50\%CF  & 0.274   & 0.351 & 0.208 & 0.0504 & 0.0145 & 0.1839 & 12 \\ \bottomrule
-\end{tabular}}
+\multirow{2}{*}{Case} & \multicolumn{5}{c}{Fastener location} \\ \cmidrule(l){2-6} 
+                      & \#1   & \#2   & \#3   & \#4   & \#5   \\ \midrule
+RP0                   & ◯     & ◯     & ◯     & ◯     & ◯     \\
+RP1                   & ▲     & ◯     & ◯     & ◯     & ◯     \\
+RP2                   & ◯     & ▲     & ◯     & ◯     & ◯     \\
+RP3                   & ◯     & ◯     & ▲     & ◯     & ◯     \\
+RP5                   & ◯     & ◯     & ◯     & ◯     & ▲     \\ \midrule
+\multicolumn{6}{r}{◯: Rivet; ▲: HSB}                         
+\end{tabular}
 \end{table}
 
-The average slip coefficient is 0.274, the coefficient of variation is 0.19, and the -2σ is 0.169. It can be found that the degree of dispersion of the slip coefficient is not low. Furthermore, it could be concluded that the slip coefficient from the slip test follows a normal distribution by the Shapiro-Wilk normality test \cite{shapiro1965Analysis}. The normal distribution of the slip coefficient is shown in Fig. \ref{ch3fig10}. The 95\% confidence interval is presented as the arithmetic mean ± 1.96 SE (Standard Error) (0.259--0.289).
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig10a.eps}
-    \caption{Normal distribution}
-    \label{ch3fig10a}  
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig10b.eps}
-    \caption{Q-Q plot}
-    \label{ch3fig10b}  
-    \end{subfigure}
-    \caption{Slip coefficient distribution}
-    \label{ch3fig10} 
-\end{figure}
-
-Besides, when the riveted joint surface is red lead paint, replacing the rivet with a high-strength bolt, the expected slip coefficient is 0.25-0.28 by Railway technical research institute in Japan \cite{rtri1992Manual}. However, in this experiment, it can be calculated that there is a 36\% probability that the slip coefficient is below 0.25. 
-
-The specimens' size could cause this, and the red lead distribution is uneven, resulting in a very low slip coefficient accrued in some specimens.
-
-The relationship between the slip coefficient and the clamping force is shown in Fig. \ref{ch3fig11}. It can be observed from the figure that the degree of dispersion of the slip coefficient has no obvious relationship with the change of clamping force; also, it can be calculated that the correlation coefficient between clamping force and slip coefficient is 0.21. On the other hand, the relationship between the slip load and clamping force is shown in Fig. \ref{ch3fig12}. As the clamping force increases, the slip load also increases.
-
-\begin{figure}[htbp]
+\begin{table}[htbp]
 \centering
-\begin{minipage}[t]{0.48\textwidth}
-\includegraphics[width=\linewidth]{imgs/ch3/fig11.eps}
-\caption{The relationship between the slip coefficient and the clamping force.}
-\label{ch3fig11}
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-\includegraphics[width=\linewidth]{imgs/ch3/fig12.eps}
-\caption{The relationship between the slip load and the clamping force.}
-\label{ch3fig12}
-\end{minipage}
-\end{figure}
+\caption{Design resistance (units: kN)}\label{tab-l3}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+    & $F_{y}$ & $F_{u}$ & $F_{b}$ & $F_{v}$ \\ \midrule
+RP0 & 668.6       & 755.8     & 2786.2   & 1214.5   \\ \bottomrule
+\end{tabular}
+\end{table}
 
-In addition, the average friction coefficient obtained is 0.295, which is 0.02 larger than the average slip coefficient of 0.274. The friction coefficient is calculated by dividing the load by the clamping force, which is taken when slippage has occurred. 
+Table \ref{tab-l3} lists the riveted joint's (RP0) design resistance. Both the riveted joint and the hybrid joint was failure by cross-sectional fracture. The net cross-section yield resistance $F_{y}$, ultimate net cross section resistance $F_{u}$, ultimate bearing resistance $F_{b}$, and ultimate rivet shear resistance $F_v$ are calculated using flowing equation.
 
-\subsection{Contact pressure distribution test}
+\begin{equation*}
+    F_y = (w-d_0)tf_y
+\end{equation*}
+\begin{equation*}
+    F_u = (w-d_0)tf_u
+\end{equation*}
+\begin{equation*}
+    F_b = 2.4ndtf_u
+\end{equation*}
+\begin{equation*}
+    F_u = nmA_sf_{ur}
+\end{equation*}
 
-The observation of the joint surface in section \ref{ch3sec2-1} revealed that the red lead surface distribution of specimens was much not uniform, and the red lead distribution of each specimen was also very different. In this study, a pressure distribution test is performed to investigate the influence of red lead distribution on the contact pressure and the slip coefficient. 
+\subsection{Analysis process step}
 
-\subsubsection{Measuring methods}
-A pressure measurement film is put into the joint surface, and then the standard clamping force is applied to the specimen by the screw-jack. When detected pressure, the film will be colored redder as the pressure increases.
+A step analysis was conducted in this study to evaluate the load redistribution within the riveted joint after removing the individual rivets. The steps involved in the analysis are summarized in Table \ref{tab-l4}.
 
-\subsubsection{Measuring result}
+\begin{table}[htbp]
+    \centering
+    \caption{Steps involved in analysis}\label{tab-l4}
+    \includegraphics[width=0.7\textwidth]{imgs/ch4/tab-l4.pdf}
+\end{table}
 
-Eight sets of specimens are conducted with a pressure distribution test. The pressure distribution was very uneven according to the aging condition of red lead paint, and the residual condition of red lead directly reflected the pressure distribution. Fig. \ref{ch3fig13} shows the pressure test results of the specimens' joint surface with a slip coefficient of 0.284 and the joint surface's condition before/after the slip test.
+The dead load was 72.5 kN, as calculated from the design dead load stress of the rivet girder's cross section. In step 2, the model change interaction was conducted in Abaqus to reproduce the rivet removal. In step 3, the bolt was installed and tightened to 205 kN. In step 4, the forced displacement was used to apply the live load. The stress contour maps for each step are shown in Fig. \ref{fig-l7}.
 
-
-\begin{figure}[htbp]
-\includegraphics[width=\linewidth]{imgs/ch3/fig13.pdf}
-\caption{Pressure contour figures and the condition before/after slip test.}
-\label{ch3fig13}  
-\end{figure}
-
-As shown in Fig. \ref{ch3fig13}-b, the range marked with red is detected contact pressure area; the white areas have not detected contact pressure. The slip test assumes that the pressure is evenly distributed on the joint surface; however, the measuring results show that red lead paint's surface does not satisfy the average pressure distribution assumption.
-
-As shown in Fig. \ref{ch3fig13}-c, after the slip test, the red lead paint on the joint surface was damaged. The traces of the slippage can be clearly seen. However, there are no traces of slippage near the marked red circle. The joint surface friction condition was very similar to the pressure distribution, as shown in Fig. \ref{ch3fig13}-b. It can be inferred that the white areas where no pressure is detected have no effective resistance to the friction and can be defined as the invalid contact area. On the contrary, the effective contact area is defined as where the contact pressure is detected. The effective contact pressure $σ_e$ is calculated by the effective contact area and clamping force.
-
-\begin{equation}
-    σ_e=N_0/S_e
-\end{equation}
-Where $N_0$ is clamping force;$ S_e$ is effective contact area. 
 
 \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/ch4/fig-l7.pdf}
+    \caption{Steps for reproducing construction (RP1 case)}
+    \label{fig-l7}
+\end{figure}
+
+\subsection{Results and discussions}
+
+\subsubsection{Load sharing of each rivet (step 2)}
+
+Fig. \ref{fig-l8} shows the load distribution of each fastener before and after rivet removal. The vertical axis represents the bearing resistance of each rivet, and the horizontal axis represents the rivet position. The green / orange bars represent the bearing resistance of the rivet before and after a
+certain rivet is removed.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/ch4/fig-l8.pdf}
+    \caption{Load sharing of each fastener within dead load (before and after removing rivet)}
+    \label{fig-l8}
+\end{figure}
+
+Table \ref{tab-l5} shows the load redistribution among the remaining rivets after the removal of an individual rivet.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Load redistribution of removed riveted [\%]}\label{tab-l5}
+    \includegraphics[width=0.6\textwidth]{imgs/ch4/tab-l5.pdf}
+\end{table}
+
+The bearing resistance of each rivet was calculated using the contact pressure on the rivet hole surface. The friction resistance of the bolt was calculated using the frictional stress on the top surface. The hole and top surfaces are shown in Fig. \ref{fig-l9}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/ch4/fig-l9.pdf}
+    \caption{Location where bearing/friction resistance is calculated}
+    \label{fig-l9}
+\end{figure}
+
+As shown in Fig. \ref{fig-l8}.a, the bearing resistance (24.53 kN) originally transferred by rivet \#1 was redistributed among the remaining four rivets. Approximately 51\% (12.6 kN / 24.53 kN) of the bearing resistance of rivet \#1 was transferred to rivet \#2, which was the closest rivet to \#1. The bearing resistance of rivet \#2 increased from 13.28 to 25.88 kN. The bearing resistances of rivets \#3, \#4, and \#5 were redistributed by 26\% (6.38 kN / 24.53 kN), 13.7\%, and 8.7\% of the \#1 rivet bearing resistance, respectively.
+
+In addition, it was discovered that the removal of rivet \#1 was based a similar load redistribution mechanism to that of the removal of rivet \#5, as shown in Table \ref{tab-l5}.
+
+As shown in Fig. \ref{fig-l8}.c, removing middle rivet \#3 caused its bearing resistance to be distributed evenly among the remaining rivets.
+
+\subsubsection{Resistance of each fastener}
+
+Fig. \ref{fig-l10} shows the relationship between each fastener's reaction force and displacement for each case from steps 2 to 4. $P_{s1}$ is the maximum reaction force of the bolt. In step 2, the residual deformation due to the dead load was disregarded, and loading was commenced from 0 kN.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/ch4/fig-l10.pdf}
+    \caption{Relationship between each fastener's reaction force and displacement}
+    \label{fig-l10}
+\end{figure}
+
+As shown in Fig. \ref{fig-l10}, before the bolt's resistance reached $P_{s1}$, rivets near the replaced rivet were affected more by the newly fastened bolt, thereby rendering the rivet's load transfer less efficient. efficient. Meanwhile, the rivets distant from the bolt were almost unaffected. For example, as shown in Fig. \ref{fig-l10}.a, where rivet \#1 was replaced by a bolt, the curve of rivet \#5 barely changed, and the slope of rivet \#2 decreased after the rivet was replaced.
+
+When the reaction force of the bolt exceeded $P_{s1}$, the bolt no longer transferred forces. Meanwhile, the curves of the rivets that were adjacent to the bolt changed, resulting in a more efficient load transfer. However, the more distant rivets were unaffected.
+
+\subsubsection{Overall mechanical behavior}
+
+Fig. \ref{fig-l11} shows the relationship between load and displacement for each case. As shown in the figure, the overall mechanical behavior was similar to that of RP0 and RP1. This might be because in RP1, bolt \#1 transferred more load to the cover plate via friction, thereby relieving the net cross-section stress in the connected plate.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imgs/ch4/fig-l11.pdf}
+    \caption{Relationship between each fastener's reaction force and displacement}
+    \label{fig-l11}
+\end{figure}
+
+\section{Load transfer mechanism for long riveted joint}
+
+In the previous section, in the case of a hybrid joint using three rows of rivets and a \ac{HSB} friction connection, although nonlinear behavior is not exhibited until the inner rivet holes plasticize, the degree of plasticization is not uniform and the plasticization zone increases as one moves away from the center of the joint. However, when the number of rivet rows is small, as in the case of the subject studied in section \ref{ch4sec2}, the plasticization bias at each rivet position is small, and it is considered possible to evaluate the plasticization of the rivet holes at the initial stage of nonlinear behavior by multiplying the nominal bearing stress by the number of rivets. However, which discusses only one-row, three-row joints, the number of rivets in a row actually increases, the force acting on the rivets is not uniform, and there is a large possibility that localized yielding will occur first.
+
+\subsection{FE analysis}
+
+Fig. \ref{fig-femodl-5r} shows the FE analysis model and the dimension of the joint. The analysis case are shown in Table \ref{tab-5rcase}, the rivets were replaced with \ac{HSB}s and the position and number of rivets were used as parameters in the analysis.
+
+The analytical model consists of a total of five rivets. The modeling range of the analytical model is 1/4 model in the direction of the plate width for symmetry. The analytical model consists of an C3D8R (reduced integral element) for the joint, splice plate, bolt, and washer. Faying surfaces were set on the joint surfaces between the jointed material and splice plate, bolt and bolt hole, and rivet and rivet hole, and boundary nonlinearities were considered. The rivet hole was modeled as 23.5 mm so that the rivet and the hole wall were in contact beforehand. When replacing the rivet with a \ac{HSB}, the bolt hole was left at 23.5 mm.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{imgs//ch4/fig-femodl-5r.pdf}
+    \caption{FE analysis model}
+    \label{fig-femodl-5r}
+\end{figure}
+
+\begin{table}[htbp]
 \centering
-\includegraphics[width=0.65\linewidth]{imgs/ch3/fig14.pdf}
-\caption{The relationship between slip coefficient and effective contact pressure}
-\label{ch3fig14}  
-\end{figure}
-
-The relationship between slip coefficient and the effective contact pressure is shown in Fig. \ref{ch3fig14}. The effective contact area for each specimen is different, so although the same clamping force they have, calculated effective contact pressure is different. The correlation coefficient between the slip coefficient and the effective contact pressure is calculated as 0.476. No apparent relationship between the slip coefficient and the effective contact pressures has been observed. It could be considered that reason is the contact pressure was unevenly distributed in the effective contact area. Furthermore, the invalid pressure area and low contact pressure area do not effectively resist friction, and local slip has likely occurred. 
-
-
-
-
-\section{Tensile test of partially replacement of riveted joint}
-
-\subsection{Specimens of test}
-
-In this study, joints part on the crossbeam(two-sided riveted joints) were sampled from the Dojima Bridge. The sampling locations and cut-off position are shown in Fig. \ref{fig-cutoff}.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth]{imgs/ch4/figA1.pdf}
-    \caption{Cut off position of each specimens}
-    \label{fig-cutoff}
-\end{figure}
-
-The specimen case is shown in Fig. 3.2. The tests were carried out using a riveted joint consisting of a total of five rivets (a. riveted join case) in one row and three columns on each side as the basic case and replacing all rivets with high-strength bolts for friction joints (b. RPALL) and partially replacing rivets with high-strength bolts because in actual repair design and repair work, only corroded or fallen out rivets may be replaced with high-strength bolts. The case where rivets are partially replaced with high-strength bolts (c. RP1, d. RP2, e. RP3) is examined, as in actual repair design and repair work, only rivets that have corroded or fallen out may be replaced with high-strength bolts.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{imgs/ch3/riveexpcase.pdf}
-    \caption{Experiment case}
-    \label{fig:enter-label}
-\end{figure}
-
-Prior to the tests, specimens cut in the direction of the shaft centre were fabricated as shown in Fig. \ref{fig-ch3beasta}, the hole diameter and the gap between the rivet and the steel plate were measured and the filling status of the rivets was observed in order to ascertain the filling status of the rivets. If gaps existed, water flowed through the gaps and corrosion damage was also observed.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{imgs/ch3/ch3beasta.pdf}
-    \caption{Confirm the filling status of the rivets}
-    \label{fig-ch3beasta}
-\end{figure}
-
-
-\subsection{Test method}
-
-\subsubsection{Specimens size}
-
-Fig. \ref{fig-sepc-size} shows the specimen shape and detailed dimensions. The 150 mm from one end is where the chuck is clamped.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{imgs/ch3/sepc-size.pdf}
-    \caption{Specimens size (mm) }
-    \label{fig-sepc-size}
-\end{figure}
-
-\subsubsection{measurement location}
-
-The measured items were load, preload of bolts, and relative displacement between main plate and splice plate as shwon in Fig. \ref{fig-ch3mealoc}. The bolt preload is measured by strain gauges at the time of assembling all specimens and at the time of the slip test, and the remaining bolt preload at the time of the test is determined to calculate a more accurate slip coefficient, μ. The bolt axial force is measured at the time of assembly, before the slip test, and at the time of slippage. A clip-type displacement transducer is attached to each bolt position to measure the relative displacement of the two splice plates and the main plate. Strain gauges were attached to the outside of the specimen, at the rivet positions, and at the center of the main plate and the splice plate between the hole diameters in order to clarify the load transfer mechanism of the combined joint.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{imgs/ch3/ch3mealoc.pdf}
-    \caption{Measurement location}
-    \label{fig-ch3mealoc}
-\end{figure}
-
-\subsubsection{Test procedure}
-
-When riveted joints were partially or completely replaced with high-strength bolts, F10T (M22) was used as the high-strength bolt for friction joints. The axial force of the tightening bolt was set to 226 kN, which is 1.1 times the design bolt axial force of 205 kN. The period from tightening to the start of the test is one week to allow for the reduction of axial force due to relaxation. A universal testing machine (loading capacity: 2000 kN) owned by Osaka City University was used for the test, and the load was applied until fracture. The loading speed was 1 kN/s, and measurements were taken at 1-second intervals.
-
-\subsubsection{Remove the rivet}
-
-To remove the rivets, the rivet heads on one side were first carefully removed with a disk sander. The joint removed from the actual bridge was already firmly filled with rivets, and the shaft was deformed according to the relative displacement between the plates. Drilling was performed using an Atra-Ace. Enlarged holes were drilled using a jet broach with a diameter of 26.5 mm, aligned with the center of the rivet shaft. The rivet shaft was pressed out while the four corners of the plate were fixed to prevent the plate from disassembling due to rivet removal. The tools used are shown in Fig.\ref{fig-retool}.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{imgs/ch3/retool.pdf}
-    \caption{Tools for rivet removal}
-    \label{fig-retool}
-\end{figure}
-
-When replacing rivets, loads may be concentrated on specific rivets or high-strength bolts during the replacing process, which can be dangerous. In the present replacement work, the order in which the sharing ratio is relatively equal (\#1 → \#6 → \#2 → \#5 → \#3 → \#4) (the bottle order was set from the edge end of one side of the joint to the edge end of the other side of the joint) according to the study by Kakimoto et al. \cite{kakimoto2002Mechanical} was followed.  The replacement process is shown in Fig. \ref{fig-reproce}.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{imgs/ch3/reproce.pdf}
-    \caption{Replacement process}
-    \label{fig-reproce}
-\end{figure}
-
-\subsubsection{Designed resistance of the joint}
-
-small-scale slip tests on the cross girder of the Dojima Bridge yielded an average slip coefficient of 0.21, which is smaller than in previous studies. This value is smaller than previous studies. Here, the design resistance was evaluated using the slip coefficient of 0.21, which is the result of the small-slip test.
-
-The design thickness of the main plate of the subject joint was 9.5 mm, and the thickness of the base material varied widely due to the limited manufacturing technology of steel products at that time. The average thicknesses of the main plates taken from the same girder are 9.3 and 10.2, respectively.
-The average thicknesses of the main plates taken from the same girder are 9.3 and 10.2, respectively. The design bearing capacity was calculated using the thickness of each joint.
-
-The slip coefficient is calculated by the following equation.
-
-\begin{equation} \label{eq-fs}
-    F_{sd} = n m \mu_d N
-\end{equation}
-
-where, n is the number of bolts, m is the number of the friction plane, $\mu_d$ is the slip coefficient, and $N$ is the design bolt perload.
-
-The net sectional yield resistance $F_{yd}$ and net sectional ultimate resistance $F_{ud}$ of the main plate are calculated by Eq.\ref{eq-fyd} and \ref{eq-fud}, respectively, without taking into account the effect of bolt axial force.
-
-\begin{equation}\label{eq-fyd}
-    F_{yd} = (w - d) t f_y
-\end{equation}
-
-\begin{equation}\label{eq-fud}
-    F_{ud} = (w - d) t f_u
-\end{equation}
-
-Where, $w$ is the width of the main plate, $d$ is the hole diameter, $t$ is the thickness of the main plate, $f_y$ is the yield resistance of the main plate, and $f_u$ is the ultimate resistance of the main plate.
-
-The design value of the slip/yield resistance ratio, βd, was calculated using Eq. \ref{eq-beta}.
-
-\begin{equation}\label{eq-beta}
-    \beta_d = \frac{F_{sd}}{F_{yd}}
-\end{equation}
-
-Bearing resistance is calculated with reference to the equation of RTRI, Japan \cite{rtri1992Manual}.
-
-\begin{equation}
-    F_{b,RTRI} = 1.5 d t f_y
-\end{equation}
-
-The strength of hybrid joints is obtained by accumulating slip strength and bearing resistance.
-
-\begin{equation}
-    F_{hybrid} = F_{sd} + F_{b,RTRI}
-\end{equation}
-
-The rivets are red-hot rivets that are tightened with a hammer to form a dome-shaped rivet head. It is known that cooling the rivet introduces axial force, and the axial force of the rivet was taken into account when calculating the slip capacity. The axial force of a rivet with a diameter of 22 mm and a shaft length of 34 mm has an average axial force/yield strength ratio of 0.4, based on previous studies. 75 mm shaft length is said to be 70\% of the rivet shaft yield value. Since the average yield strength of the rivets used in the Dojima Bridge is 295 Mpa , we considered that the rivets with a shaft length of 34 mm and a shaft length of 75 mm introduced an axial force of about 45 kN and 78.5 kN, respectively.
-
-The design resistance of the joint are summarized as in Table \ref{tab-designres-ch3}.
-
-\begin{table}[]
-    \centering
-    \caption{Design resistance of the joint}
-    \label{tab-designres-ch3}
-    \begin{tabular}{@{}cccccccc@{}}
-        \toprule
-        \multirow{2}{*}{} &
-          \multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Preload of rivet\\ kN\end{tabular}} &
-          \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Applied \\ preload\\ kN\end{tabular}} &
-          \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Slip\\ resistance\\ $F_s$\end{tabular}} &
-          \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Net C-S yield\\ resistance\\ $F_{yd}$ kN\end{tabular}} &
-          \multirow{2}{*}{β} &
-          \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Net C-S Ultimate\\ resistance\\ $F_{ud}$\end{tabular}} \\ \cmidrule(lr){2-3}
-              & 33mm                & 75mm                  &       &        &        &      &       \\ \midrule
-        RIVET & \multirow{4}{*}{45} & \multirow{4}{*}{78.5} & -     & 70.77  & 197.23 & 0.36 & 324.3 \\
-        RP1   &                     &                       & 214.9 & 142.13 & 193.28 & 0.74 & 318.8 \\
-        RP2   &                     &                       & 215.5 & 142.37 & 199.12 & 0.72 & 331.4 \\
-        RP3   &                     &                       & 217.5 & 201.63 & 194.08 & 1.04 & 320.8 \\
-        RPALl & \multicolumn{2}{c}{-}                       & 215.5 & 271.53 & 190.59 & 1.42 & 315.3 \\ \bottomrule
-    \end{tabular}
+\caption{Analysis cases}\label{tab-5rcase}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+\multirow{2}{*}{Case} & \multicolumn{5}{c}{Fastener location} \\ \cmidrule(l){2-6} 
+                      & \#1   & \#2   & \#3   & \#4   & \#5   \\ \midrule
+R5B0                   & ◯     & ◯     & ◯     & ◯     & ◯     \\
+R4B1                   & ▲     & ◯     & ◯     & ◯     & ◯     \\
+R3B2                   & ▲     &◯     & ◯     & ◯     & ▲     \\
+R2B5                   & ▲     & ◯     & ▲     & ◯     & ▲     \\
+R0B5                   & ▲     & ▲     & ▲     & ▲     & ▲     \\ \midrule
+\multicolumn{6}{r}{◯: Rivet; ▲: HSB}
+\end{tabular}
 \end{table}
 
-\subsection{Test results and discussion}
+In the analysis, an initial axial force was introduced to the rivet and \ac{HSB} in Step 1, and a tensile force due to forced displacement was applied to the end of the material to be welded in Step 2. Although some axial force was actually introduced due to cooling and shrinkage of the rivet, this force was not taken into account in the analysis. However, this axial force was not taken into account in this analysis.
 
-\subsubsection{Overall test results}
+The conditions of material properties and coefficient of friction used for the analysis are the same as in the previous section.
 
-Fig.\ref{fig-3-10} shows the relationship between load and displacement for the five specimens. Since the net sectional yield capacity of each case is different, the loads are non-dimensionalized by the respective net sectional yield capacity, Py. The displacements are the displacements between the fixtures.
+\subsection{Result and discussions}
 
-Fig.\ref{fig-3-10} shows that RP1 (replacing the outer rivets with high-strength bolts), RPall (replacing all rivets), and the repaired case with two rivets replaced had almost the same yield strength. In the case where two rivets were replaced, the slope of the load-total displacement relationship changed at about 1.1 times the yield capacity, confirming the effect of the yielding of the pure section of the main plate.
+\subsubsection{Displacement}
+
+Fig.\ref{fig-5rld} shows the The relationship between load and displacement of all the 5-row case. The location of the load and displacement acquisition is where the forced displacement is given.
+
+The initial stiffness of the joint depends on the number of \ac{HSB}s. The higher the number of \ac{HSB}s, the higher the initial stiffness of the joint. This is consistent with the results in section \ref{ch4sec2}. In the R0B5 case, slip was observed, but in the case with rivets, no slip was observed because the joint was transmitting the load by bearing. In the case with rivets and joints with rivets, the joint begins to exhibit nonlinear behavior when the displacement is about 1.8 mm. This nonlinear behavior is considered to be caused by the deformation of the hole due to yielding around the hole in the main plate. The more fasteners resist the load by bearing, the smaller the load on the fastener hole. Finally, when the \ac{HSB} also enters a bearing transfer state, the stiffness of the joint depends on the shear yield of the rivets, since the shear yield of the rivets is lower than the net cross-sectional yield of the joint. Still, the maximum load on the joint depends on the number of rivets in the joint. This may be due to shear yielding of the rivets before the maximum load is reached.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{imgs/ch3/fig3-10.pdf}
-    \caption{The relationship between load and displacement for the five specimens}
-    \label{fig-3-10}
+    \includegraphics[width=0.7\linewidth]{imgs//ch4/fig-5rld.pdf}
+    \caption{The relationship between load and displacement}
+    \label{fig-5rld}
 \end{figure}
 
-The RP1 and RPall cases tend to have a smaller overall displacement with respect to the load than the other cases. As shown in Fig.\ref{fig3-11}, yielding occurred at 1.09 for the RP1 and RPALL cases, and the net section yielding capacity occurred at 1.02 and 1.015 for the RP2 and RP3 cases, respectively. The Rivet case in sound condition was found to yield at position 1, as in the steel tensile test. This is considered to be because the axial force of the rivet is smaller than in the other cases, resulting in less load transfer to the splice plate.
+\subsubsection{Stress distribution}
 
-
-Fig.\ref{fig3-12} shows the relationship between load and relative displacement at the net cross-sectional position. 1.09, the same value as the load-strain relationship, was observed for RPALL.
+Fig.\ref{fig-5rslscount} shows the mises stress contour plot when each case begins to exhibit nonlinear behavior. When the joint begins to exhibit nonlinear behavior, the area around the hole in the main plate develops a plastic zone, but it does not develop to the gross section of the plate. On the other hand, the shaft of each rivet develops a plastic zone at the shear position. It was found that the nonlinear behavior in each case depends on the shear yield of the rivets. It can be confirmed from the contour plots that when the nonlinear behavior begins, the \ac{HSB} of the joint is not yet in a bearing state, and the stress around the hole in the main plate to the HSB is small. In the R0B5 case, there is no stress around the hole due to bearing pressure because of the occurrence of slip in the nonlinear behavior.
 
 \begin{figure}[htbp]
     \centering
-    \begin{minipage}[t]{0.42\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-11.pdf}
-    \caption{The relationship between Load and Strain, Net cross-section position (Hole \#1)}
-    \label{fig3-11}  
-    \end{minipage}
-    \begin{minipage}[t]{0.42\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-12.pdf}
-    \caption{The relationship between Load and Displacement, Net cross-section position (Hole \#1)}
-    \label{fig3-12}  
-    \end{minipage}
+    \includegraphics[width=1\linewidth]{imgs//ch4/fig-5rslscount.pdf}
+    \caption{Mises stress contour plot when each case begins to exhibit nonlinear behavior}
+    \label{fig-5rslscount}
 \end{figure}
 
-It was confirmed that the frictional force caused by the introduction of the high-strength bolt axial force transfers the load from the main plate to the splice plate. Fig.\ref{fig3-13} shows the load sharing ratio between the splice plate and the main plate. As shown in Fig.\ref{fig3-13}, when the load reached the net sectional yield, the load transfer ratio to the splice plate was 15\% for the RP1 case, and the transfer ratio was 5\% for the RPALL full replacement case, raising the net sectional yield capacity by 13\% and 8\%, respectively. This is due to the difference in the slip coefficient and the difference in the slip capacity of a single bolt.
+In the riveted joints, the plastic zone at the rivet axis is smaller than in other cases during linear behavior, but the stress in the welded material is relatively high. Especially at the edge, there is a clear tendency for the plastic zone to extend to the edge. Failure due to bearing of the joined material may occur at an early stage.
 
-The frictional force of a single RP1 outer bolt is 146.13 kN, which is about 1.6 times higher than the RPALL frictional force of 89.16 kN. the rate of increase of the RP1 quasi-sectional yield capacity is also higher than that of the RPALL by a factor of 1.6. It was found that the frictional force of the single bolt on the outside of the joint is directly proportional to the yield capacity of the pure section. In addition, the friction force between the quasi-sections of The increase in quasi-sectional yield capacity for RP2 and RP3 was 1.02 and 1.015, respectively, which was attributed to the fact that the adjacent high-strength bolt transmitted a higher clamping force than the rivet. The axial force of the adjacent high-strength bolts should be considered in terms of the specific influence range and axial force relationship.
 
+Fig.\ref{fig-5rulscount} shows the mises stress contour plot of each case when max load. It can be determined that the maximum load of the riveted and hybrid joint depends on the shear yield of the rivet. The rivet shaft is in the plastic zone and the tensile strength of the rivet is close to the rivet's ultimate strength $f_{ur}$ at the maximum load. The ultimate failure of the rivet is assumed to be the rivet shear rupture. On the other hand, in the \ac{HSB} friction joint case, the shaft of the \ac{HSB} did not yet develop a plastic zone, but developed a plastic zone around the hole in the main plate up to the gross section of the plate. In the \ac{HSB} friction joint case, it can be inferred that the final failure is either net cross-sectional rupture or end shear failure of the main plate. 
+
+The stress propagation in the plastic zone around the hole is different for each case, and the stress propagation is small from the outside to the inside of the joint. The direction of the plastic zone changes depending on the number of \ac{HSB}s replaced. In the case of rivet and single rivet replacement, the plastic zone tended to propagate toward the center of the plate width on the tensile side. In the case of R2B3, the plastic zone tended to propagate in the diagonal direction.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{imgs/ch3/fig3-13.pdf}
-    \caption{the load sharing ratio between the splice plate and the main plate}
-    \label{fig3-13}
+    \includegraphics[width=1\linewidth]{imgs//ch4/fig-5rulscount.pdf}
+    \caption{Mises stress contour plot of each case when max load}
+    \label{fig-5rulscount}
 \end{figure}
 
-Fig.\ref{fig3-15} shows the load-relative displacement relationship measured at 10mm away from the gap, RPALL is almost equal to the calculated sliding load of 271 kN. This is because the slip load is determined by the relative displacement between the base metal and the attached plate at 10 mm from the gap, which is affected by the tightening of the inside bolt. The frictional force of the outer bolt of RP1 is not very useful for the inner rivet because the inner rivet is resisted by the bearing pressure of the inner rivet, and the slip load is larger in the case where the inner bolt of RP3 is replaced. This is considered to be due to the joint resistance of the frictional force of the high-strength bolt and the rivet.
+\subsubsection{Deformation of the hole}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{imgs/ch3/fig3-15.pdf}
-    \caption{the load-relative displacement relationship measured at 10mm away from the gap}
-    \label{fig3-15}
+    \includegraphics[width=1\linewidth]{imgs//ch4/fig-5rholedef.pdf}
+    \caption{The deformation of each case each fastener's hole}
+    \label{fig-5rholedef}
 \end{figure}
 
-
-Comparison of the experimental and design values of the joint capacity is shown in Table \ref{tab-ch3compare}. The riveted quasi-sectional yield load in the sound condition is almost consistent with the design value. The yielding of the bolt hole in the base metal increased by 1.3\%, 7.9\%, and 0.5\%, respectively, compared to the riveted sound condition, depending on the position of the replacement bolt. It is considered that the replacement of the rivet can relieve the bearing pressure of the rivet by transferring the load to the splice plate, which is fixed by the frictional force of the high-strength bolt, and further to the splice plate by the crimping force, instead of sharing the bearing pressure next to the rivet. In either case, the bearing capacity of the rivet is not reduced. However, when a rivet is removed under dead or live load, the load may concentrate on other rivets, creating a dangerous situation. The reason why the maximum load of the rivet in sound condition is only 0.88 times greater than the net section tensile strength is considered to be the result of stress concentration due to yielding near the rivet holes.
-
-In the case where high-strength bolts were replaced, the rate of increase in load capacity varied depending on the location of the replacement. when the rivets on the outside of RP1 were replaced with high-strength bolts, the axial force was introduced at the net section location as in the case where all RPALL was replaced, and the load flowed to the splice plate. Therefore, the net sectional yield capacity was found to be the same as the quasi-sectional yield capacity of a high-strength-bolt friction joint, which is 1.1 times higher than that of a friction joint with high-strength bolts as described in the specifications for road bridges. The medial displacement RP2 and the medial displacement RP3 also introduced axial forces, so they shared some of the load on the pure section. Yield loads were increased by 2\% and 1.7\%, respectively.
-
-The design bearing capacity of RP1 was 3\% lower than that of the sound Rivet case, but the experimental yield load was almost the same as that of the sound Rivet case.
-
-\begin{table}[]
-    \centering
-    \caption{Comparison of the experimental and design values of the joint capacity}
-    \label{tab-ch3compare}
-    \begin{tabular}{@{}ccccccccccc@{}}
-    \toprule
-    \multirow{3}{*}{case} & \multirow{3}{*}{F\_s} & \multicolumn{3}{c}{Net C-S Yield} & \multicolumn{3}{c}{Fastener hole yield} & \multicolumn{3}{c}{Ultimate strength} \\ \cmidrule(l){3-11} 
-     &
-       &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Desgined\\ Value\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Exp.\\ Result\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}ROC\\ \%\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Desgined\\ Value\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Exp.\\ Result\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}ROC\\ \%\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Desgined\\ Value\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Exp.\\ Result\end{tabular}} &
-      \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}ROC\\ \%\end{tabular}} \\
-                          &                       &           &           &           &             &              &            &             &             &           \\ \cmidrule(r){1-10}
-    Rivet                 & 70.8                  & 197.2     & 195.8     & 99.3      & 176.9       & 175.5        & 99.2       & 324.3       & 286.7       & 88.4      \\
-    RP1                   & 142.1                 & 193.3     & 213.7     & 110.6     & 210.8       & 179.2        & 85.0       & 318.8       & 304.4       & 95.5      \\
-    RP2                   & 142.4                 & 199.1     & 203.1     & 102.0     & 211.1       & 190.84       & 90.4       & 331.4       & 295.7       & 89.2      \\
-    RP3                   & 201.6                 & 194.1     & 197.3     & 101.7     & 208.0       & 177.9        & 85.5       & 320.8       & 281.1       & 87.6      \\
-    RPALL                 & 271.5                 & 190.6     & 207.9     & 109.1     & \multicolumn{3}{c}{-}                   & 315.3       & 292.9       & 92.9      \\ \midrule
-    \multicolumn{11}{r}{ROC: Rate of Change}                                                                                                                           
-    \end{tabular}
-\end{table}
-
-\subsubsection{riveted joint}
-
-Fig.\ref{fig3-16} shows the load-strain relationship at the net cross-sectional position of the rivet joints. The relative displacements of the base plate and splice plate at each rivet position of the joint are shown in Fig.\ref{fig3-17}. A photograph of the riveted joint is shown in Fig.\ref{fig3-18}. On the tensile side, the rivet holes yielded while all the rivets deformed under a load of about 175 kN. After this, the main plate entered a reinforced state. The designed rivet hole yield capacity (bearing) is 176KN. This is almost the same as the calculated value compared to the load at which the specimen entered the bearing state. The next slope was a pure section yield, and the base plate entered a plastic state. The net section yield load was 195KN, and the design value was 197KN, almost the same as the design value. Since the load transfer to the splice plate by the rivet clamping force was very small and the net sectional yield capacity of the base plate was almost unaffected, it is difficult to expect the clamping force due to thermal expansion of the bearing rivet joints to be the same as the design.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-16.pdf}
-    \caption{The relationship between Load and Strain, Net cross-section position (Hole \#1 and \#6)}
-    \label{fig3-16}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-17.pdf}
-    \caption{The relationship between Load and Displacement, each rivet position}
-    \label{fig3-17}
-    \end{minipage}
-\end{figure}
-
-
-When the rivets were sound, the maximum ultimate load was 286.7KN, which was 88\% of the calculated net section tensile strength (324.3KN). This is considered to be due to stress concentration near the rivet holes.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\textwidth]{imgs/ch3/fig3-18.pdf}
-    \caption{Photograph of the riveted joint}
-    \label{fig3-18}
-\end{figure}
-
-
-\subsubsection{RP1 case}
-
-Fig.\ref{fig3-19} shows the strain relationship between the RP1 case load and the net cross-sectional position. Fig.\ref{fig3-20} shows the relationship between the load and the relative displacement of the main plate and the splice plate at 10 mm from the gap in the joint (End distance 10mm, ED-10) and each hole position.
-
-The relative displacement of the fixed side (so-called "rivet soundness") was smaller than that of the sliding side. The first gradient was that the rivet deformed while the slip began to occur. The next change in slope was the rivet entering a bearing state, and the rivet bit into the bearing little by little.
-
-The maximum tensile load on the joint cannot be shown in the graph because the CDP displacement transducer could not follow the plastic displacement, but based on Amsler's maximum load reading, the maximum load is 304.4KN. This is 95.5\% of the net section tensile load of the steel (318.8KN). The fact that the maximum load was about 95.5\% of the steel's tensile capacity can be attributed to the load transfer to the splice plate due to the clamping force of the high-strength bolt and the relaxation of stress concentration caused by the cross-sectional deficiency near the bolt holes.
-
-The calculated net sectional yield capacity of the RP1 case was 193.3KN (enlarged hole), and actually 216.2KN when the net sectional yield occurred near the bolt hole. This is about 12\% higher than the design value, which is also the result of the load transfer by the frictional force of the outer bolt before.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-19.pdf}
-    \caption{The relationship between Load and Strain, Net cross-section position (Hole \#1 and \#6)}
-    \label{fig3-19}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-20.pdf}
-    \caption{The relationship between Load and Displacement of RP1 Case, each rivet position}
-    \label{fig3-20}
-    \end{minipage}
-\end{figure} 
-
-\subsubsection{RPALL case}
-
-In the RPALL case, the rivets were removed from the entire joint, the rivet holes were enlarged, and replaced with M22F10T high-strength bolts. The order of rivet replacement was \#1, \#6, \#2, \#5, \#3, and \#4 according to the recommended order for replacing three rows of rivets in the literature by Kakimoto et al.14, taking the rivet bearing force into consideration. (The bottle order was set from the edge end of one side of the joint to the edge end of the other side of the joint.)
-Fig.\ref{fig3-21} shows the RPALL case load-strain relationship at the net cross-sectional location. The tensile side of the RPALL had a friction coefficient of 0.21, and the M22F10T introduced average axial force was 215.5KN and slip load was 271.5 kN.
-The tensile load-relative displacement relationship is shown in Figure 3.22. The load was 271KN when the relative displacement was 0.2mm. This is almost the same as the calculated slip load using the slip coefficient obtained from the results of the small-slip test.
-As shown in Fig.\ref{fig3-21}, the net sectional yield capacity of the RPALL was 207KN, which was about 1.09 times higher than the calculated net sectional yield value (190 kN). This is considered to be due to load transfer to the splice plate by the clamping force. Finally, the maximum load of RPALL was 293KN, which is about 0.93 times higher than the design net section tensile load of 315 kN, 5\% higher than the RivetCase but 2\% lower than the RP1Case. The friction force of the outer bolt of RP1 was 1.3\% greater than that of RPALL, and the load was transferred by the edge of the bolt due to the friction force.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-21.pdf}
-    \caption{The relationship between Load and Strain, Net cross-section position (Hole \#1 and \#6)}
-    \label{fig3-21}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-22.pdf}
-    \caption{The relationship between Load and Displacement of RPALL Case, each rivet position}
-    \label{fig3-22}
-    \end{minipage}
-\end{figure} 
-
-\subsection{Load sharing of each case}
-
-Fig.\ref{fig3-23} compares the maximum load in each case with the yield capacity and tensile capacity of each case. The test specimens were cut from actual girders, and the dimensions of each case were slightly different.
-
-The maximum load in the sound condition was 1.45 compared to the yield capacity, while the maximum loads of RP1 and RP2 were 1.53 and 1.52, respectively, both slightly higher than that of RPALL. Kobayashi et al. \cite{KOMATSU2015} showed that replacing friction high-strength bolts slightly increased the bearing capacity of joints determined by pure sectional yield, but this study further examined a partial replacement repair plan (replacing high-strength bolts only on the outside). As a result, the bearing capacity of the three-row joint was almost the same by replacing only the outer joint with a high-strength bolt as in the case where the entire joint was replaced with a high-strength bolt, suggesting that the partial replacement repair (so-called combined joint of friction high-strength bolt and bearing rivet) is effective.
-
-Fig.\ref{fig3-24}.a show the strain in the joint's main plate when the load is 60\% of the design yield capacity. In this experiment, a total of seven strain gauges were attached at equal intervals from the splice plate to the play area, where T2, T4, and T6 are the positions of the rivet holes. The stress concentration around the bolt holes in the main plate was relieved by the frictional force that was generated and transmitted to the splice plate. In the other cases (RP2 and RP3), the strain in the main plate shows a similar trend, with a convexity in the strain near the pure section of the main plate, and unlike RP1 and RPALL, the strain does not decrease much after the load passes through the hole. This is thought to indicate that the load is not transferred to the splice plate very well.
-
-Fig.\ref{fig3-24}.b shows the distribution of main plate strain at net section yield ($P/P_y=1$) for each case design. The joints in the sound condition first entered the net section yielding state, and high stress concentrations also occurred near the net section in the RP2 and RP3 cases, which is especially noticeable in RP3 (where the bolt displaces the inside of the joint). RPALL and RP1 also showed the same trend, with a small amount of convexity also starting to appear near the pure section.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth]{imgs/ch3/fig3-23.pdf}
-    \caption{Comparison of the maximum load in each case with the yield capacity and tensile capacity of each case}
-    \label{fig3-23}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\textwidth]{imgs/ch3/fig3-24.pdf}
-    \caption{the strain distribution in the joint's main plate}
-    \label{fig3-24}
-\end{figure}
-
-
-The load transfer coefficient to the main plate at the joint is shown in Fig.\ref{fig3-26}.a P/Py=0.6 and b. P/Py=1 show the load transfer coefficient when the load is 0.6 and 1 times the quasi-sectional yield capacity of the joint, respectively. The Rivet case shows that the load transfer coefficient of T3 after rivet 1 is 74\% and the cross-sectional area ratio of the joint main plate is 72\%, which is almost the same as that of the Rivet case.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\textwidth]{imgs/ch3/fig3-26.pdf}
-    \caption{the load transfer ratio to the main plate at the joint}
-    \label{fig3-26}
-\end{figure}
-
-
-\subsection{Overvation of the faying surface}
-
-The ruptured RPALL (high-strength bolt all replaced) specimen was disassembled and the cross section was observed. A photograph of the contact surface is shown in Fig.\ref{fig3-27}. The results of the small-slip test described in the previous section show that the slip coefficients of the two splice plates in contact with the main plate are different from each other, and there is a large difference between the slip coefficients of the fixed side and the sliding side. Fig.\ref{fig3-28} shows the difference in the slip coefficients between the fixed and sliding sides, the fixed side exhibited slip on only one side, which was attributed to the large difference in the coefficient of friction between the two contacting surfaces. Fig.\ref{fig3-29} and Fig.\ref{fig3-30} show enlarged views of the tensile and anchorage sides, respectively. Observation of the contact surface on the fixed side shown in Figure 3.30 confirms that slip occurred on only one side. Slip on the fixed side was considered to have occurred after yielding and before the slip on the sliding side occurred. The small-slip test showed that the coefficient of slip on the surface of the fixed side of the joint averaged 0.35, while the coefficient of slip on the opposite side averaged only 0.16. Although the same main plate was used, the difference between the coefficients of slip on the surface and the back was approximately twice that of the fixed side.
-
-In the future, when repairing and reinforcing aged riveted bridges with friction high-strength bolts, sufficient attention should be paid to the difference in slip coefficients.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}[t]{0.45\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-27.pdf}
-    \caption{Photograph of the contact surface}
-    \label{fig3-27}
-    \end{minipage}
-    \begin{minipage}[t]{0.3\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-28.pdf}
-    \caption{Slip line of the fixed and sliding sides}
-    \label{fig3-28}
-    \end{minipage}
-\end{figure} 
-
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}[t]{0.45\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-29.pdf}
-    \caption{Enlarged view of the slip side}
-    \label{fig3-29}
-    \end{minipage}
-    \begin{minipage}[t]{0.45\textwidth}
-    \includegraphics[width=\linewidth]{imgs/ch3/fig3-30.pdf}
-    \caption{Enlarged view of the fixed side}
-    \label{fig3-30}
-    \end{minipage}
-\end{figure} 
-
-
+Fig.\ref{fig-5rholedef} shows the deformation of each case each fastener's hole. The vertical axis is the hole deformation at each fastener hole, and the horizontal axis is the overall load. The bearing deformations of the riveted and \ac{HSB} friction joints are almost equal. However, in the case of a hybrid joint, the changes in the deformations of the holes in the rivets and \ac{HSB}s are also different because the load-transfer mechanism is different. From Fig.\ref{fig-5rholedef} b, c, and d, the rate of change in the bearing deformation of the holes in the rivets is almost equal, and bearing deformation occurs at an earlier stage than that of the \ac{HSB}s. In all cases, when the average value reaches 5\%, the hole in the rivet has already exceeded 5\% of the deformation before that. Since the change in hole deformation is not uniform, the use of the average value to determine the limit state of the joint is a concern. The deformation of the hole in each rivet must be taken into account.
 
 
 
 \section{Conclusions}
 
-\textbf{For the slip coefficient of riveted joint }
+In this chapter, FE analysis was conducted using rivet and \ac{HSB} arrangements as parameters to elucidate the load transfer mechanism of a joint involving both riveted and \ac{HSB} friction joints, with preloads considered during tightening. By focusing on the yielding around the rivet holes in the main plate due to bearing pressure and varying the plate width \(b\) while maintaining a constant plate thickness \(t\), the displacement of the joint, load sharing of each fastener, and stress properties of the main plate were analyzed to clarify the load transfer mechanism of the combined riveted and \ac{HSB} friction joints.
 
-In this chapter, the joint part cut out from a 90-year-old riveted bridge's cross-beam. It evaluated the riveted joint surface's aging condition with red lead by microscope observation and chemical analysis. The slip and pressure distribution tests are also conducted to investigate the joint surface's slip coefficient of the riveted joints and the pressure distribution of riveted joints' surface. 
-
-Given the results of the present research, the obtained conclusions are as follows: 
-
+\subsubsection*{Load transfer and deformation mechanisms}
 \begin{itemize}
-    \item The distribution of red lead on the joint surface is not flat, the adhesion of the red lead has deteriorated, and the black oxide on the surface of the steel can be observed. In addition to the red lead film, vinyl acetate was also discovered by the FT-IR spectra analysis. 
-
-    \item The average slip coefficient was 0.274, and the coefficient of variation was 0.191.-2σ is 0.169. The 95\% confidence interval for the slip coefficient is 0.259-0.289. 
-
-    \item According to the relationship between the slip coefficient and clamping force, it has been confirmed that the change of the clamping force will not affect the slip coefficient.
-
-    \item The pressure distribution test could be concluded that due to the joint surface is not flat, the pressure distribution is also very uneven, and very high pressure is generated locally. On the contrary, there is no effective pressure applied in some places called an invalid contact area. Besides, the slip coefficient has no obvious relationship with effective contact pressures.
-    
+    \item The overall displacement and plastic deformation around the fastener hole were analyzed, and the service limit state of the joint was defined as the point where the load-overall displacement relationship exhibited nonlinear behavior. It was found that the arrangement of \ac{HSB}s had almost no effect on the service condition of the three-row joints.
+    \item In the pressure-precedence type, where the critical service condition is determined by the bearing pressure, all rivet holes yielded when the load-total displacement relationship of the entire joint became nonlinear.
+    \item In hybrid joints, load transfer occurs in three phases: (1) friction transfer up to the slip capacity $F_{slip}$, (2) combined transfer by bearing pressure and friction up to the bearing pressure load $P_{bya}$, and (3) plastic deformation after yielding. Hybrid joints increase initial stiffness compared to riveted joints and relieve bearing stress on rivets through frictional load transfer via the contact plate.
 \end{itemize}
 
-\textbf{for the tensile test of test of partially replacement of riveted joint}
-
-The girth thicknesses of the joints cut from the transverse girders of the riveted bridge, which had been in service for 90 years, averaged 9.2 mm and 10.3 mm, respectively, which were different from the design value of 9.5 mm. This indicates that the level of steel plate manufacturing technology at that time was not very high. In addition, there were many impurities and inclusions in the steel material, and voids were found in the material specimens and girth joints. It is thought that lamination is somewhat common in steel structures due to aging, and the extent to which it affects the bearing capacity of the structure is also unknown.
-
-In this study, tensile tests were conducted on existing riveted joints to determine the load carrying capacity of the joints when they were partially or fully replaced with high-strength bolts for friction joints, and the slip coefficient that can be expected in the design. The results of this study are as follows.
-
+\subsubsection*{Load redistribution mechanism when removing rivets}
 \begin{itemize}
-    \item The bearing capacity of a riveted joint in a sound condition is about 1.4 times higher than the pure section yield capacity, and the joint is ahead of yielding. The tensile behavior of the riveted joint is as follows: first, slip occurs while the rivet is deformed, then the load rises to the bearing state, after which the pure section yields and the main plate enters a plastic state. Then, rupture of the main plate net section occurs. The frictional resistance caused by the axial force introduced during rivet cooling is smaller than the joint bearing capacity, and its effect is extremely small. Therefore, it is desirable to design the bearing capacity without considering the axial force introduced into the rivet as in the conventional design in the future.
-    
-    \item In the case of the yield-precedence type joint, almost the same bearing capacity was obtained when all the rivets were replaced with high-strength bolts and when only the rivets on the outside of the joint were replaced with high-strength bolts. Therefore, it is desirable to replace only the rivets on the outside of the joint for economic and workability reasons. In this experiment, an enlarged hole with a diameter of $\phi$ 26.5 mm was used to remove the rivets. The net cross-sectional yield strength of the specimen with the enlarged hole was 1.1 times that of the Rivet joint in its sound condition. The standard $\phi$ 24.5mm bolt hole diameter further increases the net sectional yield strength.
-    
-    \item When the main plate is of the yield-precedence type, the net sectional yield capacity depends on the frictional force per bolt on the outside of the joint. For a constant slip coefficient, the higher the axial force, the higher the rate of increase of the net sectional yield strength. When replacing rivets, introducing a higher axial force with a high-strength bolt is expected to improve the strength of the joint.
-    
-    \item In this experiment, the slip coefficients of the two contact surfaces on the fixed side of the specimen, which were all replaced with high-strength bolts, differed by a factor of approximately two, confirming the phenomenon that only one joint surface slides. In the future, it will be necessary to investigate cases where the slip coefficient differs between the two joint surfaces, since such a case is expected to occur in actual joints.
+    \item When an end rivet (e.g., rivet \#1 or \#5) was removed, half of the removed rivet's load was transferred to the nearest rivet, with less load transferred to more distant rivets.
+    \item When the middle rivet (e.g., rivet \#3) was removed, load redistribution was more uniform across the remaining rivets.
+    \item Replacing a rivet with a bolt affected load transfer primarily in nearby rivets, while distant rivets were largely unaffected. For example, replacing rivet \#1 with a bolt increased frictional load transfer to the cover plate, reducing net cross-section stress in the connected plate.
 \end{itemize}
+
+
+
+
+

@@ -62,6 +62,43 @@
 
 \setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
 
+
+%% Title page 1
+\makeatletter
+
+\def\maketitlee{
+  \begin{titlepage}
+    \hypertarget{TitlePage}{}
+    \bookmark[dest=TitlePage,level=-1]{Front matter}
+	\phantomsection \pdfbookmark[section]{Title page}{title}
+    \pgftext[at=\pgfpoint{-\marginleft+\logopad}{\margintop+\parskip-\logopad}, top, left]{
+    %\includegraphics[width=\logowidth]{oculogo.jpg}
+    }
+    %\pgfuseimage{IC_Logo}
+
+    \begin{center}
+	  \vspace*{\fill}
+    \vskip 1cm
+      \doublespacing {\huge  \textsc \@title } \par\singlespacing
+      \vskip 0.5cm
+      
+      \vskip 12cm
+      \LARGE March 2025\\[1mm]
+      \vskip 1cm
+      
+      {\LARGE \textsc \@author}
+      %{\normalsize CID: \@cid}
+      %{\large \textsc \@supervisor}\\[1mm]
+      \vspace*{\fill}
+    \end{center}
+  \end{titlepage}
+  \pagenumbering{arabic}
+  \setcounter{page}{2} 
+  % ensure no number on title page, numbers on other pages match those in the PDF
+}
+
+
+
 %% Title page
 \makeatletter
 \def\course#1{\gdef\@course{#1}}
@@ -90,11 +127,11 @@
       \vskip 0.5cm
       {\LARGE \textsc \@subtitle}
       \vskip 6cm
-      \LARGE March 2024\\[1mm]
+      \LARGE March 2025\\[1mm]
       \vskip 1cm
       \LARGE
-      Graduate School of Engineering \\[1mm]
-      Osaka City University \\
+      %Graduate School of Engineering \\[1mm]
+      %Osaka Metropolitan University \\
       \vskip 1cm
       {\LARGE \textsc \@author}\\[1mm]
       陳 瑜
@@ -106,8 +143,12 @@
   \end{titlepage}
   
   \pagenumbering{arabic}
-  \setcounter{page}{2} % ensure no number on title page, numbers on other pages match those in the PDF
+  \setcounter{page}{2} 
+  % ensure no number on title page, numbers on other pages match those in the PDF
 }
+
+
+
 \makeatother
 
 
@@ -230,9 +271,15 @@
   {\normalfont\fontsize{90}{92} \raggedleft\bfseries\color{ImperialBlue}}{\ \thechapter}{-30pt}{\Huge\raggedleft\color{ImperialBlue}}
 \titlespacing*{\chapter}{0pt}{0pt}{20pt}
 
+% 设定编号深度，使 subsubsection 显示编号
+\setcounter{secnumdepth}{3}
+
+% 设定 subsubsection 的编号格式为 章.节.小节.a
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
 
 \def\preamble{
 \dominitoc % Do not change - required
+%\maketitlee
 \maketitle % Do not change - required
 
 \pagestyle{empty} % Do not change - required
@@ -248,8 +295,7 @@
 \chapter*{Abstract}
 \addtocounter{counter}{-1}
 \input{Abstract.tex} % Do not remove
-
-
+\thispagestyle{plain}
 \input{OrigSta_Copyright.tex} % Do not remove
 \ifthenelse{\boolean{acknowledgement}}{
 \cleardoublepage\phantomsection
@@ -257,6 +303,7 @@
 \chapter*{Acknowledgments}
 \addtocounter{counter}{-1}
 \input{Acknowledgement.tex} % OPTIONAL CAN BE REMOVED
+\thispagestyle{plain}
 }{}
 
 \singlespacing % Do not change - required
